@@ -1,0 +1,6503 @@
+(lp0
+(dp1
+S'journal'
+p2
+S'IEEE Trans. Systems, Man, and Cybernetics, Part B'
+p3
+sS'title'
+p4
+S'Perceptually stable regions for arbitrary polygons.'
+p5
+sS'key'
+p6
+S'journals/tsmc/Rocha03'
+p7
+sS'author'
+p8
+S'J. Rocha'
+p9
+sa(dp10
+S'booktitle'
+p11
+S'ROSS@ICS'
+p12
+sg4
+S'Hybrid MPI: a case study on the Xeon Phi platform.'
+p13
+sg6
+S'conf/ics/WickramasingheB14'
+p14
+sg8
+S'Andrew Friedley'
+p15
+sa(dp16
+g11
+S'ICRA'
+p17
+sg4
+S'Spatial memory and learning: Towards a set of metrics to evaluate task performance in rats and robots.'
+p18
+sg6
+S'conf/icra/BarreraWCR10'
+p19
+sg8
+S'Victor Ramirez-Amaya'
+p20
+sa(dp21
+g2
+S'Microelectronics Journal'
+p22
+sg4
+S'CMOS balanced regenerative frequency dividers for wide-band quadrature LO generation.'
+p23
+sg6
+S'journals/mj/MazzantiLS07'
+p24
+sg8
+S'Francesco Svelto'
+p25
+sa(dp26
+g2
+S'IJTM'
+p27
+sg4
+S'Identifying the variables associated with types of innovation, radical or incremental: strategic flexibility, organisation and context.'
+p28
+sg6
+S'journals/ijtm/Cabello-MedinaCV06'
+p29
+sg8
+VRamón Valle-Cabrera
+p30
+sa(dp31
+g11
+S'Applied Informatics'
+p32
+sg4
+S'Component Modeling for Evolutionary Redesign in a Classical Application Environment.'
+p33
+sg6
+S'conf/appinf/Hundehege99'
+p34
+sg8
+S'Johannes-Bernhard Hundehege'
+p35
+sa(dp36
+g2
+S'Int. J. Neural Syst.'
+p37
+sg4
+S'Nonlinear System Identification and Control Based on Modular Neural Networks.'
+p38
+sg6
+S'journals/ijns/PuscasuC11'
+p39
+sg8
+S'Bogdan Codres'
+p40
+sa(dp41
+g2
+S'IEEE Trans. Biomed. Engineering'
+p42
+sg4
+S'Visual Feature Extraction From Voxel-Weighted Averaging of Stimulus Images in 2 fMRI Studies.'
+p43
+sg6
+S'journals/tbe/HartR13'
+p44
+sg8
+S'William J. Rose'
+p45
+sa(dp46
+g2
+S'International Journal of Geographical Information Science'
+p47
+sg4
+S'From land cover-graphs to urban structure types.'
+p48
+sg6
+S'journals/gis/WaldeHBS14'
+p49
+sg8
+S'Christiane Schmullius'
+p50
+sa(dp51
+g11
+S'Euro-Par'
+p52
+sg4
+S'Task-Parallel Programming on NUMA Architectures.'
+p53
+sg6
+S'conf/europar/TerbovenSCM12'
+p54
+sg8
+S'Dieter an Mey'
+p55
+sa(dp56
+g2
+S'J. Electronic Testing'
+p57
+sg4
+S'TA-PSV - Timing Analysis for Partially Specified Vectors.'
+p58
+sg6
+S'journals/et/ChenGB02a'
+p59
+sg8
+S'Melvin A. Breuer'
+p60
+sa(dp61
+g2
+S'Algorithmica'
+p62
+sg4
+S'Anonymous Meeting in Networks.'
+p63
+sg6
+S'journals/algorithmica/DieudonneP16'
+p64
+sg8
+S'Andrzej Pelc'
+p65
+sa(dp66
+g11
+S'CSCW'
+p67
+sg4
+S'Harnessing the wisdom of crowds in wikipedia: quality through coordination.'
+p68
+sg6
+S'conf/cscw/KitturK08'
+p69
+sg8
+S'Robert E. Kraut'
+p70
+sa(dp71
+g11
+S'ICIP'
+p72
+sg4
+S'Image segmentation by cooperative optimization.'
+p73
+sg6
+S'conf/icip/Huang04'
+p74
+sg8
+S'Xiaofei Huang'
+p75
+sa(dp76
+g2
+S'Computers and the Humanities'
+p77
+sg4
+S'Intelligent knowledge-based systems in archaeology: A computerized simulation of reasoning by means of an expert system.'
+p78
+sg6
+S'journals/lre/LagrangeR85'
+p79
+sg8
+S'Monique Renaud'
+p80
+sa(dp81
+g2
+S'Mathematical and Computer Modelling'
+p82
+sg4
+S'Consistency of stochastic context-free grammars.'
+p83
+sg6
+S'journals/mcm/GecseK10'
+p84
+sg8
+VAttila Kovács
+p85
+sa(dp86
+g11
+S'ACM Multimedia'
+p87
+sg4
+S'Annotating photo collections by label propagation according to multiple similarity cues.'
+p88
+sg6
+S'conf/mm/CaoLH08'
+p89
+sg8
+S'Thomas S. Huang'
+p90
+sa(dp91
+g2
+S'Electronic Colloquium on Computational Complexity (ECCC)'
+p92
+sg4
+S'Some Facets of Complexity Theory and Cryptography: A Five-Lectures Tutorial'
+p93
+sg6
+S'journals/eccc/ECCC-TR01-096'
+p94
+sg8
+VJörg Rothe
+p95
+sa(dp96
+g11
+S'DICTA'
+p97
+sg4
+S'GPU Accelerated Face Recognition System with Enhanced Local Ternary Patterns Using OpenCL.'
+p98
+sg6
+S'conf/dicta/BKNR15'
+p99
+sg8
+S'G. N. Rathna'
+p100
+sa(dp101
+g2
+VComputación y Sistemas
+p102
+sg4
+S'Qualitative Interpretation of Camera Motion in the Projection of Individual Frames of an Image Stream.'
+p103
+sg6
+S'journals/cys/Salas03'
+p104
+sg8
+VJoaquín Salas
+p105
+sa(dp106
+g2
+S'Educational Technology & Society'
+p107
+sg4
+S'The knowledge web: Learning and collaborating on the web.'
+p108
+sg6
+S'journals/ets/Paliwala99'
+p109
+sg8
+S'Abdul Paliwala'
+p110
+sa(dp111
+g11
+S'ICMLC'
+p112
+sg4
+S'New robust exponential stability of complex neutral system with mixed time-varying delays and nonlinear perturbations.'
+p113
+sg6
+S'conf/icmlc/QiuLZX12'
+p114
+sg8
+S'Zirui Xing'
+p115
+sa(dp116
+g2
+S'IEEE Trans. on CAD of Integrated Circuits and Systems'
+p117
+sg4
+S'Integrated circuit quality optimization using surface integrals.'
+p118
+sg6
+S'journals/tcad/FeldmannD93'
+p119
+sg8
+S'Stephen W. Director'
+p120
+sa(dp121
+g11
+S'STOC'
+p122
+sg4
+S'Energy Consumption in VLSI Circuits (Preliminary Version)'
+p123
+sg6
+S'conf/stoc/AggarwalCR88'
+p124
+sg8
+S'Prabhakar Raghavan'
+p125
+sa(dp126
+g11
+S'MIPRO'
+p127
+sg4
+S'Serious computer games as instructional technology.'
+p128
+sg6
+S'conf/mipro/ZapusekCR11'
+p129
+sg8
+S'Joze Rugelj'
+p130
+sa(dp131
+g11
+S'IJCCI (ECTA-FCTA)'
+p132
+sg4
+S'Ant Colony Optimization for the Unequal-area Facility Layout Problem.'
+p133
+sg6
+S'conf/ijcci/Kulturel-KonakK11'
+p134
+sg8
+S'Abdullah Konak'
+p135
+sa(dp136
+g2
+S'Experimental Mathematics'
+p137
+sg4
+S'Counting and Testing Dominant Polynomials.'
+p138
+sg6
+S'journals/em/DubickasS15'
+p139
+sg8
+S'Min Sha'
+p140
+sa(dp141
+g11
+S'ASIACRYPT'
+p142
+sg4
+S'PRINCE - A Low-Latency Block Cipher for Pervasive Computing Applications - Extended Abstract.'
+p143
+sg6
+S'conf/asiacrypt/BorghoffCGKKKLNPRRTY12'
+p144
+sg8
+VTolga Yalçin
+p145
+sa(dp146
+g11
+S'HCI (13)'
+p147
+sg4
+S'Common Work Space or How to Support Cooperative Activities Between Human Operators and Machine: Application to Air Traffic Control.'
+p148
+sg6
+S'conf/hci/GuiostD07'
+p149
+sg8
+S'Serge Debernard'
+p150
+sa(dp151
+g11
+S'IJCAI (2)'
+p152
+sg4
+S'On the Interaction of Metonymies and Anaphora.'
+p153
+sg6
+S'conf/ijcai/MarkertH97'
+p154
+sg8
+S'Udo Hahn'
+p155
+sa(dp156
+g11
+S'INFOCOM'
+p157
+sg4
+S'OPTINET - Methodology and Reusable Tool Support for Network Planning.'
+p158
+sg6
+S'conf/infocom/VittaliDSH92'
+p159
+sg8
+S'A. Hafner'
+p160
+sa(dp161
+g2
+S'Inf. Sci.'
+p162
+sg4
+S'Granulation of a fuzzy set: Nonspecificity.'
+p163
+sg6
+S'journals/isci/Bodjanova07'
+p164
+sg8
+S'Slavka Bodjanova'
+p165
+sa(dp166
+g11
+S'SIGMOD PhD Symposium'
+p167
+sg4
+S'Probabilistic Evaluation of Expressive Queries on Bounded-Treewidth Instances.'
+p168
+sg6
+S'conf/sigmod/Monet16'
+p169
+sg8
+VMikaël Monet
+p170
+sa(dp171
+g2
+S'Genomics, Proteomics & Bioinformatics'
+p172
+sg4
+S'Hands-on Workshops as An Effective Means of Learning Advanced Technologies Including Genomics, Proteomics and Bioinformatics.'
+p173
+sg6
+S'journals/gpb/ReisdorphSKPRPECSNG13'
+p174
+sg8
+S'Marc Geraci'
+p175
+sa(dp176
+g11
+S'WCRE'
+p177
+sg4
+S'Reverse Engineering Tools as Media for Imperfect Knowledge.'
+p178
+sg6
+S'conf/wcre/JahnkeW00'
+p179
+sg8
+S'Andrew Walenstein'
+p180
+sa(dp181
+g11
+S'PIMRC'
+p182
+sg4
+S'Design and performance analysis of the MC-CDMA.'
+p183
+sg6
+S'conf/pimrc/LeeP03'
+p184
+sg8
+S'Sin-Chong Park'
+p185
+sa(dp186
+g2
+S'J. Computational Applied Mathematics'
+p187
+sg4
+S'Centralized resource allocation for enhanced Russell models.'
+p188
+sg6
+S'journals/jcam/LotfiNJGM10'
+p189
+sg8
+S'M. R. Mozaffari'
+p190
+sa(dp191
+g11
+S'IEEE Congress on Evolutionary Computation'
+p192
+sg4
+VSwarms and Genes: Exploring \u03bb - Switch Gene Regulation through Swarm Intelligence.
+p193
+sg6
+S'conf/cec/JacobBT06'
+p194
+sg8
+S'Glorious Tsui'
+p195
+sa(dp196
+g11
+S'Encyclopedia of Database Systems'
+p197
+sg6
+S'reference/db/X09p'
+p198
+sg4
+S'Acquisitional Query Languages.'
+p199
+sa(dp200
+g11
+S'ACSSC'
+p201
+sg4
+S'Sonar data compression using non-uniform quantization and noise shaping.'
+p202
+sg6
+S'conf/acssc/WongAE14'
+p203
+sg8
+S'Brian L. Evans'
+p204
+sa(dp205
+g2
+S'Wireless Sensor Network'
+p206
+sg4
+S'Blending Sensor Scheduling Strategy with Particle Filter to Track a Smart Target.'
+p207
+sg6
+S'journals/wsn/LiuJZH09'
+p208
+sg8
+S'Chengpeng Hao'
+p209
+sa(dp210
+g11
+S'ICME'
+p211
+sg4
+S'Modeling the tele-immersive systems using stochastic activity network.'
+p212
+sg6
+S'conf/icmcs/MalikWN09'
+p213
+sg8
+S'Klara Nahrstedt'
+p214
+sa(dp215
+g2
+S'Soft Comput.'
+p216
+sg4
+S'Learning topic of dynamic scene using belief propagation and weighted visual words approach.'
+p217
+sg6
+S'journals/soco/LiuLGJL15'
+p218
+sg8
+S'Quan Liu'
+p219
+sa(dp220
+g11
+S'COORDINATION'
+p221
+sg4
+S'Compositional Semantics of an Actor-Based Language Using Constraint Automata.'
+p222
+sg6
+S'conf/coordination/SirjaniJBA06'
+p223
+sg8
+S'Farhad Arbab'
+p224
+sa(dp225
+g11
+S'IPSN'
+p226
+sg4
+S'Power-bandwidth-distortion scaling laws for sensor networks.'
+p227
+sg6
+S'conf/ipsn/GastparV04'
+p228
+sg8
+S'Martin Vetterli'
+p229
+sa(dp230
+g11
+S'NGITS'
+p231
+sg4
+S'A Fast Signature Algorithm for Sequence Data Searching.'
+p232
+sg6
+S'conf/ngits/LamW97'
+p233
+sg8
+S'Man Hon Wong'
+p234
+sa(dp235
+g11
+S'ESIAT (1)'
+p236
+sg4
+S'Effect of Environmental Silicic Concentration on ATPases of Diatom Ditylum Brightwelli Plasma Membrane.'
+p237
+sg6
+S'conf/esiat/ZhengLL09'
+p238
+sg8
+S'Junrong Liang'
+p239
+sa(dp240
+g11
+S'IROS (1)'
+p241
+sg4
+S'Multi-level navigation using active localization system.'
+p242
+sg6
+S'conf/iros/GiuffridaMMVZ95'
+p243
+sg8
+S'Renato Zaccaria'
+p244
+sa(dp245
+g11
+S'ISPA'
+p246
+sg4
+S'New Parallel Prefix Algorithm for Multicomputers.'
+p247
+sg6
+S'conf/ispa/LinK11'
+p248
+sg8
+S'Chun-Yu Ko'
+p249
+sa(dp250
+g11
+S'ICRA'
+p251
+sg4
+S'Computing Distances between NURBS-defined Convex Objects.'
+p252
+sg6
+S'conf/icra/TurnbullC98'
+p253
+sg8
+S'Stephen Cameron'
+p254
+sa(dp255
+g11
+S'ICASSP'
+p256
+sg4
+S'Perceptual audio features for unsupervised key-phrase detection.'
+p257
+sg6
+S'conf/icassp/ZeddelmannKM10'
+p258
+sg8
+VMeinard Müller
+p259
+sa(dp260
+g2
+S'SIAM J. Discrete Math.'
+p261
+sg4
+S'Asymptotic Minimum Covering Radius of Block Codes.'
+p262
+sg6
+S'journals/siamdm/ChenH01'
+p263
+sg8
+S'Yunghsiang S. Han'
+p264
+sa(dp265
+g11
+S'Euro-Par'
+p266
+sg4
+S'Automating Performance Analysis from UML Design Patterns (Research Note).'
+p267
+sg6
+S'conf/europar/RanaJ00'
+p268
+sg8
+S'Dave Jennings'
+p269
+sa(dp270
+g2
+S'Microprocessors and Microsystems'
+p271
+sg4
+S'Component-based development of DSP software for mobile communication terminals.'
+p272
+sg6
+S'journals/mam/JyrkkaSAHB02'
+p273
+sg8
+S'Heikki Berg'
+p274
+sa(dp275
+g2
+S'IEEE Trans. Fuzzy Systems'
+p276
+sg4
+S'A robust stabilization problem of fuzzy control systems and its application to backing up control of a truck-trailer.'
+p277
+sg6
+S'journals/tfs/TanakaS94'
+p278
+sg8
+S'Manabu Sano'
+p279
+sa(dp280
+S'publisher'
+p281
+S'ACM'
+p282
+sg11
+S'C3S2E'
+p283
+sS'editor'
+p284
+S'Sudhir P. Mudur'
+p285
+sg6
+S'conf/c3s2e/2010'
+p286
+sg4
+S'Canadian Conference on Computer Science & Software Engineering, C3S2E 2010, Montreal, Quebec, Canada, May 19-20, 2010, Proceedings'
+p287
+sa(dp288
+g11
+S'WWW (Companion Volume)'
+p289
+sg4
+S'Smart Urban Planning Support through Web Data Science on Open and Enterprise Data.'
+p290
+sg6
+S'conf/www/CalegariC15'
+p291
+sg8
+S'Irene Celino'
+p292
+sa(dp293
+g2
+S'Presence'
+p294
+sg4
+S'Evaluation of the Effects of a Head-Mounted Display on Ocular Accommodation.'
+p295
+sg6
+S'journals/presence/NeveuBS98'
+p296
+sg8
+S'Lawrence W. Stark'
+p297
+sa(dp298
+g2
+S'J. Visual Communication and Image Representation'
+p299
+sg4
+S'Blind single-image super resolution based on compressive sensing.'
+p300
+sg6
+S'journals/jvcir/KarimiAKR15'
+p301
+sg8
+S'Ahad Rajabi'
+p302
+sa(dp303
+g2
+S'Computer Communications'
+p304
+sg4
+S'A cooperative CDMA-based multi-channel MAC protocol for mobile ad hoc networks.'
+p305
+sg6
+S'journals/comcom/MoonS09'
+p306
+sg8
+S'Violet R. Syrotiuk'
+p307
+sa(dp308
+g2
+S'Complexity'
+p309
+sg4
+S'Rooting out randomness.'
+p310
+sg6
+S'journals/complexity/Casti01a'
+p311
+sg8
+S'John L. Casti'
+p312
+sa(dp313
+g11
+S'ICIP'
+p314
+sg4
+S'Systematic lossy forward error protection for error-resilient digital video broadcasting -a wyner-ziv coding approach.'
+p315
+sg6
+S'conf/icip/RaneAG04'
+p316
+sg8
+S'Bernd Girod'
+p317
+sa(dp318
+g2
+S'CoRR'
+p319
+sg4
+S'Fine-Grained Product Class Recognition for Assisted Shopping.'
+p320
+sg6
+S'journals/corr/GeorgeMSFM15'
+p321
+sg8
+S'Friedemann Mattern'
+p322
+sa(dp323
+g4
+S'WoLFram - a word level framework for formal verification and its application.'
+p324
+sg6
+S'phd/de/Sulflow2010'
+p325
+sg8
+VAndré Sülflow
+p326
+sa(dp327
+g11
+S'WebNet'
+p328
+sg4
+S'Comparing Computer-based and Text-based Research Writing: A Course Model.'
+p329
+sg6
+S'conf/webnet/Petracca99'
+p330
+sg8
+S'Michael Petracca'
+p331
+sa(dp332
+g11
+S'Encyclopedia of Algorithms'
+p333
+sg4
+S'Graph Coloring.'
+p334
+sg6
+S'reference/algo/Langberg08'
+p335
+sg8
+S'Michael Langberg'
+p336
+sa(dp337
+g2
+S'JACIII'
+p338
+sg4
+S'A Fast Dynamic Full-Text Search Method Using Efficient Block Management Structure.'
+p339
+sg6
+S'journals/jaciii/FuketaAGA04'
+p340
+sg8
+S'Jun-Ichi Aoe'
+p341
+sa(dp342
+g2
+S'IEEE Journal on Selected Areas in Communications'
+p343
+sg4
+S'An Echo-Cancellation-Based 4800 Bit/s Full-Duplex DDD Modem.'
+p344
+sg6
+S'journals/jsac/Werner84'
+p345
+sg8
+S'Jean-Jacques Werner'
+p346
+sa(dp347
+g2
+S'CoRR'
+p348
+sg4
+S'Penalized K-Nearest-Neighbor-Graph Based Metrics for Clustering'
+p349
+sg6
+S'journals/corr/abs-1006-2734'
+p350
+sg8
+S'Pablo M. Granitto'
+p351
+sa(dp352
+g11
+S'ACM Multimedia'
+p353
+sg4
+S'MuVis: an application for interactive exploration of large music collections.'
+p354
+sg6
+S'conf/mm/DiasF10'
+p355
+sg8
+S'Manuel J. Fonseca'
+p356
+sa(dp357
+g2
+S'Evolutionary Computation'
+p358
+sg4
+S'Enabling the Extended Compact Genetic Algorithm for Real-Parameter Optimization by Using Adaptive Discretization.'
+p359
+sg6
+S'journals/ec/ChenC10'
+p360
+sg8
+S'Chao-Hong Chen'
+p361
+sa(dp362
+g2
+S'Adv. in MM'
+p363
+sg4
+S'Video Superresolution Reconstruction Using Iterative Back Projection with Critical-Point Filters Based Image Matching.'
+p364
+sg6
+S'journals/amm/ZhangTYD15'
+p365
+sg8
+S'Zhen-miao Deng'
+p366
+sa(dp367
+g11
+S'CCGrid'
+p368
+sg4
+S'KOALA-F: A Resource Manager for Scheduling Frameworks in Clusters.'
+p369
+sg6
+S'conf/ccgrid/KuzmanovskaME16'
+p370
+sg8
+S'Dick H. J. Epema'
+p371
+sa(dp372
+g2
+S'IEEE Design & Test of Computers'
+p373
+sg6
+S'journals/dt/X94g'
+p374
+sg4
+S'News.'
+p375
+sa(dp376
+g11
+S'PPSN'
+p377
+sg4
+S'UEGO, an Abstract Niching Technique for Global Optimization.'
+p378
+sg6
+S'conf/ppsn/Jelasity98'
+p379
+sg8
+VMárk Jelasity
+p380
+sa(dp381
+g11
+S'ICCE'
+p382
+sg4
+S'A Study of Curriculum Implementation and School Culture in the Information Age.'
+p383
+sg6
+S'conf/icce/LinTLC05'
+p384
+sg8
+S'Chuang-Chieh Chiu'
+p385
+sa(dp386
+g11
+S'AAMAS'
+p387
+sg4
+S'A testbed to evaluate the robustness of reputation systems in e-marketplaces.'
+p388
+sg6
+S'conf/atal/Irissappane014'
+p389
+sg8
+S'Jie Zhang 0002'
+p390
+sa(dp391
+g11
+S'ICCCN'
+p392
+sg4
+S'Cross-layer wireless information security.'
+p393
+sg6
+S'conf/icccn/SongW14'
+p394
+sg8
+S'Shaoen Wu'
+p395
+sa(dp396
+g11
+S'Visualization and Data Analysis'
+p397
+sg4
+S'Blogviz: mapping the dynamics of information diffusion in blogspace.'
+p398
+sg6
+S'conf/vda/Lima06'
+p399
+sg8
+S'Manuel S. Lima'
+p400
+sa(dp401
+g2
+S'Annals OR'
+p402
+sg4
+S'A branch-and-cut procedure for the Udine Course Timetabling problem.'
+p403
+sg6
+S'journals/anor/BurkeMPR12'
+p404
+sg8
+VHana Rudová
+p405
+sa(dp406
+g2
+S'IEEE Computer'
+p407
+sg4
+S'Gridnet: An Alternative Large Distributed Network.'
+p408
+sg6
+S'journals/computer/MooreGG84'
+p409
+sg8
+S'H. A. Graf'
+p410
+sa(dp411
+g2
+S'Neural Computation'
+p412
+sg4
+S'GTM: The Generative Topographic Mapping.'
+p413
+sg6
+S'journals/neco/BishopSW98'
+p414
+sg8
+S'Christopher K. I. Williams'
+p415
+sa(dp416
+g11
+S'3DUI'
+p417
+sg4
+S'Multi-touch RST in 2D and 3D spaces: Studying the impact of directness on user performance.'
+p418
+sg6
+S'conf/3dui/KnodelH11'
+p419
+sg8
+S'Martin Hachet'
+p420
+sa(dp421
+g11
+S'ICWE'
+p422
+sg4
+S'Experiences in Building a RESTful Mixed Reality Web Service Platform.'
+p423
+sg6
+S'conf/icwe/SelonenBY10'
+p424
+sg8
+S'Yu You'
+p425
+sa(dp426
+g2
+S'Interactive Learning Environments'
+p427
+sg4
+S'Teaching Teleapprenticeships: Electronic Network-Based Educational Frameworks for Improving Teacher Education.'
+p428
+sg6
+S'journals/ile/LevinW98'
+p429
+sg8
+S'Michael Waugh'
+p430
+sa(dp431
+g11
+S'SwSTE'
+p432
+sg4
+S'Integrating Domain-Specific Programming into Software Design.'
+p433
+sg6
+S'conf/swste/ShaniS10'
+p434
+sg8
+S'Aviad Sela'
+p435
+sa(dp436
+g2
+S'Theor. Comput. Sci.'
+p437
+sg4
+S'Symmetric and Economical Solutions to the Mutual Exclusion Problem in a Distributed System.'
+p438
+sg6
+S'journals/tcs/CohenLP84'
+p439
+sg8
+S'Amir Pnueli'
+p440
+sa(dp441
+g2
+S'AI EDAM'
+p442
+sg4
+S'Problem solving methods and knowledge systems: A personal journey to perceptual images as knowledge.'
+p443
+sg6
+S'journals/aiedam/Chandrasekaran09'
+p444
+sg8
+S'B. Chandrasekaran 0001'
+p445
+sa(dp446
+g11
+S'NETYS'
+p447
+sg4
+S'Towards a Formal Semantics and Analysis of BPMN Gateways.'
+p448
+sg6
+S'conf/netys/HichamiNABM15'
+p449
+sg8
+S'Badr Eddine El Mohajir'
+p450
+sa(dp451
+g11
+S'AIRS'
+p452
+sg4
+S'A Comparison of Action Transitions in Individual and Collaborative Exploratory Web Search.'
+p453
+sg6
+S'conf/airs/YueHH12'
+p454
+sg8
+S'Daqing He'
+p455
+sa(dp456
+g11
+S'SAINT'
+p457
+sg4
+S'A Proposal of Privacy Management Architecture.'
+p458
+sg6
+S'conf/saint/OsawaITKSH10'
+p459
+sg8
+S'Kazuo Hashimoto'
+p460
+sa(dp461
+g2
+S'Journal of Approximation Theory'
+p462
+sg4
+S'The generalized decomposition theorem in Banach spaces and its applications.'
+p463
+sg6
+S'journals/jat/SongC04'
+p464
+sg8
+S'Zhengjun Cao'
+p465
+sa(dp466
+g2
+S'CoRR'
+p467
+sg4
+S'Independence of P vs. NP in regards to oracle relativizations'
+p468
+sg6
+S'journals/corr/abs-0805-2170'
+p469
+sg8
+S'Jerrald Meek'
+p470
+sa(dp471
+g2
+S'Mach. Vis. Appl.'
+p472
+sg4
+S'A novel online boosting algorithm for automatic anatomy detection.'
+p473
+sg6
+S'journals/mva/TajbakhshWXGL13'
+p474
+sg8
+S'Jianming Liang'
+p475
+sa(dp476
+g2
+S'SIAM J. Scientific Computing'
+p477
+sg4
+S'Adaptive Timestepping for Elastohydrodynamic Lubrication Solvers.'
+p478
+sg6
+S'journals/siamsc/GoodyerB06'
+p479
+sg8
+S'Martin Berzins'
+p480
+sa(dp481
+g11
+S'GLOBECOM Workshops'
+p482
+sg4
+S'A geographic mobility prediction routing protocol for Ad Hoc UAV Network.'
+p483
+sg6
+S'conf/globecom/LinSWY12'
+p484
+sg8
+S'Fangchun Yang'
+p485
+sa(dp486
+g11
+S'DCAI'
+p487
+sg4
+S'Which Is the Most Appropriate Response? Combining Decision-Support Systems and Conversational Interfaces.'
+p488
+sg6
+S'conf/dcai/GriolM16'
+p489
+sg8
+VJosé Manuel Molina
+p490
+sa(dp491
+g2
+S'Adaptive Behaviour'
+p492
+sg4
+S'Reafferent or Redundant: Integration of Phonotaxis and Optomotor Behavior in Crickets and Robots.'
+p493
+sg6
+S'journals/adb/WebbR03'
+p494
+sg8
+S'Richard E. Reeve'
+p495
+sa(dp496
+g2
+S'KI'
+p497
+sg4
+S'MediaAnalyzer - Erfassung der Kundenwirkung von Bildmaterial.'
+p498
+sg6
+S'journals/ki/EgnerS02'
+p499
+sg8
+S'Christian Scheier'
+p500
+sa(dp501
+g11
+S'IASSE'
+p502
+sg4
+S'Neural Network Modeling of Financial Markets.'
+p503
+sg6
+S'conf/iasse/HenteaG03'
+p504
+sg8
+S'Donald L. Gray'
+p505
+sa(dp506
+g11
+S'ISCC'
+p507
+sg4
+S'Fault Discovery Protocol (FDP) for Passive Optical Networks (PONs).'
+p508
+sg6
+S'conf/iscc/HajduczeniaFSM07'
+p509
+sg8
+S'Paulo P. Monteiro'
+p510
+sa(dp511
+g2
+S'Electr. Notes Theor. Comput. Sci.'
+p512
+sg4
+VCanonicity of Weak \u03c9-groupoid Laws Using Parametricity Theory.
+p513
+sg6
+S'journals/entcs/Lasson14'
+p514
+sg8
+S'Marc Lasson'
+p515
+sa(dp516
+g11
+S'IJCNN'
+p517
+sg4
+S'Fuzzy-GIST for 4-emotion recognition in natural scene images.'
+p518
+sg6
+S'conf/ijcnn/ZhangL10'
+p519
+sg8
+S'Minho Lee'
+p520
+sa(dp521
+g11
+S'IKE'
+p522
+sg4
+S'Dimensionality Reduction of Accident Databases for Minimal Tradeoff in Prediction Accuracy.'
+p523
+sg6
+S'conf/ike/TambouratzisCSG10'
+p524
+sg8
+S'Andreas Gregoriades'
+p525
+sa(dp526
+g2
+S'Statistics and Computing'
+p527
+sg4
+S'A new method for the estimation of variance matrix with prescribed zeros in nonlinear mixed effects models.'
+p528
+sg6
+S'journals/sac/ChafaiC09'
+p529
+sg8
+S'Didier Concordet'
+p530
+sa(dp531
+g11
+S'AMAST'
+p532
+sg4
+S'A Theory of May Testing for Asynchronous Calculi with Locality and No Name Matching.'
+p533
+sg6
+S'conf/amast/ThatiZA02'
+p534
+sg8
+S'Gul Agha'
+p535
+sa(dp536
+g11
+S'CBMS'
+p537
+sg4
+S'Mobile ECG Detector through GPRS/Internet.'
+p538
+sg6
+S'conf/cbms/JunH04'
+p539
+sg8
+S'Hong-hai Zhu'
+p540
+sa(dp541
+g2
+S'Applied Mathematics and Computation'
+p542
+sg4
+S'English sentence stress detection system based on HMM framework.'
+p543
+sg6
+S'journals/amc/LiLX07'
+p544
+sg8
+S'Shanhong Xia'
+p545
+sa(dp546
+g11
+S'FIE'
+p547
+sg4
+S'Special session: Introduction to systematic reviews in engineering education research.'
+p548
+sg6
+S'conf/fie/FroydFMBCC15'
+p549
+sg8
+S'Xueshu Chen'
+p550
+sa(dp551
+g11
+S'NordiCHI'
+p552
+sg4
+S'Demographic user characteristic sampling for model-based usability evaluation.'
+p553
+sg6
+S'conf/nordichi/Schulz14'
+p554
+sg8
+S'Matthias Schulz'
+p555
+sa(dp556
+g2
+S'IEEE Communications Surveys and Tutorials'
+p557
+sg4
+S'Cross-layer design proposals for wireless mobile networks: A survey and taxonomy.'
+p558
+sg6
+S'journals/comsur/FoukalasGA08'
+p559
+sg8
+S'Nancy Alonistioti'
+p560
+sa(dp561
+g11
+S'CPA'
+p562
+sg4
+S'Concurrent/Reactive System Design with Honeysuckle.'
+p563
+sg6
+S'conf/wotug/East07'
+p564
+sg8
+S'Ian East'
+p565
+sa(dp566
+g2
+S'IEEE Trans. Instrumentation and Measurement'
+p567
+sg4
+S'Temperature Dependence of Pd Thin-Film Cryoresistors.'
+p568
+sg6
+S'journals/tim/SatrapinskiHSNL11'
+p569
+sg8
+S'Natalia Lebedeva'
+p570
+sa(dp571
+g11
+S'Encyclopedia of GIS'
+p572
+sg6
+S'reference/gis/X08ov'
+p573
+sg4
+S'Georegistration.'
+p574
+sa(dp575
+g2
+S'Experimental Mathematics'
+p576
+sg4
+S'On the Resolution of Index Form Equations in Dihedral Quartic Number Fields.'
+p577
+sg6
+S'journals/em/GaalPP94'
+p578
+sg8
+S'Michael Pohst'
+p579
+sa(dp580
+g2
+S'Discrete & Computational Geometry'
+p581
+sg4
+S'Untangling a Polygon.'
+p582
+sg6
+S'journals/dcg/PachT02'
+p583
+sg8
+VGábor Tardos
+p584
+sa(dp585
+g2
+S'Journal of Documentation'
+p586
+sg4
+S'Digital library research: major issues and trends.'
+p587
+sg6
+S'journals/jd/ChowdhuryC99'
+p588
+sg8
+S'Sudatta Chowdhury'
+p589
+sa(dp590
+g11
+S'AGERE!@SPLASH'
+p591
+sg4
+S'Deny capabilities for safe, fast actors.'
+p592
+sg6
+S'conf/agere/ClebschDBM15'
+p593
+sg8
+S'Andy McNeil'
+p594
+sa(dp595
+g2
+S'EURASIP J. Adv. Sig. Proc.'
+p596
+sg4
+S'Low-Complexity Banded Equalizers for OFDM Systems in Doppler Spread Channels.'
+p597
+sg6
+S'journals/ejasp/RuginiBL06'
+p598
+sg8
+S'Geert Leus'
+p599
+sa(dp600
+g2
+S'IEEE Communications Magazine'
+p601
+sg4
+S'The 4th ITU kaleidoscope conference "The fully networked human? innovations for future networks and services".'
+p602
+sg6
+S'journals/cm/SherifJAM12'
+p603
+sg8
+S'Yoichi Maeda'
+p604
+sa(dp605
+g11
+S'SwSTE'
+p606
+sg4
+S'Patentability of Software.'
+p607
+sg6
+S'conf/swste/Wilk12'
+p608
+sg8
+S'Asher Wilk'
+p609
+sa(dp610
+g2
+S'CoRR'
+p611
+sg4
+S"Zipf's law for word frequencies: word forms versus lemmas in long texts."
+p612
+sg6
+S'journals/corr/CorralBF14'
+p613
+sg8
+S'Ramon Ferrer-i-Cancho'
+p614
+sa(dp615
+g11
+S'CDC'
+p616
+sg4
+S'Consensus of multi-agent systems with an active leader and asymmetric adjacency matrix.'
+p617
+sg6
+S'conf/cdc/GuoCLY09'
+p618
+sg8
+S'Xinghuo Yu'
+p619
+sa(dp620
+g11
+S'ITSC'
+p621
+sg4
+S'Stuck Around the Stadium? An Approach to Identify Road Segments Affected by Planned Special Events.'
+p622
+sg6
+S'conf/itsc/KwoczekMN15'
+p623
+sg8
+S'Wolfgang Nejdl'
+p624
+sa(dp625
+g11
+S'ICASSP'
+p626
+sg4
+S'Stable sparse approximations via nonconvex optimization.'
+p627
+sg6
+S'conf/icassp/SaabCY08'
+p628
+sg8
+VÖzgür Yilmaz
+p629
+sa(dp630
+g11
+S'Big Data and Internet of Things'
+p631
+sg4
+S'Adaptive Pipelined Neural Network Structure in Self-aware Internet of Things.'
+p632
+sg6
+S'series/sci/Al-JumeilyAHD14'
+p633
+sg8
+S'Ciprian Dobre'
+p634
+sa(dp635
+g2
+S'IEEE Trans. Automat. Contr.'
+p636
+sg4
+S'Disturbance attenuation for constrained discrete-time systems via receding horizon controls.'
+p637
+sg6
+S'journals/tac/Kim04'
+p638
+sg8
+S'Ki Baek Kim'
+p639
+sa(dp640
+g11
+S'IGARSS'
+p641
+sg4
+S'Graph based SAR images change detection.'
+p642
+sg6
+S'conf/igarss/GouY12'
+p643
+sg8
+S'Tiantian Yu'
+p644
+sa(dp645
+g11
+S'SOAR'
+p646
+sg4
+S'Self-organisation for Survival in Complex Computer Architectures.'
+p647
+sg6
+S'conf/wicsa/Polack09'
+p648
+sg8
+S'Fiona A. C. Polack'
+p649
+sa(dp650
+g11
+S'IEEE Congress on Evolutionary Computation'
+p651
+sg4
+S'Hybrid evolutionary algorithm for graph coloring register allocation.'
+p652
+sg6
+S'conf/cec/MahajanA08'
+p653
+sg8
+S'M. S. Ali'
+p654
+sa(dp655
+g11
+S'ICPP (2)'
+p656
+sg4
+S'Experimental Evaluation of Load Balancing Strategies for Ray Tracing on Parallel Processors.'
+p657
+sg6
+S'conf/icpp/LeeRN94'
+p658
+sg8
+S'John B. Nicholas'
+p659
+sa(dp660
+g2
+S'Annals OR'
+p661
+sg4
+S'Explaining inefficiency in nonparametric production models: the state of the art.'
+p662
+sg6
+S'journals/anor/BadinDS14'
+p663
+sg8
+VLéopold Simar
+p664
+sa(dp665
+g2
+S'SIGKDD Explorations'
+p666
+sg4
+S'KDD cup 2008 and the workshop on mining medical data.'
+p667
+sg6
+S'journals/sigkdd/RaoYK08'
+p668
+sg8
+S'Balaji Krishnapuram'
+p669
+sa(dp670
+g2
+S'Numerical Lin. Alg. with Applic.'
+p671
+sg4
+S'Reorthogonalization-based stiffness preconditioning in FETI algorithms with applications to variational inequalities.'
+p672
+sg6
+S'journals/nla/DostalKVB15'
+p673
+sg8
+VTomás Brzobohatý
+p674
+sa(dp675
+g2
+S'CoRR'
+p676
+sg4
+S'How important tasks are performed: peer review'
+p677
+sg6
+S'journals/corr/abs-1304-4963'
+p678
+sg8
+S'Mikko Alava'
+p679
+sa(dp680
+g2
+S'PVLDB'
+p681
+sg4
+S'Fast Sparse Matrix-Vector Multiplication on GPUs: Implications for Graph Mining.'
+p682
+sg6
+S'journals/pvldb/YangPS11'
+p683
+sg8
+S'P. Sadayappan'
+p684
+sa(dp685
+g2
+S'IEEE Trans. on CAD of Integrated Circuits and Systems'
+p686
+sg4
+S'On determining symmetries in inputs of logic circuits.'
+p687
+sg6
+S'journals/tcad/PomeranzR94c'
+p688
+sg8
+S'Sudhakar M. Reddy'
+p689
+sa(dp690
+g11
+S'AAAI'
+p691
+sg4
+S'Reducing Labeling Effort for Structured Prediction Tasks.'
+p692
+sg6
+S'conf/aaai/CulottaM05'
+p693
+sg8
+S'Andrew McCallum'
+p694
+sa(dp695
+g2
+VAnnales des Télécommunications
+p696
+sg4
+S'An all-IP software radio architecture under RTLinux.'
+p697
+sg6
+S'journals/adt/BonnetGHKHMNNW02'
+p698
+sg8
+S'Michelle Wetterwald'
+p699
+sa(dp700
+g11
+S'Software Engineering'
+p701
+sg4
+VMethoden bei der Entwicklung neuer Komponenten für die COMET-Anwendungssfotware.
+p702
+sg6
+S'conf/se/Muller80'
+p703
+sg8
+VGerhard Müller
+p704
+sa(dp705
+g11
+S'COLING'
+p706
+sg4
+S'Computational Data Analysis For Syntax.'
+p707
+sg6
+S'conf/coling/UhlirovaNK82'
+p708
+sg8
+VJan Králík
+p709
+sa(dp710
+g2
+S'Computer Science (AGH)'
+p711
+sg4
+S'Using BOINC Desktop Grid to Solve Large Scale SAT Problems.'
+p712
+sg6
+S'journals/aghcs/PosypkinSZ12'
+p713
+sg8
+S'Oleg Zaikin'
+p714
+sa(dp715
+g2
+S'IEICE Transactions'
+p716
+sg4
+S'A Cost-Effective Handshake Protocol and Its Implementation for Bundled-Data Asynchronous Circuits.'
+p717
+sg6
+S'journals/ieicet/ShimizuA06'
+p718
+sg8
+VKôki Abe
+p719
+sa(dp720
+g11
+S'ALT'
+p721
+sg4
+S'Supermartingales in Prediction with Expert Advice.'
+p722
+sg6
+S'conf/alt/ChernovKZV08'
+p723
+sg8
+S'Vladimir Vovk'
+p724
+sa(dp725
+g11
+S'CIBCB'
+p726
+sg4
+S'Matching and Visualization of Multiple Overlapping Clusterings of Microarray Data.'
+p727
+sg6
+S'conf/cibcb/KrumpelmanG07'
+p728
+sg8
+S'Joydeep Ghosh'
+p729
+sa(dp730
+g11
+S'ICASSP'
+p731
+sg4
+S'A multi-purpose speech recognition system.'
+p732
+sg6
+S'conf/icassp/BuissonMQV76'
+p733
+sg8
+S'R. Vives'
+p734
+sa(dp735
+g11
+S'IMR'
+p736
+sg4
+S'Fitting Polynomial Surfaces to Triangular Meshes with Voronoi Squared Distance Minimization.'
+p737
+sg6
+S'conf/imr/NivoliersYL11'
+p738
+sg8
+VBruno Lévy
+p739
+sa(dp740
+g11
+S'HICSS'
+p741
+sg4
+S'What Is Default Reasoning Good For? Applications Revisited.'
+p742
+sg6
+S'conf/hicss/AntoniouG99'
+p743
+sg8
+S'Aditya Ghose'
+p744
+sa(dp745
+g2
+S'Electronic Colloquium on Computational Complexity (ECCC)'
+p746
+sg4
+S'Partition Expanders.'
+p747
+sg6
+S'journals/eccc/GavinskyP14'
+p748
+sg8
+VPavel Pudlák
+p749
+sa(dp750
+g11
+S'ICPP (3)'
+p751
+sg4
+S'An Improved O(log N) Mutual Exclusion Algorithm for Distributed Systems.'
+p752
+sg6
+S'conf/icpp/ChangSL90'
+p753
+sg8
+S'Ming T. Liu'
+p754
+sa(dp755
+g11
+S'ICINCO (2)'
+p756
+sg4
+S'Multilevel Darwinist Brain in Robots - Initial Implementation.'
+p757
+sg6
+S'conf/icinco/BellasD04'
+p758
+sg8
+S'Richard J. Duro'
+p759
+sa(dp760
+g11
+S'MMM'
+p761
+sg4
+S'A New Shape Distance for Content Based Image Retrieval.'
+p762
+sg6
+S'conf/mmm/IannizzottoVP96'
+p763
+sg8
+S'Antonio Puliafito'
+p764
+sa(dp765
+g11
+S'GECCO'
+p766
+sg4
+S'Comparison of tree and graph encodings as function of problem complexity.'
+p767
+sg6
+S'conf/gecco/SchmidtL07'
+p768
+sg8
+S'Hod Lipson'
+p769
+sa(dp770
+g2
+S'Oper. Res. Lett.'
+p771
+sg4
+S'Analysis of the discrete-time bulk-service queue Geo/G'
+p772
+sg6
+S'journals/orl/ChaudhryC04'
+p773
+sg8
+S'S. H. Seok Ho Chang'
+p774
+sa(dp775
+g11
+S'KDD'
+p776
+sg4
+S'Dimensionality Reduction Via Graph Structure Learning.'
+p777
+sg6
+S'conf/kdd/MaoWGS15'
+p778
+sg8
+S'Yijun Sun'
+p779
+sa(dp780
+g11
+S'Bangalore Compute Conf.'
+p781
+sg4
+S'Extracting hidden image using histogram, DFT and SVM.'
+p782
+sg6
+S'conf/compute/DeviSSMRVP09'
+p783
+sg8
+S'Lalit M. Patnaik'
+p784
+sa(dp785
+g2
+S'IEEE Trans. Instrumentation and Measurement'
+p786
+sg4
+S'Power measurement using the wavelet transform.'
+p787
+sg6
+S'journals/tim/YoonD98'
+p788
+sg8
+S'Michael J. Devaney'
+p789
+sa(dp790
+g11
+S'MOCO'
+p791
+sg4
+S'A 3D application to familiarize children with sign language and assess the potential of avatars and motion capture for learning movement.'
+p792
+sg6
+S'conf/moco/BrunTL16'
+p793
+sg8
+VAurélien Laville
+p794
+sa(dp795
+g11
+S'IJCNN'
+p796
+sg4
+S'A neural-network-based controller for a single-link flexible manipulator: Comparison of FFNN and DRNN controllers.'
+p797
+sg6
+S'conf/ijcnn/AmiriMY08'
+p798
+sg8
+S'Mohammad Javad Yazdanpanah'
+p799
+sa(dp800
+g11
+S'ICASSP'
+p801
+sg4
+S'Two-dimensional spectral representation of periodic, cyclostationary, and more general random processes.'
+p802
+sg6
+S'conf/icassp/TherrienC02'
+p803
+sg8
+S'Roberto Cristi'
+p804
+sa(dp805
+g11
+S'ICRA'
+p806
+sg4
+S'Fully distributed scalable smoothing and mapping with robust multi-robot data association.'
+p807
+sg6
+S'conf/icra/CunninghamWBD12'
+p808
+sg8
+S'Frank Dellaert'
+p809
+sa(dp810
+g2
+S'Human Factors'
+p811
+sg4
+S'Cognitive Neurophysiologic Synchronies: What Can They Contribute to the Study of Teamwork?'
+p812
+sg6
+S'journals/hf/StevensGWB12'
+p813
+sg8
+S'Chris Berka'
+p814
+sa(dp815
+g2
+S'Science in China Series F: Information Sciences'
+p816
+sg4
+S'Real-time reliability prediction for dynamic systems with both deteriorating and unreliable components.'
+p817
+sg6
+S'journals/chinaf/XuJZ09'
+p818
+sg8
+S'DongHua Zhou'
+p819
+sa(dp820
+g2
+S'Commun. ACM'
+p821
+sg4
+S'The life and times of the first Web Cam.'
+p822
+sg6
+S'journals/cacm/Stafford-Fraser01'
+p823
+sg8
+S'Quentin Stafford-Fraser'
+p824
+sa(dp825
+g2
+S'Australian Computer Journal'
+p826
+sg4
+S'Experiments with a Britton-Lee Data base machine on CSIRONET.'
+p827
+sg6
+S'journals/acj/MackenzieRS84'
+p828
+sg8
+S'J. L. Smith'
+p829
+sa(dp830
+g11
+S'ICHL'
+p831
+sg4
+S'Repository and Search Based on Distance Learning Standards.'
+p832
+sg6
+S'conf/ichl/YenSC09'
+p833
+sg8
+S'Louis R. Chao'
+p834
+sa(dp835
+g11
+S'ICRA'
+p836
+sg4
+S'Combining Multi-Material Rapid Prototyping and Pseudo-Rigid Body Modeling for a new compliant mechanism.'
+p837
+sg6
+S'conf/icra/BruyasGMR14'
+p838
+sg8
+S'Pierre Renaud'
+p839
+sa(dp840
+g2
+S'Electr. J. Comb.'
+p841
+sg4
+S'A Dice Rolling Game on a Set of Tori.'
+p842
+sg6
+S'journals/combinatorics/KangKP12'
+p843
+sg8
+S'Boram Park'
+p844
+sa(dp845
+g11
+S'ITSC'
+p846
+sg4
+S'Towards a realistic optimization of urban traffic flows.'
+p847
+sg6
+S'conf/itsc/AngiusRCGP12'
+p848
+sg8
+S'Giovanni Pau'
+p849
+sa(dp850
+g11
+S'SOCA'
+p851
+sg4
+S'iSocialMash: Convergence of social networks and services composition on a mashup framework.'
+p852
+sg6
+S'conf/soca/LiuJZH11'
+p853
+sg8
+S'Gang Huang 0001'
+p854
+sa(dp855
+g2
+S'Theor. Comput. Sci.'
+p856
+sg4
+S'Reducing rank of the adjacency matrix by graph modification.'
+p857
+sg6
+S'journals/tcs/MeesumMS16'
+p858
+sg8
+S'Saket Saurabh'
+p859
+sa(dp860
+g2
+S'International Journal of High Speed Computing'
+p861
+sg4
+S'Linear Algebra calculations on a Virtual Shared Memory Computer.'
+p862
+sg6
+S'journals/ijhsc/AmestoyDDM95'
+p863
+sg8
+VPierre Morère
+p864
+sa(dp865
+g2
+S'Softw., Pract. Exper.'
+p866
+sg4
+S'An interactive method for extracting grammar from programs.'
+p867
+sg6
+S'journals/spe/JainAJB04'
+p868
+sg8
+S'Shiladitya Biswas'
+p869
+sa(dp870
+g11
+S'GLOBECOM'
+p871
+sg4
+S'On the Impact of Sources Criticality Correlation in Satellite-Based Tactical Communications.'
+p872
+sg6
+S'conf/globecom/GalluccioLMPR11'
+p873
+sg8
+S'Corrado Rametta'
+p874
+sa(dp875
+g2
+S'IEEE Trans. on Circuits and Systems'
+p876
+sg4
+S'Evolutionary design of 2-dimensional recursive filters via the computer language GENETICA.'
+p877
+sg6
+S'journals/tcas/GonosVMS06'
+p878
+sg8
+S'M. N. Shanmukha Swamy'
+p879
+sa(dp880
+g2
+S'Inf. Syst.'
+p881
+sg4
+S'Optimal B-tree packing.'
+p882
+sg6
+S'journals/is/KleinPT91'
+p883
+sg8
+S'Alan L. Tharp'
+p884
+sa(dp885
+g11
+S'IEEE Congress on Evolutionary Computation'
+p886
+sg4
+S'Improved reconstruction of deep space images via genetic algorithms.'
+p887
+sg6
+S'conf/cec/AldridgeBMP11'
+p888
+sg8
+S'Michael R. Peterson'
+p889
+sa(dp890
+g11
+S'IEEE VAST'
+p891
+sg4
+S'Exploring agent-based simulations using temporal graphs.'
+p892
+sg6
+S'conf/ieeevast/CrouserFC11'
+p893
+sg8
+S'Remco Chang'
+p894
+sa(dp895
+g11
+S'NBiS'
+p896
+sg4
+S'Metabolic Computing.'
+p897
+sg6
+S'conf/nbis/Uehara11'
+p898
+sg8
+S'Minoru Uehara'
+p899
+sa(dp900
+g11
+S'AVI'
+p901
+sg4
+S'Appropriating and assessing heuristics for mobile computing.'
+p902
+sg6
+S'conf/avi/BertiniGK06'
+p903
+sg8
+S'Stephen Kimani'
+p904
+sa(dp905
+g2
+S'Neurocomputing'
+p906
+sg4
+S'Artificial neural networks for feedback control of a human elbow hydraulic prosthesis.'
+p907
+sg6
+S'journals/ijon/BevilacquaDFATV14'
+p908
+sg8
+S'Marcello Valori'
+p909
+sa(dp910
+g2
+S'BMC Systems Biology'
+p911
+sg4
+S'Comparative analysis of module-based versus direct methods for reverse-engineering transcriptional regulatory networks.'
+p912
+sg6
+S'journals/bmcsb/MichoelSJPM09'
+p913
+sg8
+S'Kathleen Marchal'
+p914
+sa(dp915
+g2
+S'CoRR'
+p916
+sg4
+S'Achievable and Crystallized Rate Regions of the Interference Channel with Interference as Noise'
+p917
+sg6
+S'journals/corr/abs-1111-1048'
+p918
+sg8
+S'Arogyaswami Paulraj'
+p919
+sa(dp920
+g11
+S'Panhellenic Conference on Informatics'
+p921
+sg4
+S'Implementing Basic Computational Kernels of Linear Algebra on Multicore.'
+p922
+sg6
+S'conf/pci/MichailidisM12'
+p923
+sg8
+S'Konstantinos G. Margaritis'
+p924
+sa(dp925
+g2
+S'ACM TIST'
+p926
+sg4
+S'Introduction to the Special Section on Urban Computing.'
+p927
+sg6
+S'journals/tist/ZhengCWY14'
+p928
+sg8
+S'Hai Yang'
+p929
+sa(dp930
+g11
+S'ECIS'
+p931
+sg4
+S'Do We Behave Based on Our Implicit Attitudes? Proposing a Research Model and an Experimental Study to Investigate Their Influence on Behavioral Intentions.'
+p932
+sg6
+S'conf/ecis/WeinertML15'
+p933
+sg8
+S'Sven Laumer'
+p934
+sa(dp935
+g11
+S'FIW'
+p936
+sg4
+S'Restructuring the problem of feature interaction: Has the approach been validated? Experience with an advanced telecommunications application for personal mobility.'
+p937
+sg6
+S'conf/fiw/CrossO94'
+p938
+sg8
+S"Fergus O'Brien"
+p939
+sa(dp940
+g2
+S'J. Parallel Distrib. Comput.'
+p941
+sg4
+S'A Vertically Layered Allocation Scheme for Data Flow Systems.'
+p942
+sg6
+S'journals/jpdc/LeeHF91'
+p943
+sg8
+S'Tse-Yun Feng'
+p944
+sa(dp945
+g2
+S'IEEE Trans. Automat. Contr.'
+p946
+sg4
+S'H'
+p947
+sg6
+S'journals/tac/CheahKAL01'
+p948
+sg8
+S'K. Lee'
+p949
+sa(dp950
+g2
+S'IEICE Transactions'
+p951
+sg4
+S'Adaptive Communication System with Renewable Energy Source.'
+p952
+sg6
+S'journals/ieicet/WuSST15'
+p953
+sg8
+S'Tatsuro Takahashi'
+p954
+sa(dp955
+g11
+S'IJCAI'
+p956
+sg4
+S'KBQA: An Online Template Based Question Answering System over Freebase.'
+p957
+sg6
+S'conf/ijcai/CuiXW16'
+p958
+sg8
+S'Wei Wang'
+p959
+sa(dp960
+g11
+S'SAC'
+p961
+sg4
+S'Effective shape-based retrieval and classification of mammograms.'
+p962
+sg6
+S'conf/sac/FelipeRSTT06'
+p963
+sg8
+S'Caetano Traina Jr.'
+p964
+sa(dp965
+g11
+S'ICALP'
+p966
+sg4
+S'Degree Distribution of the FKP Network Model.'
+p967
+sg6
+S'conf/icalp/BergerBBCR03'
+p968
+sg8
+S'Oliver Riordan'
+p969
+sa(dp970
+g11
+S'ASE'
+p971
+sg4
+S'Identification of Potentially Infeasible Program Paths by Monitoring the Search for Test Data.'
+p972
+sg6
+S'conf/kbse/BuenoJ00'
+p973
+sg8
+S'Mario Jino'
+p974
+sa(dp975
+g11
+S'NIPS'
+p976
+sg4
+S'Online Variational Approximations to non-Exponential Family Change Point Models: With Application to Radar Tracking.'
+p977
+sg6
+S'conf/nips/TurnerBS13'
+p978
+sg8
+S'Clay J. Stanek'
+p979
+sa(dp980
+g2
+S'CoRR'
+p981
+sg4
+S'Contraction analysis of switched Filippov systems via regularization.'
+p982
+sg6
+S'journals/corr/FioreHB15'
+p983
+sg8
+S'Mario di Bernardo'
+p984
+sa(dp985
+g2
+S'I. J. Speech Technology'
+p986
+sg4
+S'Tone Modeling for Continuous Mandarin Speech Recognition.'
+p987
+sg6
+S'journals/ijst/CaoZHX04'
+p988
+sg8
+S'Bo Xu'
+p989
+sa(dp990
+g11
+S'ICANN (1)'
+p991
+sg4
+S'Multi-category Bayesian Decision by Neural Networks.'
+p992
+sg6
+S'conf/icann/ItoSI08'
+p993
+sg8
+S'Hiroyuki Izumi'
+p994
+sa(dp995
+g2
+S'Decision Support Systems'
+p996
+sg4
+S'A model-free scheme for meme ranking in social media.'
+p997
+sg6
+S'journals/dss/HeZZ16'
+p998
+sg8
+S'Daniel Zeng'
+p999
+sa(dp1000
+g11
+S'e-Forensics'
+p1001
+sg4
+S'Investigating Encrypted Material.'
+p1002
+sg6
+S'conf/eforensics/McGrathGKC09'
+p1003
+sg8
+S'Joe Carthy'
+p1004
+sa(dp1005
+g11
+S'RECOMB-CG'
+p1006
+sg4
+S'Inferring the Recent Duplication History of a Gene Cluster.'
+p1007
+sg6
+S'conf/recomb/SongZVM09'
+p1008
+sg8
+S'Webb Miller'
+p1009
+sa(dp1010
+g2
+S'CoRR'
+p1011
+sg4
+S'Graph-Based Decoding in the Presence of ISI'
+p1012
+sg6
+S'journals/corr/abs-0707-1241'
+p1013
+sg8
+S'Paul H. Siegel'
+p1014
+sa(dp1015
+g11
+S'IGARSS'
+p1016
+sg4
+S'Building reconstruction from LIDAR data and aerial imagery.'
+p1017
+sg6
+S'conf/igarss/ChenTRLH05'
+p1018
+sg8
+S'Wei-Chen Hsu'
+p1019
+sa(dp1020
+g2
+S'CoRR'
+p1021
+sg4
+S'Hilbert Matrix Based Cryptosystem using a Session Key'
+p1022
+sg6
+S'journals/corr/abs-1110-1502'
+p1023
+sg8
+S'P. S. Avadhani'
+p1024
+sa(dp1025
+g11
+S'3DIMPVT'
+p1026
+sg4
+S'High-Resolution Performance Capture by Zoom-in Pan-Tilt Cameras.'
+p1027
+sg6
+S'conf/3dim/UkitaFH12'
+p1028
+sg8
+S'Norihiro Hagita'
+p1029
+sa(dp1030
+g11
+S'APMS (1)'
+p1031
+sg4
+S'Key Performance Indicators for Integrating Maintenance Management and Manufacturing Planning and Control.'
+p1032
+sg6
+S'conf/ifip5-7/RodsethSS15'
+p1033
+sg8
+VPer Schjølberg
+p1034
+sa(dp1035
+g11
+S'INTERSPEECH'
+p1036
+sg4
+S'Automatic Detection of Depression in Speech Using Gaussian Mixture Modeling with Factor Analysis.'
+p1037
+sg6
+S'conf/interspeech/SturimTQMM11'
+p1038
+sg8
+S'Alan McCree'
+p1039
+sa(dp1040
+g11
+S'NIPS'
+p1041
+sg4
+S'The Relaxed Online Maximum Margin Algorithm.'
+p1042
+sg6
+S'conf/nips/LiL99'
+p1043
+sg8
+S'Philip M. Long'
+p1044
+sa(dp1045
+g11
+S'FSKD'
+p1046
+sg4
+S'Fusion of multispectral and panchromatic satellite images using Principal Component Analysis and Nonsubsampled Contourlet Transform.'
+p1047
+sg6
+S'conf/fskd/ShiTW10'
+p1048
+sg8
+S'Yuanzheng Wang'
+p1049
+sa(dp1050
+g281
+S'Springer'
+p1051
+sg11
+S'POS'
+p1052
+sg284
+S'David M. Koch'
+p1053
+sg6
+S'conf/pos/1989'
+p1054
+sg4
+S'Persistent Object Systems, Proceedings of the Third International Workshop, 10-13 January 1989, Newcastle, New South Wales'
+p1055
+sa(dp1056
+g11
+S'ICC'
+p1057
+sg4
+S'On the multiplexing gain of MIMO microwave backhaul links affected by phase noise.'
+p1058
+sg6
+S'conf/icc/DurisiTK13'
+p1059
+sg8
+S'Tobias Koch'
+p1060
+sa(dp1061
+g11
+S'Encyclopedia of Complexity and Systems Science'
+p1062
+sg4
+S'Intentionality: A Naturalization Proposal on the Basis of Complex Dynamical Systems.'
+p1063
+sg6
+S'reference/complexity/Tschacher09'
+p1064
+sg8
+S'Wolfgang Tschacher'
+p1065
+sa(dp1066
+g11
+S'IEEE Conference on Computational Complexity'
+p1067
+sg4
+S'Proofs, Codes, and Polynomial-Time Reducibilities.'
+p1068
+sg6
+S'conf/coco/KumarS99'
+p1069
+sg8
+S'D. Sivakumar'
+p1070
+sa(dp1071
+g2
+S'IEEE Communications Letters'
+p1072
+sg4
+S'On upper bounds of SIR-based call admission threshold in power-controlled DS-CDMA mobile systems.'
+p1073
+sg6
+S'journals/icl/Kim02'
+p1074
+sg8
+S'Dongwoo Kim'
+p1075
+sa(dp1076
+g2
+S'Kybernetika'
+p1077
+sg4
+S'Geometry of Gaussian nonlinear regression. Parallel curves and confidence intervals.'
+p1078
+sg6
+S'journals/kybernetika/Pazman82'
+p1079
+sg8
+VAndrej Pázman
+p1080
+sa(dp1081
+g11
+S'International Semantic Web Conference (Posters & Demos)'
+p1082
+sg4
+S'Cross-Language Record Linkage using Word Embedding driven Metadata Similarity Measurement.'
+p1083
+sg6
+S'conf/semweb/SongKBM16'
+p1084
+sg8
+S'Akira Maeda'
+p1085
+sa(dp1086
+g2
+S'STTT'
+p1087
+sg4
+S'Control and Data Abstraction: The Cornerstones of Practical Formal Verification.'
+p1088
+sg6
+S'journals/sttt/KestenP00'
+p1089
+sg8
+S'Amir Pnueli'
+p1090
+sa(dp1091
+g11
+S'Symposium on Computational Geometry'
+p1092
+sg4
+S'An Improved Lower Bound on the Minimum Number of Triangulations.'
+p1093
+sg6
+S'conf/compgeom/AichholzerAHPSV16'
+p1094
+sg8
+S'Birgit Vogtenhuber'
+p1095
+sa(dp1096
+g11
+S'CSE (2)'
+p1097
+sg4
+S'A Hierarchical Primitive Lists Structure for Tile-Based Rendering.'
+p1098
+sg6
+S'conf/cse/HsiaoCY09'
+p1099
+sg8
+S'Hui-Chin Yang'
+p1100
+sa(dp1101
+g4
+S'Adaptive Prozess- und Speicherverwaltung in verteilten Systemen.'
+p1102
+sg6
+S'phd/dnb/Hehmann86'
+p1103
+sg8
+S'Dietmar Hehmann'
+p1104
+sa(dp1105
+g2
+S'Neural Computing and Applications'
+p1106
+sg4
+S'Neural adaptive coordination control of multiple trains under bidirectional communication topology.'
+p1107
+sg6
+S'journals/nca/GaoDNRC16'
+p1108
+sg8
+S'Lei Chen'
+p1109
+sa(dp1110
+g2
+S'Int. J. Image Graphics'
+p1111
+sg4
+S'Recent Advances in Video Content Analysis: From Visual Features to Semantic Video Segments.'
+p1112
+sg6
+S'journals/ijig/HanjalicLB01'
+p1113
+sg8
+S'Jan Biemond'
+p1114
+sa(dp1115
+g11
+S'Digital Privacy - PRIME'
+p1116
+sg4
+S'Human-Computer Interaction.'
+p1117
+sg6
+S'series/lncs/Fischer-HubnerPBHPM11'
+p1118
+sg8
+S'Marco Casassa Mont'
+p1119
+sa(dp1120
+g2
+S'IEEE Signal Process. Lett.'
+p1121
+sg4
+S'When is instantaneous frequency the average frequency at each time?'
+p1122
+sg6
+S'journals/spl/NhoL99'
+p1123
+sg8
+S'Patrick J. Loughlin'
+p1124
+sa(dp1125
+g11
+S'CogSci'
+p1126
+sg4
+S'Popout Attention with two foils: linear dependence and dimensional interaction.'
+p1127
+sg6
+S'conf/cogsci/KumarCS13'
+p1128
+sg8
+S'Richard M. Shiffrin'
+p1129
+sa(dp1130
+g2
+S'SIAM Journal of Applied Mathematics'
+p1131
+sg4
+S'Total Bounded Variation Regularization as a Bilaterally Constrained Optimization Problem.'
+p1132
+sg6
+S'journals/siamam/KunischH04'
+p1133
+sg8
+VMichael Hintermüller
+p1134
+sa(dp1135
+g11
+S'KI'
+p1136
+sg4
+S'Towards System Optimum: Finding Optimal Routing Strategies in Time-Dependent Networks for Large-Scale Evacuation Problems.'
+p1137
+sg6
+S'conf/ki/LammelF09'
+p1138
+sg8
+VGunnar Flötteröd
+p1139
+sa(dp1140
+g2
+S'SIAM Journal of Applied Mathematics'
+p1141
+sg4
+S'Low Frequency Expansions for Two-Dimensional Interface Scattering Problems.'
+p1142
+sg6
+S'journals/siamam/MacCamy97'
+p1143
+sg8
+S'R. C. MacCamy'
+p1144
+sa(dp1145
+g2
+S'Computers, Environment and Urban Systems'
+p1146
+sg4
+S'The development of regional collaboration for resource efficiency: A network perspective on industrial symbiosis.'
+p1147
+sg6
+S'journals/urban/ZhuR14'
+p1148
+sg8
+S'Matthias Ruth'
+p1149
+sa(dp1150
+g11
+S'SODA'
+p1151
+sg4
+S'Approximating rooted Steiner networks.'
+p1152
+sg6
+S'conf/soda/CheriyanLNV12'
+p1153
+sg8
+S'Adrian Vetta'
+p1154
+sa(dp1155
+g2
+S'CoRR'
+p1156
+sg4
+S'Sample-targeted clinical trial adaptation.'
+p1157
+sg6
+S'journals/corr/Arandjelovic14c'
+p1158
+sg8
+S'Ognjen Arandjelovic'
+p1159
+sa(dp1160
+g2
+S'Discrete Mathematics'
+p1161
+sg4
+S'Forbidden subgraphs that imply 2-factors.'
+p1162
+sg6
+S'journals/dm/FaudreeFR08'
+p1163
+sg8
+VZdenek Ryjácek
+p1164
+sa(dp1165
+g2
+S'Artif. Intell. Rev.'
+p1166
+sg4
+S'Managing computer files via artificial intelligence approaches.'
+p1167
+sg6
+S'journals/air/JinJM09'
+p1168
+sg8
+S'Geyong Min'
+p1169
+sa(dp1170
+g2
+S'Discrete Optimization'
+p1171
+sg4
+S'Lattice-based algorithms for number partitioning in the hard phase.'
+p1172
+sg6
+S'journals/disopt/KrishnamoorthyWM12'
+p1173
+sg8
+S'Nathan Moyer'
+p1174
+sa(dp1175
+g2
+S'Artif. Intell. Rev.'
+p1176
+sg4
+S'An Intelligent Human-Computer Interface for Provision of On-Line Help.'
+p1177
+sg6
+S'journals/air/Jerrams-Smith00'
+p1178
+sg8
+S'Jennifer Jerrams-Smith'
+p1179
+sa(dp1180
+g11
+S'CP'
+p1181
+sg4
+S'Online Constraint Solving and Rectangle Packing.'
+p1182
+sg6
+S'conf/cp/Vidotto04'
+p1183
+sg8
+S'Alfio Vidotto'
+p1184
+sa(dp1185
+g2
+S'Applied Mathematics and Computation'
+p1186
+sg4
+S'Automatic intervalwise block partitioning using Adams type method and backward differentiation formula for solving ODEs.'
+p1187
+sg6
+S'journals/amc/OthmanISM07'
+p1188
+sg8
+S'Zanariah Abdul Majid'
+p1189
+sa(dp1190
+g11
+S'EACL'
+p1191
+sg4
+S'How to Parse Gaps in Spoken Utterances.'
+p1192
+sg6
+S'conf/eacl/GorzB83'
+p1193
+sg8
+S'Clemens Beckstein'
+p1194
+sa(dp1195
+g11
+S'ICVS'
+p1196
+sg4
+S'Performance Evaluation Metrics and Statistics for Positional Tracker Evaluation.'
+p1197
+sg6
+S'conf/icvs/NeedhamB03'
+p1198
+sg8
+S'Roger D. Boyle'
+p1199
+sa(dp1200
+g2
+S'Computers & Geosciences'
+p1201
+sg4
+S'Method for rapid high-frequency seismogram calculation.'
+p1202
+sg6
+S'journals/gandc/StabileMZ09'
+p1203
+sg8
+S'Aldo Zollo'
+p1204
+sa(dp1205
+g11
+S'HiPC'
+p1206
+sg4
+S'Probabilistic routing in wavelength-routed multistage, hypercube, and Debruijn networks.'
+p1207
+sg6
+S'conf/hipc/VenkatesanMM97'
+p1208
+sg8
+S'Chebiyyam Siva Ram Murthy'
+p1209
+sa(dp1210
+g2
+S'ACM Trans. Comput.-Hum. Interact.'
+p1211
+sg4
+S'MASSIVE: A Collaborative Virtual Environment for Teleconferencing.'
+p1212
+sg6
+S'journals/tochi/GreenhalghB95'
+p1213
+sg8
+S'Steve Benford'
+p1214
+sa(dp1215
+g2
+S'IEEE Trans. Education'
+p1216
+sg4
+S'Are Computing Students Different? An Analysis of Coping Strategies and Emotional Intelligence.'
+p1217
+sg6
+S'journals/te/BelangerLKSH07'
+p1218
+sg8
+S'K. Vernard Harrington'
+p1219
+sa(dp1220
+g11
+S'FCS'
+p1221
+sg4
+S"An Application of Pansystems Methodology to Path's Searching Problem Solving."
+p1222
+sg6
+S'conf/fcs/zhouYM08'
+p1223
+sg8
+S'Shahriar Movafaghi'
+p1224
+sa(dp1225
+g2
+S'Software - Concepts and Tools'
+p1226
+sg4
+S'The StarLite Algorithm Animator.'
+p1227
+sg6
+S'journals/stp/CookM95'
+p1228
+sg8
+S'Richard G. McDaniel'
+p1229
+sa(dp1230
+g11
+S'JMLC'
+p1231
+sg4
+S'Project C2 - A Survey of an Industrial Embedded Application with Native Oberon for PC.'
+p1232
+sg6
+S'conf/jmlc/SedlacekG00'
+p1233
+sg8
+VJürg Gutknecht
+p1234
+sa(dp1235
+g11
+S'VLSI-DAT'
+p1236
+sg4
+S'MIMO fingerprinting-based particle filter for mobile positioning systems.'
+p1237
+sg6
+S'conf/vlsi-dat/ChuangLWH13'
+p1238
+sg8
+S'Yuan-Hao Huang'
+p1239
+sa(dp1240
+g11
+S'ER'
+p1241
+sg4
+S'TBE: Trigger-By-Example.'
+p1242
+sg6
+S'conf/er/LeeMC00'
+p1243
+sg8
+S'Wesley W. Chu'
+p1244
+sa(dp1245
+g11
+S'CCE'
+p1246
+sg4
+S'Passivity based control of a turbocharger-diesel engine system with exhaust gas recirculation.'
+p1247
+sg6
+S'conf/iceee/Mendoza-SotoA13'
+p1248
+sg8
+S'Luis Alvarez-Icaza'
+p1249
+sa(dp1250
+g11
+S'ISADS'
+p1251
+sg4
+S'The simulation research for the ATO model based on fuzzy predictive control.'
+p1252
+sg6
+S'conf/isads/ZhuFHX05'
+p1253
+sg8
+S'Jian Xiao'
+p1254
+sa(dp1255
+g2
+S'Computers & Industrial Engineering'
+p1256
+sg4
+S'Foreword.'
+p1257
+sg6
+S'journals/candie/DessoukyP06'
+p1258
+sg8
+S'Minnie H. Patel'
+p1259
+sa(dp1260
+g11
+S'GMP'
+p1261
+sg4
+S'Convergent Discrete Laplace-Beltrami Operators over Triangular Surfaces.'
+p1262
+sg6
+S'conf/gmp/Xu04'
+p1263
+sg8
+S'Guoliang Xu'
+p1264
+sa(dp1265
+g2
+S'IEEE Computer'
+p1266
+sg4
+S'Codesign from Cospecification.'
+p1267
+sg6
+S'journals/computer/WooDW94'
+p1268
+sg8
+S'Wayne H. Wolf'
+p1269
+sa(dp1270
+g2
+S'J. ACM'
+p1271
+sg4
+S'Optimality of the Fast Fourier transform.'
+p1272
+sg6
+S'journals/jacm/Papadimitriou79a'
+p1273
+sg8
+S'Christos H. Papadimitriou'
+p1274
+sa(dp1275
+g11
+S'LAK'
+p1276
+sg4
+S'A process mining approach to linking the study of aptitude and event facets of self-regulated learning.'
+p1277
+sg6
+S'conf/lak/BeheshithaGH15'
+p1278
+sg8
+S'Marek Hatala'
+p1279
+sa(dp1280
+g2
+S'IEEE Trans. Robotics'
+p1281
+sg4
+S'Landing a VTOL Unmanned Aerial Vehicle on a Moving Platform Using Optical Flow.'
+p1282
+sg6
+S'journals/trob/HerisseHMR12'
+p1283
+sg8
+VFrançois-Xavier Russotto
+p1284
+sa(dp1285
+g2
+S'Human Factors'
+p1286
+sg4
+S'Text Legibility and the Letter Superiority Effect.'
+p1287
+sg6
+S'journals/hf/SheedySZH05'
+p1288
+sg8
+S'John R. Hayes'
+p1289
+sa(dp1290
+g11
+S'NOMS'
+p1291
+sg4
+S'Automatic discovery of sub-optimal radio performance in LTE RAN networks.'
+p1292
+sg6
+S'conf/noms/BosneagHO16'
+p1293
+sg8
+S"James O'Sullivan"
+p1294
+sa(dp1295
+g11
+S'SIU'
+p1296
+sg4
+S'Density estimation in crowd videos.'
+p1297
+sg6
+S'conf/siu/GunduzTT14'
+p1298
+sg8
+S'Alptekin Temizel'
+p1299
+sa(dp1300
+g2
+S'Int. J. Comput. Math.'
+p1301
+sg4
+S'Generalized Gaussian quadrature rules over regions with parabolic edges.'
+p1302
+sg6
+S'journals/ijcm/NagarajaS12'
+p1303
+sg8
+S'Jayan Sarada'
+p1304
+sa(dp1305
+g11
+S'ICASSP'
+p1306
+sg4
+S'Cooperative off-policy prediction of Markov decision processes in adaptive networks.'
+p1307
+sg6
+S'conf/icassp/MacuaCZS13'
+p1308
+sg8
+S'Ali H. Sayed'
+p1309
+sa(dp1310
+g11
+S'SEKE'
+p1311
+sg4
+S'Verification of Design Patterns with Object-Oriented Quality Models.'
+p1312
+sg6
+S'conf/seke/HsuehCK05'
+p1313
+sg8
+S'Jong-Yih Kuo'
+p1314
+sa(dp1315
+g2
+S'J. Electrical and Computer Engineering'
+p1316
+sg4
+S'Blood Glucose Prediction Using Artificial Neural Networks Trained with the AIDA Diabetes Simulator: A Proof-of-Concept Pilot Study.'
+p1317
+sg6
+S'journals/jece/RobertsonLSH11'
+p1318
+sg8
+S'David J. Hamilton'
+p1319
+sa(dp1320
+g2
+S'J. Sel. Topics Signal Processing'
+p1321
+sg4
+S'Social Collaborative Retrieval.'
+p1322
+sg6
+S'journals/jstsp/HsiaoKH14'
+p1323
+sg8
+S'Alfred O. Hero III'
+p1324
+sa(dp1325
+g11
+S'GLOBECOM Workshops'
+p1326
+sg4
+S'An inter-store transaction mechanism to distribute mobile applications.'
+p1327
+sg6
+S'conf/globecom/ChuangCH12'
+p1328
+sg8
+S'Yuh-Jer Hung'
+p1329
+sa(dp1330
+g2
+S'Commun. ACM'
+p1331
+sg4
+S'Where is the librarian in the digital library?'
+p1332
+sg6
+S'journals/cacm/Borgman01'
+p1333
+sg8
+S'Christine L. Borgman'
+p1334
+sa(dp1335
+g11
+S'PARA'
+p1336
+sg4
+S'Recursive Formulation of Cholesky Algorithm in Fortran 90.'
+p1337
+sg6
+S'conf/para/WasniewskiAG98'
+p1338
+sg8
+S'Fred G. Gustavson'
+p1339
+sa(dp1340
+g11
+S'WPNC'
+p1341
+sg4
+S'Time of Arrival Prediction for WLAN Systems Using Prony Algorithm.'
+p1342
+sg6
+S'conf/wpnc/IbraheemS07'
+p1343
+sg8
+S'Joerg Schoebel'
+p1344
+sa(dp1345
+g11
+S'ISIT'
+p1346
+sg4
+S'On multiple access channels with asymmetric feedback.'
+p1347
+sg6
+S'conf/isit/AggarwalS08'
+p1348
+sg8
+S'Ashutosh Sabharwal'
+p1349
+sa(dp1350
+g11
+S'IMF'
+p1351
+sg4
+S'Self-Forensics Through Case Studies of Small-to-Medium Software Systems.'
+p1352
+sg6
+S'conf/imf/MokhovV09'
+p1353
+sg8
+S'Emil Vassev'
+p1354
+sa(dp1355
+g11
+S'URAI'
+p1356
+sg4
+S'Implementation of 3D simulator for golf putting green.'
+p1357
+sg6
+S'conf/urai/BaasandorjKGH13'
+p1358
+sg8
+S'Woonchul Ham'
+p1359
+sa(dp1360
+g2
+S'J. Computational Applied Mathematics'
+p1361
+sg4
+S'An eigenvalue search method using the Orr-Sommerfeld equation for shear flow.'
+p1362
+sg6
+S'journals/jcam/WalkerTM12'
+p1363
+sg8
+S'Morris H. Morgan III'
+p1364
+sa(dp1365
+g11
+S'CANS'
+p1366
+sg4
+S'Server-Aided Revocable Identity-Based Encryption from Lattices.'
+p1367
+sg6
+S'conf/cans/NguyenWZ16'
+p1368
+sg8
+S'Juanyang Zhang'
+p1369
+sa(dp1370
+g11
+S'SEKE'
+p1371
+sg4
+S'System Dynamics as an Enabling Technology for Learning in Software Organizations.'
+p1372
+sg6
+S'conf/seke/PfahlR01'
+p1373
+sg8
+VGünther Ruhe
+p1374
+sa(dp1375
+g2
+S'Comput. J.'
+p1376
+sg4
+S'A Computational Algorithm for Sequential Estimation.'
+p1377
+sg6
+S'journals/cj/HansonD71'
+p1378
+sg8
+S'P. Dyer'
+p1379
+sa(dp1380
+g11
+S'MICCAI (3)'
+p1381
+sg4
+S'Regularized Tensor Factorization for Multi-Modality Medical Image Classification.'
+p1382
+sg6
+S'conf/miccai/BatmanghelichDTD11'
+p1383
+sg8
+S'Christos Davatzikos'
+p1384
+sa(dp1385
+g2
+S'Int. J. Imaging Systems and Technology'
+p1386
+sg4
+S'The imaginary component of the reconstructed image in fan beam tomography.'
+p1387
+sg6
+S'journals/imst/Weinstein99'
+p1388
+sg8
+S'Franklin S. Weinstein'
+p1389
+sa(dp1390
+g11
+S'Humanoids'
+p1391
+sg4
+S'Torso rotation for push recovery using a simple change of variables.'
+p1392
+sg6
+S'conf/humanoids/WhitmanSA12'
+p1393
+sg8
+S'Christopher G. Atkeson'
+p1394
+sa(dp1395
+g2
+S'CoRR'
+p1396
+sg4
+S'Proportional Fair Resource Allocation on an Energy Harvesting Downlink - Part I: Structure'
+p1397
+sg6
+S'journals/corr/abs-1205-5147'
+p1398
+sg8
+S'Kemal Leblebicioglu'
+p1399
+sa(dp1400
+g2
+S'Pattern Recognition'
+p1401
+sg4
+S'Fast recursive algorithms for two-dimensional thresholding.'
+p1402
+sg6
+S'journals/pr/GongLC98'
+p1403
+sg8
+S'Weinan Chen'
+p1404
+sa(dp1405
+g2
+S'IEEE Trans. Circuits Syst. Video Techn.'
+p1406
+sg4
+S'On using game theory to optimize the rate control in video coding.'
+p1407
+sg6
+S'journals/tcsv/AhmadL06'
+p1408
+sg8
+S'Jiancong Luo'
+p1409
+sa(dp1410
+g2
+S'Network Security'
+p1411
+sg4
+S'Actively boosting network security with passive DNS.'
+p1412
+sg6
+S'journals/ns/Liu16'
+p1413
+sg8
+S'Cricket Liu'
+p1414
+sa(dp1415
+g11
+S'GWAI'
+p1416
+sg4
+VEinführungsseminar: Maschinelles Lernen.
+p1417
+sg6
+S'conf/ki/MellisB89'
+p1418
+sg8
+S'Toni Bollinger'
+p1419
+sa(dp1420
+g11
+S'KDD'
+p1421
+sg4
+S'Exploitation and exploration in a performance based contextual advertising system.'
+p1422
+sg6
+S'conf/kdd/LiWZCMJ10'
+p1423
+sg8
+S'Rong Jin'
+p1424
+sa(dp1425
+g11
+S'ICCSA (3)'
+p1426
+sg4
+S'An Efficient Mapping Table Management in NAND Flash-Based Mobile Computers.'
+p1427
+sg6
+S'conf/iccsa/YangR11'
+p1428
+sg8
+S'Yeonseung Ryu'
+p1429
+sa(dp1430
+g11
+S'Petri Nets'
+p1431
+sg4
+S'Monotonicity in Service Orchestrations.'
+p1432
+sg6
+S'conf/apn/BouillardRBH09'
+p1433
+sg8
+S'Stefan Haar'
+p1434
+sa(dp1435
+g2
+S'IEICE Transactions'
+p1436
+sg4
+S'A New Approach of Parsing and Search Based on the Divide and Conquer Strategy for Continuous Speech Recognition.'
+p1437
+sg6
+S'journals/ieicet/WangI95'
+p1438
+sg8
+S'Satoshi Imai'
+p1439
+sa(dp1440
+g11
+S'CVPR'
+p1441
+sg4
+S'3-D model-data correspondence and nonrigid deformation.'
+p1442
+sg6
+S'conf/cvpr/GuptaL93'
+p1443
+sg8
+S'Cheng-Chung Liang'
+p1444
+sa(dp1445
+g11
+S'IPCO'
+p1446
+sg4
+S'On Approximating Complex Quadratic Optimization Problems via Semidefinite Programming Relaxations.'
+p1447
+sg6
+S'conf/ipco/SoZY05'
+p1448
+sg8
+S'Yinyu Ye'
+p1449
+sa(dp1450
+g11
+S'ICC'
+p1451
+sg4
+S'Joint power and rate adaptation aided network-coded PSK for two-way relaying over fading channels.'
+p1452
+sg6
+S'conf/icc/YangCLKH15'
+p1453
+sg8
+S'Lajos Hanzo'
+p1454
+sa(dp1455
+g11
+S'ICASSP'
+p1456
+sg4
+S'A sparse component model of source signals and its application to blind source separation.'
+p1457
+sg6
+S'conf/icassp/KitanoKIOS10'
+p1458
+sg8
+S'Shigeki Sagayama'
+p1459
+sa(dp1460
+g11
+S'DEXA'
+p1461
+sg4
+S'Temporal Aspects of a Knowledge Based System for the Management of Hospital Patients.'
+p1462
+sg6
+S'conf/dexa/SoperAR90'
+p1463
+sg8
+S'Charles Ranaboldo'
+p1464
+sa(dp1465
+g11
+S'e-Learning'
+p1466
+sg4
+S'Interactive Autonomus E-Learning Task Focused Web Services In Sciences.'
+p1467
+sg6
+S'conf/iadis/StavT08'
+p1468
+sg8
+S'Trond M. Thorseth'
+p1469
+sa(dp1470
+g11
+S'NICSO'
+p1471
+sg4
+S'ESCA: A New Evolutionary-Swarm Cooperative Algorithm.'
+p1472
+sg6
+S'series/sci/LungD07'
+p1473
+sg8
+S'D. Dumitrescu'
+p1474
+sa(dp1475
+g2
+S'Industrial Management and Data Systems'
+p1476
+sg4
+S'Business process flexibility: a driver for outsourcing.'
+p1477
+sg6
+S'journals/imds/Sommer03'
+p1478
+sg8
+S'Rainer A. Sommer'
+p1479
+sa(dp1480
+g2
+S'Computers in Human Behavior'
+p1481
+sg4
+S'Designing a personal music assistant that enhances the social, cognitive, and affective experiences of people with dementia.'
+p1482
+sg6
+S'journals/chb/PeetersHN16'
+p1483
+sg8
+S'Mark A. Neerincx'
+p1484
+sa(dp1485
+g11
+S'CIKM'
+p1486
+sg4
+S'Valid scope computation for location-dependent spatial query in mobile broadcast environments.'
+p1487
+sg6
+S'conf/cikm/LeeSZL08'
+p1488
+sg8
+S'Wang-Chien Lee'
+p1489
+sa(dp1490
+g11
+S'PLILP'
+p1491
+sg4
+S'A New Strategy for Semantic Matching'
+p1492
+sg6
+S'conf/plilp/ButowGOT95'
+p1493
+sg8
+S'Stephan Thesing'
+p1494
+sa(dp1495
+g2
+S'I. J. Medical Informatics'
+p1496
+sg4
+S'Improving the informational continuity of care in diabetes mellitus treatment with a nationwide Shared EHR system: Estimates from Austrian claims data.'
+p1497
+sg6
+S'journals/ijmi/RinnerSEHTKD16'
+p1498
+sg8
+S'Georg Duftschmid'
+p1499
+sa(dp1500
+g11
+S'WASA'
+p1501
+sg4
+S'A Balance Storage Nodes Assignment for Wireless Sensor Networks.'
+p1502
+sg6
+S'conf/wasa/LiXCL13'
+p1503
+sg8
+S'Qing Li'
+p1504
+sa(dp1505
+g11
+S'SIGIR'
+p1506
+sg4
+S'Privacy-Preserving IR 2015: When Information Retrieval Meets Privacy and Security.'
+p1507
+sg6
+S'conf/sigir/YangS15'
+p1508
+sg8
+S'Ian Soboroff'
+p1509
+sa(dp1510
+g2
+S'VLSI Design'
+p1511
+sg4
+S'Low-power Implementation of an Encryption/Decryption System with Asynchronous Techniques.'
+p1512
+sg6
+S'journals/vlsi/SklavosPTK02'
+p1513
+sg8
+S'Odysseas G. Koufopavlou'
+p1514
+sa(dp1515
+g11
+S'KES'
+p1516
+sg4
+S'Determination of Packet Priority by Genetic Algorithm in the Packet Switching Networks.'
+p1517
+sg6
+S'conf/kes/TuncerK04'
+p1518
+sg8
+S'Ali Karci'
+p1519
+sa(dp1520
+g11
+S'IPCCC'
+p1521
+sg4
+S'Location matters: Eliciting responses to direct probes.'
+p1522
+sg6
+S'conf/ipccc/BlantonTSF13'
+p1523
+sg8
+S'Sonia Fahmy'
+p1524
+sa(dp1525
+g2
+S'IACR Cryptology ePrint Archive'
+p1526
+sg4
+S'Non-Cyclic Subgroups of Jacobians of Genus Two Curves with Complex Multiplication.'
+p1527
+sg6
+S'journals/iacr/Ravnshoj08'
+p1528
+sg8
+VChristian Robenhagen Ravnshøj
+p1529
+sa(dp1530
+g2
+S'SIAM J. Comput.'
+p1531
+sg4
+S'Precise Analyses of the Right- and Left-Shift Greatest Common Divisor Algorithms for GF(q)[x].'
+p1532
+sg6
+S'journals/siamcomp/Norton89'
+p1533
+sg8
+S'Graham H. Norton'
+p1534
+sa(dp1535
+g11
+S'World Haptics'
+p1536
+sg4
+S'Friction rendering of parametric surfaces.'
+p1537
+sg6
+S'conf/haptics/UlusoyP11'
+p1538
+sg8
+S'Volkan Patoglu'
+p1539
+sa(dp1540
+g11
+S'IV'
+p1541
+sg4
+S'Architectural Illustration: The Advancement of Light, Shade, and Shadows Knowledge with 3D Digital Technology.'
+p1542
+sg6
+S'conf/iv/Cory00'
+p1543
+sg8
+S'Clark A. Cory'
+p1544
+sa(dp1545
+g2
+S'CoRR'
+p1546
+sg4
+S'Reinforcement Control with Hierarchical Backpropagated Adaptive Critics.'
+p1547
+sg6
+S'journals/corr/Jameson15'
+p1548
+sg8
+S'John W. Jameson'
+p1549
+sa(dp1550
+g2
+S'Journal of Circuits, Systems, and Computers'
+p1551
+sg4
+S'Improving Pelifo Cache Replacement Policy: Hardware Reduction and Thread-Aware Extension.'
+p1552
+sg6
+S'journals/jcsc/SedanoSCCGT14'
+p1553
+sg8
+S'Francisco Tirado'
+p1554
+sa(dp1555
+g11
+S'SERVICES'
+p1556
+sg4
+S'Service Discovery Using a Semantic Algorithm in a SOA Modernization Process from Legacy Web Applications.'
+p1557
+sg6
+S'conf/services/SanchezCSCRS14'
+p1558
+sg8
+VFernando Sánchez-Figueroa
+p1559
+sa(dp1560
+g11
+S'FedCSIS'
+p1561
+sg4
+S'Automated annotation system for natural images.'
+p1562
+sg6
+S'conf/fedcsis/Stanescu11'
+p1563
+sg8
+S'Liana Stanescu'
+p1564
+sa(dp1565
+g11
+S'Control of Distributed Parameter and Stochastic Systems'
+p1566
+sg4
+S'Some Approaches to Ergodic and Adaptive Control of Stochastic Semilinear Systems.'
+p1567
+sg6
+S'conf/ifip7-2/Duncan98'
+p1568
+sg8
+S'Tyrone E. Duncan'
+p1569
+sa(dp1570
+g2
+S'Intelligent Automation & Soft Computing'
+p1571
+sg4
+S'An in-network data cleaning approach for wireless sensor networks.'
+p1572
+sg6
+S'journals/iasc/LeiBXHB16'
+p1573
+sg8
+S'Hae-Young Bae'
+p1574
+sa(dp1575
+g11
+S'M-MPAC@Middleware'
+p1576
+sg4
+S'Scalable and interoperable service discovery for future internet.'
+p1577
+sg6
+S'conf/middleware/RodriguesRBN11'
+p1578
+sg8
+VDaniel Négru
+p1579
+sa(dp1580
+g281
+S'Springer'
+p1581
+sg4
+S'Smalltalk and object orientation - an introduction.'
+p1582
+sg6
+S'books/daglib/0090130'
+p1583
+sg8
+S'John Hunt'
+p1584
+sa(dp1585
+g2
+S'NeuroImage'
+p1586
+sg4
+S'Histologic validation of locus coeruleus MRI contrast in post-mortem tissue.'
+p1587
+sg6
+S'journals/neuroimage/KerenTVMGAE15'
+p1588
+sg8
+S'Mark A. Eckert'
+p1589
+sa(dp1590
+g2
+S'Applied Mathematics and Computation'
+p1591
+sg4
+S'A multi-innovation generalized extended stochastic gradient algorithm for output nonlinear autoregressive moving average systems.'
+p1592
+sg6
+S'journals/amc/HuLZ14'
+p1593
+sg8
+S'Qin Zhou'
+p1594
+sa(dp1595
+g11
+S'International Conference on Computational Science (2)'
+p1596
+sg4
+S'Extending Neural Networks for B-Spline Surface Reconstruction.'
+p1597
+sg6
+S'conf/iccS/EchevarriaIG02'
+p1598
+sg8
+VAkemi Gálvez
+p1599
+sa(dp1600
+g2
+S'Neural Networks'
+p1601
+sg4
+S'A robust method for distinguishing between learned and spurious attractors.'
+p1602
+sg6
+S'journals/nn/RobinsM04'
+p1603
+sg8
+S'Simon McCallum'
+p1604
+sa(dp1605
+g2
+S'J. Symb. Log.'
+p1606
+sg4
+VQuelques Modestes Remarques A Propos D'Une Conséquence Inattendue D'Un Résultat Surprenant de Monsieur Frank Olaf Wagner.
+p1607
+sg6
+S'journals/jsyml/Poizat01'
+p1608
+sg8
+S'Bruno Poizat'
+p1609
+sa(dp1610
+g2
+S'IEEE Trans. Mob. Comput.'
+p1611
+sg4
+S'A Scalable Bandwidth-Efficient Hybrid Adaptive Service Discovery Protocol for Vehicular Networks with Infrastructure Support.'
+p1612
+sg6
+S'journals/tmc/AbrouguiBPA14'
+p1613
+sg8
+S'Mohammed Almulla'
+p1614
+sa(dp1615
+g11
+S'Winter Simulation Conference'
+p1616
+sg4
+S'A heuristic to support make-to-stock, assemble-to-order, and make-to-order decisions in semiconductor supply chains.'
+p1617
+sg6
+S'conf/wsc/ForstnerM13'
+p1618
+sg8
+VLars Mönch
+p1619
+sa(dp1620
+g11
+S'ICSE'
+p1621
+sg4
+S'A Systematic Approach to Domain-Oriented Software Development.'
+p1622
+sg6
+S'conf/icse/ShimizuFH98'
+p1623
+sg8
+S'Masayuki Hirayama'
+p1624
+sa(dp1625
+g11
+S'Soft Computing for Intelligent Control and Mobile Robotics'
+p1626
+sg4
+S'Neuro-Fuzzy Based Output Feedback Controller Design for Biped Robot Walking.'
+p1627
+sg6
+S'series/sci/Cardenas-MacielCA11'
+p1628
+sg8
+S'Luis T. Aguilar'
+p1629
+sa(dp1630
+g2
+S'Decision Support Systems'
+p1631
+sg4
+S'Extracting and reasoning about implicit behavioral evidences for detecting fraudulent online transactions in e-Commerce.'
+p1632
+sg6
+S'journals/dss/ZhaoLZZCT16'
+p1633
+sg8
+S'Deyu Tang'
+p1634
+sa(dp1635
+g2
+S'Discrete Mathematics'
+p1636
+sg4
+S'Structures and lower bounds for binary covering arrays.'
+p1637
+sg6
+S'journals/dm/ChoiKO12'
+p1638
+sg8
+S'Dong Yeol Oh'
+p1639
+sa(dp1640
+g11
+S'IWINAC (1)'
+p1641
+sg4
+S'Towards an Evolutionary Design of Modular Robots for Industry.'
+p1642
+sg6
+S'conf/iwinac/FainaBSD11'
+p1643
+sg8
+S'Richard J. Duro'
+p1644
+sa(dp1645
+g2
+S'Finite Fields and Their Applications'
+p1646
+sg4
+S'Exponential sums for nonlinear recurring sequences.'
+p1647
+sg6
+S'journals/ffa/NiederreiterW08'
+p1648
+sg8
+S'Arne Winterhof'
+p1649
+sa(dp1650
+g11
+S'SECON'
+p1651
+sg4
+S'MAC-Layer Capture: A Problem in Wireless Mesh Networks using Beamforming Antennas.'
+p1652
+sg6
+S'conf/secon/ChoudhuryV07'
+p1653
+sg8
+S'Nitin H. Vaidya'
+p1654
+sa(dp1655
+g11
+S'ISNN (2)'
+p1656
+sg4
+S'Soft Sensor Using PNN Model and Rule Base for Wastewater Treatment Plant.'
+p1657
+sg6
+S'conf/isnn/KimBPKMKK06'
+p1658
+sg8
+S'Changwon Kim'
+p1659
+sa(dp1660
+g11
+S'Human Vision and Electronic Imaging'
+p1661
+sg4
+S'Reference-free objective quality metrics for MPEG-coded video.'
+p1662
+sg6
+S'conf/hvei/ChengL05'
+p1663
+sg8
+S'Jeffrey Lubin'
+p1664
+sa(dp1665
+g11
+S'DATESO'
+p1666
+sg4
+S'INTLIB - an INTelligent LIBrary.'
+p1667
+sg6
+S'conf/dateso/HolubovaKKNH14'
+p1668
+sg8
+VBarbora Vidová Hladká
+p1669
+sa(dp1670
+g2
+S'Numerical Algorithms'
+p1671
+sg4
+S'A HAM-based analytic approach for physical models with an infinite number of singularities.'
+p1672
+sg6
+S'journals/na/XuCLA15'
+p1673
+sg8
+S'Ahmed Alsaedi'
+p1674
+sa(dp1675
+g2
+S'CoRR'
+p1676
+sg4
+S'A Nonparametric Bayesian Approach Toward Stacked Convolutional Independent Component Analysis.'
+p1677
+sg6
+S'journals/corr/Chatzis14a'
+p1678
+sg8
+S'S. Chatzis'
+p1679
+sa(dp1680
+g2
+S'JNW'
+p1681
+sg4
+S'Video Watermarking Robust Against Spatio-Temporal Attacks.'
+p1682
+sg6
+S'journals/jnw/BiZL11'
+p1683
+sg8
+S'Xueming Li'
+p1684
+sa(dp1685
+g11
+S'FPL'
+p1686
+sg4
+S'fGREP - Fast Generic Routing Demand Estimation for Placed FPGA Circuits.'
+p1687
+sg6
+S'conf/fpl/KannanBB01'
+p1688
+sg8
+S'Dinesh Bhatia'
+p1689
+sa(dp1690
+g2
+S'Neural Computation'
+p1691
+sg4
+S'Dynamic State and Parameter Estimation Applied to Neuromorphic Systems.'
+p1692
+sg6
+S'journals/neco/NeftciTIA12'
+p1693
+sg8
+S'Henry D. I. Abarbanel'
+p1694
+sa(dp1695
+g2
+S'Computer Methods and Programs in Biomedicine'
+p1696
+sg4
+S'A Bayesian multilevel model for fMRI data analysis.'
+p1697
+sg6
+S'journals/cmpb/Silva11'
+p1698
+sg8
+S'Adelino R. Ferreira da Silva'
+p1699
+sa(dp1700
+g11
+S'ICWI'
+p1701
+sg4
+S'Wireless Applications for SMES: A Case Study.'
+p1702
+sg6
+S'conf/iadis/YuenC02'
+p1703
+sg8
+S'Walter W. C. Chung'
+p1704
+sa(dp1705
+g11
+S'CHI Extended Abstracts'
+p1706
+sg4
+S'Interactive querying of time series data.'
+p1707
+sg6
+S'conf/chi/Hochheiser02'
+p1708
+sg8
+S'Harry Hochheiser'
+p1709
+sa(dp1710
+g281
+S'Springer'
+p1711
+sg11
+S'ICISP'
+p1712
+sg284
+S'Abderrahim Elmoataz'
+p1713
+sg6
+S'conf/icisp/2016'
+p1714
+sg4
+VImage and Signal Processing - 7th International Conference, ICISP 2016, Trois-Rivières, QC, Canada, May 30 - June 1, 2016, Proceedings
+p1715
+sa(dp1716
+g2
+S'J. Visualization'
+p1717
+sg4
+S'Surface topography of jet shock cells in a hydraulic analogy.'
+p1718
+sg6
+S'journals/jvis/NgKSHF10'
+p1719
+sg8
+S'Andreas Fouras'
+p1720
+sa(dp1721
+g2
+S'New Media & Society'
+p1722
+sg4
+S'Being strategic and taking control: Bedrooms, social network sites and the narratives of growing up.'
+p1723
+sg6
+S'journals/nms/LincolnR16'
+p1724
+sg8
+S'Brady Robards'
+p1725
+sa(dp1726
+g2
+S'ACM Trans. Graph.'
+p1727
+sg4
+S'Cardinality-constrained texture filtering.'
+p1728
+sg6
+S'journals/tog/MansonS13'
+p1729
+sg8
+S'Scott Schaefer'
+p1730
+sa(dp1731
+g2
+S'CoRR'
+p1732
+sg4
+S'Convex Computation of the Reachable Set for Hybrid Systems with Parametric Uncertainty.'
+p1733
+sg6
+S'journals/corr/MohanSV16'
+p1734
+sg8
+S'Ram Vasudevan'
+p1735
+sa(dp1736
+g2
+S'Int. J. Hum. Comput. Interaction'
+p1737
+sg4
+S'Two Types of Attitudes in ICT Acceptance and Use.'
+p1738
+sg6
+S'journals/ijhci/0002AS08'
+p1739
+sg8
+S'Heshan Sun'
+p1740
+sa(dp1741
+g11
+S'BIOSIG'
+p1742
+sg4
+S'Protected Honey Face Templates.'
+p1743
+sg6
+S'conf/biosig/MartiriYB15'
+p1744
+sg8
+S'Christoph Busch'
+p1745
+sa(dp1746
+g2
+S'Electr. J. Comb.'
+p1747
+sg4
+S'Binary Gray Codes with Long Bit Runs.'
+p1748
+sg6
+S'journals/combinatorics/GoddynG03'
+p1749
+sg8
+S'Pavol Gvozdjak'
+p1750
+sa(dp1751
+g2
+S'Games and Economic Behavior'
+p1752
+sg4
+S'Behavioral conformity in games with many players.'
+p1753
+sg6
+S'journals/geb/WoodersCS06'
+p1754
+sg8
+S'Reinhard Selten'
+p1755
+sa(dp1756
+g2
+S'The Journal of Supercomputing'
+p1757
+sg4
+S'A Framework for Efficient Data Redistribution on Distributed Memory Multicomputers.'
+p1758
+sg6
+S'journals/tjs/GuoN01'
+p1759
+sg8
+S'Ikuo Nakata'
+p1760
+sa(dp1761
+g11
+S'Encyclopedia of Biometrics'
+p1762
+sg6
+S'reference/bio/X09ls'
+p1763
+sg4
+S'Fingerprint Skeletonization.'
+p1764
+sa(dp1765
+g2
+S'Technometrics'
+p1766
+sg4
+S'Development of Robust Multivariate Calibration Models.'
+p1767
+sg6
+S'journals/technometrics/ThomasG00'
+p1768
+sg8
+S'Nanxiang Ge'
+p1769
+sa(dp1770
+g11
+S'FG'
+p1771
+sg4
+S'Regularized active shape model for shape alignment.'
+p1772
+sg6
+S'conf/fgr/HeLYL08'
+p1773
+sg8
+S'Stan Z. Li'
+p1774
+sa(dp1775
+g2
+S'International Journal of Information Technology and Decision Making'
+p1776
+sg4
+S'Supply Chain Coordination with Contracts Game between Complementary Suppliers.'
+p1777
+sg6
+S'journals/ijitdm/DingC07'
+p1778
+sg8
+S'Jian Chen'
+p1779
+sa(dp1780
+g11
+S'SSP'
+p1781
+sg4
+S'MATRIX ALPS: Accelerated low rank and sparse matrix reconstruction.'
+p1782
+sg6
+S'conf/ssp/KyrillidisC12'
+p1783
+sg8
+S'Volkan Cevher'
+p1784
+sa(dp1785
+g11
+S'RCIS'
+p1786
+sg4
+S'Energy efficiency and environmental impact of datacenters and cloud computing.'
+p1787
+sg6
+S'conf/rcis/Pernici16'
+p1788
+sg8
+S'Barbara Pernici'
+p1789
+sa(dp1790
+g11
+S'CDC'
+p1791
+sg4
+S'Poisson reduction via feedback invariant distributions.'
+p1792
+sg6
+S'conf/cdc/HoffnerG09'
+p1793
+sg8
+S'Martin Guay'
+p1794
+sa(dp1795
+g11
+S'IPSN'
+p1796
+sg4
+S'IMUSim: A simulation environment for inertial sensing algorithm design and evaluation.'
+p1797
+sg6
+S'conf/ipsn/YoungLA11'
+p1798
+sg8
+S'D. K. Arvind'
+p1799
+sa(dp1800
+g2
+S'Computers and Artificial Intelligence'
+p1801
+sg4
+S'Collaborative Virtual Environment for Advanced Computing.'
+p1802
+sg6
+S'journals/cai/LewisHADC05'
+p1803
+sg8
+S'Mark Calleja'
+p1804
+sa(dp1805
+g11
+S'ICDM'
+p1806
+sg4
+S'SolarMap: Multifaceted Visual Analytics for Topic Exploration.'
+p1807
+sg6
+S'conf/icdm/CaoGSLQ11'
+p1808
+sg8
+S'Huamin Qu'
+p1809
+sa(dp1810
+g2
+S'IEEE Trans. Computers'
+p1811
+sg4
+S'On the Equivalence of Two Algorithms for Finding All Maximal Compatibles.'
+p1812
+sg6
+S'journals/tc/Yang75'
+p1813
+sg8
+S'Chao-Chih Yang'
+p1814
+sa(dp1815
+g2
+S'CoRR'
+p1816
+sg4
+S'A Hybrid Feature Selection Method to Improve Performance of a Group of Classification Algorithms.'
+p1817
+sg6
+S'journals/corr/NaseriparsaBV14a'
+p1818
+sg8
+S'Touraj Varaee'
+p1819
+sa(dp1820
+g2
+S'IEEE Trans. Wireless Communications'
+p1821
+sg4
+S'Adaptive MQAM for Energy Harvesting Wireless Communications With 1-Bit Channel Feedback.'
+p1822
+sg6
+S'journals/twc/MaZ15'
+p1823
+sg8
+S'Wei Zhang'
+p1824
+sa(dp1825
+g2
+S'J. Intelligent Manufacturing'
+p1826
+sg4
+S'A genetic algorithm-based solution methodology for modular design.'
+p1827
+sg6
+S'journals/jim/KamraniG03'
+p1828
+sg8
+S'Ricardo Gonzalez'
+p1829
+sa(dp1830
+g2
+S'Datenschutz und Datensicherheit'
+p1831
+sg4
+S'Crowdsourcing and cloudsourcing CCTV surveillance.'
+p1832
+sg6
+S'journals/dud/Schafer13'
+p1833
+sg8
+S'Burkhard Schafer'
+p1834
+sa(dp1835
+g11
+S'GfKl'
+p1836
+sg4
+S'Fuzzy PLS Path Modeling: A New Tool For Handling Sensory Data.'
+p1837
+sg6
+S'conf/gfkl/PalumboRV07'
+p1838
+sg8
+S'Vincenzo Esposito Vinzi'
+p1839
+sa(dp1840
+g2
+S'European Transactions on Telecommunications'
+p1841
+sg4
+S'Pseudo-Noise Code Synchronization of Multicarrier DS-CDMA Systems on Multipath Fading Channels Part I: Analysis of the Serial Search Multiple-Dwell Acquisition.'
+p1842
+sg6
+S'journals/ett/SheenCWW99'
+p1843
+sg8
+S'Cheng-Shong Wu'
+p1844
+sa(dp1845
+g2
+S'J. Comput. Physics'
+p1846
+sg4
+S'Accurate numerical modeling of 1D flow in channels with arbitrary shape. Application of the energy balanced property.'
+p1847
+sg6
+S'journals/jcphy/MurilloG14'
+p1848
+sg8
+VP. García-Navarro
+p1849
+sa(dp1850
+g11
+S'SAFECOMP'
+p1851
+sg4
+S'A Unified Tool for Performance Modelling and Prediction.'
+p1852
+sg6
+S'conf/safecomp/GilmoreK03'
+p1853
+sg8
+VLeïla Kloul
+p1854
+sa(dp1855
+g11
+S'PCM'
+p1856
+sg4
+S'Guaranteed Bandwidth Requirement Mechanism for Multimedia Multicast Traffic in MANETs.'
+p1857
+sg6
+S'conf/pcm/HuDJ08'
+p1858
+sg8
+S'Lih-Gwo Jeng'
+p1859
+sa(dp1860
+g11
+S'ICC (3)'
+p1861
+sg4
+S'Improvements in SOVA-Based Decoding for Turbo Codes.'
+p1862
+sg6
+S'conf/icc/LinC97'
+p1863
+sg8
+S'Roger S. Cheng'
+p1864
+sa(dp1865
+g11
+S'QRS Companion'
+p1866
+sg4
+S'Motivating Security Engineering with Economics: A Utility Function Approach.'
+p1867
+sg6
+S'conf/qrs/HeitzenraterKS16'
+p1868
+sg8
+S'Andrew C. Simpson'
+p1869
+sa(dp1870
+g2
+S'Applied Mathematics and Computation'
+p1871
+sg4
+S'The numerical solution of discrete-delay systems.'
+p1872
+sg6
+S'journals/amc/HuC01'
+p1873
+sg8
+S'Baruch Cahlon'
+p1874
+sa(dp1875
+g11
+S'SIGUCCS'
+p1876
+sg4
+S'Bridging the service gap with student employees: curse or blessing?'
+p1877
+sg6
+S'conf/siguccs/SobczakPM01'
+p1878
+sg8
+S'Karen J. McRitchie'
+p1879
+sa(dp1880
+g11
+S'ICIC (1)'
+p1881
+sg4
+S'Improved Emotion Recognition with Novel Task-Oriented Wavelet Packet Features.'
+p1882
+sg6
+S'conf/icic/HuangZLW14'
+p1883
+sg8
+S'Ao Wu'
+p1884
+sa(dp1885
+g11
+S'Web3D'
+p1886
+sg4
+S'Remote scientific visualization of progressive 3D meshes with X3D.'
+p1887
+sg6
+S'conf/vrml/MagloLLMHD10'
+p1888
+sg8
+S'Florent Dupont'
+p1889
+sa(dp1890
+g11
+S'ICIW'
+p1891
+sg4
+S'Using Propagation of Distrust to Find Untrustworthy Web Neighborhoods.'
+p1892
+sg6
+S'conf/iciw/Metaxas09'
+p1893
+sg8
+S'Panagiotis Takis Metaxas'
+p1894
+sa(dp1895
+g11
+S'EDUCON'
+p1896
+sg4
+S'Integration of laboratory experiments into introductory electrical engineering courses: concept, implementation and competence-based evaluation.'
+p1897
+sg6
+S'conf/educon/Block14'
+p1898
+sg8
+S'Brit-Maren Block'
+p1899
+sa(dp1900
+g2
+S'IEEE Trans. Knowl. Data Eng.'
+p1901
+sg4
+S'EIC Editorial: 2007 TKDE Editorial Board Changes.'
+p1902
+sg6
+S'journals/tkde/Wu07'
+p1903
+sg8
+S'Xindong Wu'
+p1904
+sa(dp1905
+g11
+S'ISPD'
+p1906
+sg4
+S"Moore's law and physical design of ICs."
+p1907
+sg6
+S'conf/ispd/Maly98'
+p1908
+sg8
+S'Wojciech Maly'
+p1909
+sa(dp1910
+g2
+S'Discrete Applied Mathematics'
+p1911
+sg4
+S'A reduction algorithm for the weighted stable set problem in claw-free graphs.'
+p1912
+sg6
+S'journals/dam/NobiliS14'
+p1913
+sg8
+S'Antonio Sassano'
+p1914
+sa(dp1915
+g2
+S'Discrete Mathematics'
+p1916
+sg4
+S'The reconstruction of separable graphs with 2-connected trunks that are series-parallel networks.'
+p1917
+sg6
+S'journals/dm/Anacker88'
+p1918
+sg8
+S'Steven E. Anacker'
+p1919
+sa(dp1920
+g11
+S'ESANN'
+p1921
+sg4
+S'Incremental increased complexity training.'
+p1922
+sg6
+S'conf/esann/LudikC94'
+p1923
+sg8
+S'Ian Cloete'
+p1924
+sa(dp1925
+g2
+S'IEEE Journal on Selected Areas in Communications'
+p1926
+sg4
+S'Field dependability evaluation principles.'
+p1927
+sg6
+S'journals/jsac/Strandberg88'
+p1928
+sg8
+S'Kjell Strandberg'
+p1929
+sa(dp1930
+g2
+S'Decision Support Systems'
+p1931
+sg4
+S'Identity matching and information acquisition: Estimation of optimal threshold parameters.'
+p1932
+sg6
+S'journals/dss/AlirezazadehBGGG14'
+p1933
+sg8
+VPaulo B. Góes
+p1934
+sa(dp1935
+g11
+S'IFSA (1)'
+p1936
+sg4
+S'Fuzzy Reversed Posynomial Geometric Programming and Its Dual Form.'
+p1937
+sg6
+S'conf/ifsa/Cao07'
+p1938
+sg8
+S'Bing-yuan Cao'
+p1939
+sa(dp1940
+g11
+S'Spanish Bioinformatics Conference'
+p1941
+sg4
+S'A Tool for Heuristic Detection of Association Clusters in Whole-Genome Scans.'
+p1942
+sg6
+S'conf/jbi/Marques-BonetLGCMN04'
+p1943
+sg8
+S'Arcadi Navarro'
+p1944
+sa(dp1945
+g11
+S'ICCA'
+p1946
+sg4
+S'Reduced-order synchronization of chaotic systems: A modular adaptive design.'
+p1947
+sg6
+S'conf/icca/MotallebzadehMC10'
+p1948
+sg8
+S'Zahra Rahmani Cherati'
+p1949
+sa(dp1950
+g2
+S'IEEE Trans. Instrumentation and Measurement'
+p1951
+sg4
+S'Extending the Dynamic Range of a Spectrum Monitor Using Comparison Switching and Spectral Averaging.'
+p1952
+sg6
+S'journals/tim/RogersCDS08'
+p1953
+sg8
+S'D. L. Smythe'
+p1954
+sa(dp1955
+g11
+S'IICAI'
+p1956
+sg4
+S'A Growing Hierarchical Self-Organizing Map approach for machine-part cell formation.'
+p1957
+sg6
+S'conf/iicai/ChattopadhyayDDM11'
+p1958
+sg8
+S'Sitanath Majumdar'
+p1959
+sa(dp1960
+g2
+S'IEEE Computer'
+p1961
+sg4
+S'Special Feature Computer Graphics: A Two-Way Street.'
+p1962
+sg6
+S'journals/computer/Myers80b'
+p1963
+sg8
+S'Ware Myers'
+p1964
+sa(dp1965
+g11
+S'ICPR (3)'
+p1966
+sg4
+S'Video Completion for Perspective Camera Under Constrained Motion.'
+p1967
+sg6
+S'conf/icpr/ShenLCF06'
+p1968
+sg8
+S'Hassan Foroosh'
+p1969
+sa(dp1970
+g2
+S'Inf. Sci.'
+p1971
+sg4
+S'Fuzzy Groups with Sup Property.'
+p1972
+sg6
+S'journals/isci/Ajmal96'
+p1973
+sg8
+S'Naseem Ajmal'
+p1974
+sa(dp1975
+g11
+S'ICECS'
+p1976
+sg4
+S'Fault tolerant implementation of a SpaceWire interface.'
+p1977
+sg6
+S'conf/icecsys/TaubePK14'
+p1978
+sg8
+S'Milos Krstic'
+p1979
+sa(dp1980
+g11
+S'ICWSM'
+p1981
+sg4
+S'CrisisLex: A Lexicon for Collecting and Filtering Microblogged Communications in Crises.'
+p1982
+sg6
+S'conf/icwsm/OlteanuCDV14'
+p1983
+sg8
+S'Sarah Vieweg'
+p1984
+sa(dp1985
+g2
+S'Artificial Intelligence in Medicine'
+p1986
+sg4
+S'Neural network assisted cardiac auscultation.'
+p1987
+sg6
+S'journals/artmed/Cathers95'
+p1988
+sg8
+S'I. Cathers'
+p1989
+sa(dp1990
+g2
+S'Mathematical and Computer Modelling'
+p1991
+sg4
+S'On extreme values in open queueing networks.'
+p1992
+sg6
+S'journals/mcm/Minkevicius09'
+p1993
+sg8
+S'Saulius Minkevicius'
+p1994
+sa(dp1995
+g11
+S'MMAR'
+p1996
+sg4
+VState-space representations for 2×2 hyperbolic systems with boundary inputs.
+p1997
+sg6
+S'conf/mmar/Bartecki15'
+p1998
+sg8
+S'Krzysztof Bartecki'
+p1999
+sa(dp2000
+g11
+S'TPCG'
+p2001
+sg4
+S'An Aliasing Theory of Shadow Mapping.'
+p2002
+sg6
+S'conf/tpcg/ZhangZS09'
+p2003
+sg8
+S'Hanqiu Sun'
+p2004
+sa(dp2005
+g11
+S'ICLP'
+p2006
+sg4
+S'Extending the Semantics of Logic Programs to Disjunctive Logic Programs.'
+p2007
+sg6
+S'conf/iclp/LoboMR89'
+p2008
+sg8
+S'Arcot Rajasekar'
+p2009
+sa(dp2010
+g11
+S'Probabilistic Graphical Models'
+p2011
+sg4
+VExact Inference on Conditional Linear \u0393-Gaussian Bayesian Networks.
+p2012
+sg6
+S'conf/pgm/SimonssonM16'
+p2013
+sg8
+S'Petter Mostad'
+p2014
+sa(dp2015
+g2
+S'Parallel Computing'
+p2016
+sg4
+S'Parallel Genetic Programming and its Application to Trading Model Induction.'
+p2017
+sg6
+S'journals/pc/OussaideneCP97'
+p2018
+sg8
+S'Olivier V. Pictet'
+p2019
+sa(dp2020
+g11
+S'ISGT'
+p2021
+sg4
+S'Impact of partitioning on the performance of decomposition methods for AC Optimal Power Flow.'
+p2022
+sg6
+S'conf/isgt/GuoHT15'
+p2023
+sg8
+S'Ozan K. Tonguz'
+p2024
+sa(dp2025
+g2
+S'IEEE Journal on Selected Areas in Communications'
+p2026
+sg4
+S'Large System Analysis of Sum Capacity in the Gaussian MIMO Broadcast Channel.'
+p2027
+sg6
+S'journals/jsac/GuthyUH13'
+p2028
+sg8
+S'Michael L. Honig'
+p2029
+sa(dp2030
+g11
+S'HPEC'
+p2031
+sg4
+S'Real time change point detection by incremental PCA in large scale sensor data.'
+p2032
+sg6
+S'conf/hpec/MishinBCS14'
+p2033
+sg8
+S'Alexander S. Szalay'
+p2034
+sa(dp2035
+g11
+S'EAPCogSci'
+p2036
+sg4
+S'How Metalinguistic Negation Differs from Descriptive Negation: ERP Evidence.'
+p2037
+sg6
+S'conf/eapcogsci/Lee15'
+p2038
+sg8
+S'Chungmin Lee'
+p2039
+sa(dp2040
+g2
+S'IEEE Trans. Contr. Sys. Techn.'
+p2041
+sg4
+S'Synchronization of Underactuated Unknown Heavy Symmetric Chaotic Gyroscopes via Optimal Gaussian Radial Basis Adaptive Variable Structure Control.'
+p2042
+sg6
+S'journals/tcst/FarivarSNT13'
+p2043
+sg8
+S'Mohammad Teshnehlab'
+p2044
+sa(dp2045
+g11
+S'MCS'
+p2046
+sg4
+S'Cascading for Nominal Data.'
+p2047
+sg6
+S'conf/mcs/MaudesRG07'
+p2048
+sg8
+VCésar Ignacio García-Osorio
+p2049
+sa(dp2050
+g2
+S'IEEE Trans. Geoscience and Remote Sensing'
+p2051
+sg4
+S'Speckle removal from SAR images in the undecimated wavelet domain.'
+p2052
+sg6
+S'journals/tgrs/ArgentiA02'
+p2053
+sg8
+S'Luciano Alparone'
+p2054
+sa(dp2055
+g2
+S'Artif. Intell. Rev.'
+p2056
+sg4
+S'Automatic Reconstruction of Vasculature.'
+p2057
+sg6
+S'journals/air/McKevittH96'
+p2058
+sg8
+S'Peter Hall'
+p2059
+sa(dp2060
+g2
+S'IEEE Trans. VLSI Syst.'
+p2061
+sg4
+S'An Efficient Wake-Up Strategy Considering Spurious Glitches Phenomenon for Power Gating Designs.'
+p2062
+sg6
+S'journals/tvlsi/JuanCLC10'
+p2063
+sg8
+S'Shih-Chieh Chang'
+p2064
+sa(dp2065
+g11
+S'Encyclopedia of Systems and Control'
+p2066
+sg4
+S'Stochastic Games and Learning.'
+p2067
+sg6
+S'reference/sc/Szajowski15'
+p2068
+sg8
+S'Krzysztof Szajowski'
+p2069
+sa(dp2070
+g2
+S'Microprocessors and Microsystems - Embedded Hardware Design'
+p2071
+sg4
+S'Design automation of cellular neural networks for data fusion applications.'
+p2072
+sg6
+S'journals/mam/ChatziagorakisSL12'
+p2073
+sg8
+S'John N. Lygouras'
+p2074
+sa(dp2075
+g2
+S'J. Comb. Optim.'
+p2076
+sg4
+S'Using heuristics to find minimal unsatisfiable subformulas in satisfiability problems.'
+p2077
+sg6
+S'journals/jco/DesrosiersGHP09'
+p2078
+sg8
+S'Sandrine Paroz'
+p2079
+sa(dp2080
+g11
+S'ELPUB'
+p2081
+sg4
+S'What are the Prospects for Publishing Online Scholarly Journals in Malaysia? The Cultural Constraint.'
+p2082
+sg6
+S'conf/elpub/ZakariaR06'
+p2083
+sg8
+S'Fytton Rowland'
+p2084
+sa(dp2085
+g11
+S'EUROCRYPT'
+p2086
+sg4
+S'Tactical Configurations and Threshold Schemes.'
+p2087
+sg6
+S'conf/eurocrypt/Ecker86'
+p2088
+sg8
+S'A. Ecker'
+p2089
+sa(dp2090
+g2
+S'IEEE Trans. Wireless Communications'
+p2091
+sg4
+S'Exact and Closed-Form Outage Probability of Opportunistic Decode-and-Forward Relaying with Unequal-Power Interferers.'
+p2092
+sg6
+S'journals/twc/KimK10'
+p2093
+sg8
+S'Dongwoo Kim'
+p2094
+sa(dp2095
+g2
+S'Neural Computing and Applications'
+p2096
+sg4
+S'Associate learning and correcting in a memristive neural network.'
+p2097
+sg6
+S'journals/nca/ChenLWD13'
+p2098
+sg8
+S'Shukai Duan'
+p2099
+sa(dp2100
+g2
+S'Journal of Systems Architecture - Embedded Systems Design'
+p2101
+sg4
+S'MultiCS: Circuit switched NoC with multiple sub-networks and sub-channels.'
+p2102
+sg6
+S'journals/jsa/LiuJL15'
+p2103
+sg8
+S'Zhonghai Lu'
+p2104
+sa(dp2105
+g11
+S'CSER'
+p2106
+sg4
+S'Simulating Corrective Maintenance: Aggregating Component Level Maintenance Time Uncertainty at the System Level.'
+p2107
+sg6
+S'journals/procedia/SaltmarshM13'
+p2108
+sg8
+S'Dimitri N. Mavris'
+p2109
+sa(dp2110
+g11
+S'CISIS'
+p2111
+sg4
+S'A Multimedia Document Model for e-Government Information Systems.'
+p2112
+sg6
+S'conf/cisis/AmatoMMP10'
+p2113
+sg8
+S'Antonio Picariello'
+p2114
+sa(dp2115
+g2
+S'J. Field Robotics'
+p2116
+sg4
+S'The Jet Propulsion Laboratory Autonomous Helicopter Testbed: A platform for planetary exploration technology research and development.'
+p2117
+sg6
+S'journals/jfr/MontgomeryJRM06'
+p2118
+sg8
+S'Larry H. Matthies'
+p2119
+sa(dp2120
+g11
+S'ICME'
+p2121
+sg4
+S'An OpenWRT solution for future wireless homes.'
+p2122
+sg6
+S'conf/icmcs/PalazziBR10'
+p2123
+sg8
+S'Marco Roccetti'
+p2124
+sa(dp2125
+g2
+S'Trans. Emerging Telecommunications Technologies'
+p2126
+sg4
+S'A self-configured link adaptation for green LTE downlink transmission.'
+p2127
+sg6
+S'journals/ett/SalmanNNAS15'
+p2128
+sg8
+S'Aduwati Sali'
+p2129
+sa(dp2130
+g11
+S'LCN'
+p2131
+sg4
+S'Using multicast communication for dynamic load balancing in local area networks.'
+p2132
+sg6
+S'conf/lcn/AhamadB89'
+p2133
+sg8
+S'Nasr E. Belkeir'
+p2134
+sa(dp2135
+g11
+S'EUSIPCO'
+p2136
+sg4
+S'An oriented fractal analysis for the characterization of texture. Application to bone radiographs.'
+p2137
+sg6
+S'conf/eusipco/LoussotHJBLJ96'
+p2138
+sg8
+S'A. Julien'
+p2139
+sa(dp2140
+g11
+S'SAICSIT'
+p2141
+sg4
+S'Usability evaluation guidelines for business intelligence applications.'
+p2142
+sg6
+S'conf/saicsit/JoosteBM13'
+p2143
+sg8
+S'Jan Mentz'
+p2144
+sa(dp2145
+g11
+S'IWOCA'
+p2146
+sg4
+S'Dynamising Interval Scheduling: The Monotonic Case.'
+p2147
+sg6
+S'conf/iwoca/GavruskinKKL13'
+p2148
+sg8
+S'Jiamou Liu'
+p2149
+sa(dp2150
+g11
+S'AAAI'
+p2151
+sg4
+S'Reducing Particle Filtering Complexity for 3D Motion Capture using Dynamic Bayesian Networks.'
+p2152
+sg6
+S'conf/aaai/RoseSC08'
+p2153
+sg8
+VFrançois Charpillet
+p2154
+sa(dp2155
+g11
+S'SAS'
+p2156
+sg4
+S'Using Static Analysis in Space: Why Doing so?'
+p2157
+sg6
+S'conf/sas/Lesens10'
+p2158
+sg8
+S'David Lesens'
+p2159
+sa(dp2160
+g11
+S'ICML'
+p2161
+sg4
+S'Learning nonparametric kernel matrices from pairwise constraints.'
+p2162
+sg6
+S'conf/icml/HoiJL07'
+p2163
+sg8
+S'Michael R. Lyu'
+p2164
+sa(dp2165
+g11
+S'INCoS'
+p2166
+sg4
+S'Strong Security Enabled Certificateless Aggregate Signatures Applicable to Mobile Computation.'
+p2167
+sg6
+S'conf/incos/XiongWC11'
+p2168
+sg8
+S'Zhong Chen'
+p2169
+sa(dp2170
+g11
+S'ROBIO'
+p2171
+sg4
+S'Robot hand discovery based on visuomotor coherence.'
+p2172
+sg6
+S'conf/robio/SaegusaMS09'
+p2173
+sg8
+S'Giulio Sandini'
+p2174
+sa(dp2175
+g11
+S'Encyclopedia of Information Assurance'
+p2176
+sg4
+S'Personnel: Practices.'
+p2177
+sg6
+S'reference/tf/Freeman11a'
+p2178
+sg8
+S'Edward H. Freeman'
+p2179
+sa(dp2180
+g11
+S'CDC'
+p2181
+sg4
+S'Sliding mode control for discrete-time uncertain descriptor systems with time-varying delay.'
+p2182
+sg6
+S'conf/cdc/KchaouH15'
+p2183
+sg8
+S'Ahmed El Hajjaji'
+p2184
+sa(dp2185
+g2
+S'CoRR'
+p2186
+sg4
+S'Planar functions and perfect nonlinear monomials over finite fields'
+p2187
+sg6
+S'journals/corr/abs-1301-5004'
+p2188
+sg8
+S'Michael Zieve'
+p2189
+sa(dp2190
+g11
+S'RIDE-DOM'
+p2191
+sg4
+S'Parallel Query Processing in Distributed Object Database Systems by Query Packets.'
+p2192
+sg6
+S'conf/ride/LiuC95'
+p2193
+sg8
+S'Arbee L. P. Chen'
+p2194
+sa(dp2195
+g2
+S'The Journal of Supercomputing'
+p2196
+sg4
+S'Coordinated multimedia object replacement in transcoding proxies.'
+p2197
+sg6
+S'journals/tjs/LiSLQ10'
+p2198
+sg8
+S'Wenyu Qu'
+p2199
+sa(dp2200
+g2
+S'International Journal on Artificial Intelligence Tools'
+p2201
+sg4
+S'Performance-Estimation Properties of Cross-Validation-Based Protocols with Simultaneous Hyper-Parameter Optimization.'
+p2202
+sg6
+S'journals/ijait/TsamardinosRL15'
+p2203
+sg8
+S'Vincenzo Lagani'
+p2204
+sa(dp2205
+g11
+S'FPGA'
+p2206
+sg4
+S'Configuration Cloning: Exploiting Regularity in Dynamic DSP Architectures.'
+p2207
+sg6
+S'conf/fpga/ParkB99'
+p2208
+sg8
+S'Wayne Burleson'
+p2209
+sa(dp2210
+g11
+S'INTERSPEECH'
+p2211
+sg4
+S'Psychological evaluation of a group communication activation robot in a party game.'
+p2212
+sg6
+S'conf/interspeech/MatsuyamaFTK10'
+p2213
+sg8
+S'Tetsunori Kobayashi'
+p2214
+sa(dp2215
+g11
+S'WPNC'
+p2216
+sg4
+S'Generic real-time round-trip-delay test-bed for cooperative positioning.'
+p2217
+sg6
+S'conf/wpnc/StaudingerS12'
+p2218
+sg8
+S'Stephan Sand'
+p2219
+sa(dp2220
+g2
+S'CoRR'
+p2221
+sg4
+S'Convolutional Patch Networks with Spatial Prior for Road Detection and Urban Scene Understanding.'
+p2222
+sg6
+S'journals/corr/BrustSSRD15'
+p2223
+sg8
+S'Joachim Denzler'
+p2224
+sa(dp2225
+g2
+S'Signal Processing'
+p2226
+sg4
+S'Color-texture cosegmentation based on nonlinear compact multi-scale structure tensor and TV-flow.'
+p2227
+sg6
+S'journals/sigpro/HanXTC17'
+p2228
+sg8
+S'Yang Chen'
+p2229
+sa(dp2230
+g11
+S'ICDM'
+p2231
+sg4
+S'Progression Analysis of Community Strengths in Dynamic Networks.'
+p2232
+sg6
+S'conf/icdm/DuGZ13'
+p2233
+sg8
+S'Aidong Zhang'
+p2234
+sa(dp2235
+g11
+S'ICICS'
+p2236
+sg4
+S'Source localization on solids using Kullback-Leibler discrimination information.'
+p2237
+sg6
+S'conf/IEEEicics/ArunOK11'
+p2238
+sg8
+S'Andy W. H. Khong'
+p2239
+sa(dp2240
+g2
+S'Applied Mathematics and Computation'
+p2241
+sg4
+S'An unconditionally stable numerical method for bimodal image segmentation.'
+p2242
+sg6
+S'journals/amc/LiK12'
+p2243
+sg8
+S'Junseok Kim'
+p2244
+sa(dp2245
+g2
+S'Internet Research'
+p2246
+sg4
+S'A framework for evaluating Internet telephony systems.'
+p2247
+sg6
+S'journals/intr/FooH98'
+p2248
+sg8
+S'Siu Cheung Hui'
+p2249
+sa(dp2250
+g11
+S'CAD/Graphics'
+p2251
+sg4
+S'Multi-degree reduction of Bezier curves with higher approximation order.'
+p2252
+sg6
+S'conf/cadgraphics/ChenMY13'
+p2253
+sg8
+S'Yangtian Ye'
+p2254
+sa(dp2255
+g2
+S'IEICE Transactions'
+p2256
+sg4
+S'Noise Power Spectral Density Estimation Using the Generalized Gamma Probability Density Function and Minimum Mean Square Error.'
+p2257
+sg6
+S'journals/ieicet/DangN14'
+p2258
+sg8
+S'Takayoshi Nakai'
+p2259
+sa(dp2260
+g11
+S'ICIRA (1)'
+p2261
+sg4
+S'Combined Online and Offline Information for Tracking Facial Feature Points.'
+p2262
+sg6
+S'conf/icira/WangZC12'
+p2263
+sg8
+S'Chunlei Chai'
+p2264
+sa(dp2265
+g11
+S'VALUETOOLS'
+p2266
+sg4
+S'Joint network/channel decoding for heterogeneous multi-source/multi-relay cooperative networks.'
+p2267
+sg6
+S'conf/valuetools/PoulliatR11'
+p2268
+sg8
+S'Marco Di Renzo'
+p2269
+sa(dp2270
+g2
+S'Spatial Cognition & Computation'
+p2271
+sg4
+S'Spatial Perspective Taking is an Embodied Process, but Not for Everyone in the Same Way: Differences Predicted by Sex and Social Skills Score.'
+p2272
+sg6
+S'journals/scc/KesslerW12'
+p2273
+sg8
+S'Hongfang Wang'
+p2274
+sa(dp2275
+g11
+S'ISI'
+p2276
+sg4
+S'Fuzzy Aided Ant Colony Optimization Algorithm to Solve Optimization Problem.'
+p2277
+sg6
+S'conf/intelligent/GeorgeR12'
+p2278
+sg8
+S'B. R. Rajakumar'
+p2279
+sa(dp2280
+g11
+S'KDD'
+p2281
+sg4
+S'Textual data mining of service center call records.'
+p2282
+sg6
+S'conf/kdd/TanBHG00'
+p2283
+sg8
+S'Robert P. Goldman'
+p2284
+sa(dp2285
+g11
+S'INFOS'
+p2286
+sg4
+S'Agile Softwareentwicklung - Erfahrungsbericht eines Oberstufenprojekts im Wahlpflichtunterricht.'
+p2287
+sg6
+S'conf/schule/Brichzin15'
+p2288
+sg8
+S'Peter Brichzin'
+p2289
+sa(dp2290
+g2
+S'IEEE Trans. Communications'
+p2291
+sg4
+S'Coding Across Finite Transport Blocks in Modern Wireless Communication Systems.'
+p2292
+sg6
+S'journals/tcom/SahinLP14'
+p2293
+sg8
+S'Erik Perrins'
+p2294
+sa(dp2295
+g11
+S'ICNC'
+p2296
+sg4
+S'Slow start algorithm for mobile broadband networks including delay unrelated to network congestion.'
+p2297
+sg6
+S'conf/iccnc/KoyamaA15'
+p2298
+sg8
+S'Katsunori Aoki'
+p2299
+sa(dp2300
+g2
+S'e-Informatica'
+p2301
+sg4
+S'Software Startups - A Research Agenda.'
+p2302
+sg6
+S'journals/eInformatica/Unterkalmsteiner16'
+p2303
+sg8
+VAgustín Yagüe
+p2304
+sa(dp2305
+g11
+VBildverarbeitung für die Medizin
+p2306
+sg4
+S'Prototyp eines Mammographie-CAD-Systems auf Basis der Cognition Network Technology.'
+p2307
+sg6
+S'conf/bildmed/SchonmeyerASEFSB10'
+p2308
+sg8
+S'Gerd Karl Binnig'
+p2309
+sa(dp2310
+g11
+S'Ada-Europe'
+p2311
+sg4
+S'HCSD Unit Development Process: Step-Wise Process Improvement.'
+p2312
+sg6
+S'conf/adaEurope/EmeryM96'
+p2313
+sg8
+S'Jas Madhur'
+p2314
+sa(dp2315
+g11
+S'GIS-LBSN'
+p2316
+sg4
+S'Using location based social networks for quality-aware participatory data transfer.'
+p2317
+sg6
+S'conf/gis/Shirani-MehrKS10'
+p2318
+sg8
+S'Cyrus Shahabi'
+p2319
+sa(dp2320
+g11
+S'ICEC'
+p2321
+sg4
+S'An endorser discovering mechanism for social advertising.'
+p2322
+sg6
+S'conf/ACMicec/LiL09'
+p2323
+sg8
+S'Nine-Jun Lien'
+p2324
+sa(dp2325
+g11
+S'ICNC'
+p2326
+sg4
+S'Coordinated MultiPoint uplink capacity over a MIMO composite fading channel.'
+p2327
+sg6
+S'conf/iccnc/ChatzinotasO12'
+p2328
+sg8
+VBjörn E. Ottersten
+p2329
+sa(dp2330
+g11
+S'VTC Spring'
+p2331
+sg4
+S'Improved Spectrum Sensing by Utilizing Signal Autocorrelation.'
+p2332
+sg6
+S'conf/vtc/SharmaW09'
+p2333
+sg8
+S'Jon W. Wallace'
+p2334
+sa(dp2335
+g2
+S'CoRR'
+p2336
+sg4
+S'Distributed Denial of Service Prevention Techniques'
+p2337
+sg6
+S'journals/corr/abs-1208-3557'
+p2338
+sg8
+S'Manoj Misra'
+p2339
+sa(dp2340
+g2
+S'Intell. Data Anal.'
+p2341
+sg4
+S'Supporting bi-cluster interpretation in 0/1 data by means of local patterns.'
+p2342
+sg6
+S'journals/ida/PensaRB06'
+p2343
+sg8
+VJean-François Boulicaut
+p2344
+sa(dp2345
+g11
+S'ICRA'
+p2346
+sg4
+S'ARMin II - 7 DoF rehabilitation robot: mechanics and kinematics.'
+p2347
+sg6
+S'conf/icra/MiheljNR07'
+p2348
+sg8
+S'Robert Riener'
+p2349
+sa(dp2350
+g11
+S'HCI (13)'
+p2351
+sg4
+S'Social Media Design Requirements for the Collectivist International Students.'
+p2352
+sg6
+S'conf/hci/Kitkhachonkunlaphat15'
+p2353
+sg8
+S'Mihaela Vorvoreanu'
+p2354
+sa(dp2355
+g11
+S'EUSIPCO'
+p2356
+sg4
+S'An object-based hierarchical motion compensation technique using the greedy method.'
+p2357
+sg6
+S'conf/eusipco/LeeKL98'
+p2358
+sg8
+S'Sang Uk Lee'
+p2359
+sa(dp2360
+g11
+S'SEKE'
+p2361
+sg4
+S'Towards an Ontology for Software Measurement.'
+p2362
+sg6
+S'conf/seke/GeneroRPC03'
+p2363
+sg8
+S'Coral Calero'
+p2364
+sa(dp2365
+g11
+S'DAC'
+p2366
+sg4
+S'Timing and Crosstalk Driven Area Routing.'
+p2367
+sg6
+S'conf/dac/TsengSS98'
+p2368
+sg8
+S'Carl Sechen'
+p2369
+sa(dp2370
+g2
+S'Concurrency and Computation: Practice and Experience'
+p2371
+sg4
+S'Optimizing queries with expensive video predicates in cloud environment.'
+p2372
+sg6
+S'journals/concurrency/ZhangYZWL12'
+p2373
+sg8
+S'Hui Li'
+p2374
+sa(dp2375
+g11
+S'RIDE'
+p2376
+sg4
+S'Enterprise Workflow Resource Management.'
+p2377
+sg6
+S'conf/ride/DuS99'
+p2378
+sg8
+S'Ming-Chien Shan'
+p2379
+sa(dp2380
+g11
+S'ED&TC'
+p2381
+sg4
+S'Optimizing CMOS Circuits for Low Power Using Transistor Reordering.'
+p2382
+sg6
+S'conf/date/MusollC96'
+p2383
+sg8
+S'Jordi Cortadella'
+p2384
+sa(dp2385
+g281
+S'Springer'
+p2386
+sg11
+S'Advanced Programming Environments'
+p2387
+sg284
+S'Dag H. Wanvik'
+p2388
+sg6
+S'conf/ifip/1986ape'
+p2389
+sg4
+S'Advanced Programming Environments, Proceedings of an International Workshop, Trondheim, Norway, June 16-18, 1986'
+p2390
+sa(dp2391
+g2
+S'Higher-Order and Symbolic Computation'
+p2392
+sg4
+S'Editorial.'
+p2393
+sg6
+S'journals/lisp/DanvyT09b'
+p2394
+sg8
+S'Carolyn L. Talcott'
+p2395
+sa(dp2396
+g11
+S'CSCWD (2)'
+p2397
+sg4
+S'Design optimization by functional neural networks.'
+p2398
+sg6
+S'conf/cscwd/LiuDT05'
+p2399
+sg8
+S'Ming Xi Tang'
+p2400
+sa(dp2401
+g2
+S'IJIDE'
+p2402
+sg4
+S'A Case Study of a Knowledge-Sharing Web-Based Platform for Energy Education.'
+p2403
+sg6
+S'journals/ijide/ChangC14'
+p2404
+sg8
+S'Yao-Ming Chu'
+p2405
+sa(dp2406
+g11
+S'SSP'
+p2407
+sg4
+S'FOOD steganography with olfactory white.'
+p2408
+sg6
+S'conf/ssp/VarshneyV14'
+p2409
+sg8
+S'Lav R. Varshney'
+p2410
+sa(dp2411
+g11
+S'ICDM Workshops'
+p2412
+sg4
+S'R-HBase: A Multi-dimensional Indexing Framework for Cloud Computing Environment.'
+p2413
+sg6
+S'conf/icdm/HuangWZWY14'
+p2414
+sg8
+S'Ge Yu'
+p2415
+sa(dp2416
+g2
+S'IEICE Transactions'
+p2417
+sg4
+S'Integrated Ambient Light Sensor with an LTPS Noise-Robust Circuit and a-Si Photodiodes for AMLCDs.'
+p2418
+sg6
+S'journals/ieicet/MatsukiHSHKCAEY10'
+p2419
+sg8
+S'Nigel D. Young'
+p2420
+sa(dp2421
+g11
+S'VRCAI'
+p2422
+sg4
+S'Development an interactive VR training for CNC machining.'
+p2423
+sg6
+S'conf/vrcai/WangZWSLL04'
+p2424
+sg8
+S'Yangchun Li'
+p2425
+sa(dp2426
+g2
+S'Telematics and Informatics'
+p2427
+sg4
+S'Computer focused communication: changes and challenges for the contemporary organization.'
+p2428
+sg6
+S'journals/tele/BarrettT98'
+p2429
+sg8
+S'Douglas S. Turtz'
+p2430
+sa(dp2431
+g11
+S'GLOBECOM'
+p2432
+sg4
+S'Paging load balance in hierarchical cellular networks.'
+p2433
+sg6
+S'conf/globecom/XiaoG05a'
+p2434
+sg8
+S'Mohsen Guizani'
+p2435
+sa(dp2436
+g2
+S'Journal of Logic, Language and Information'
+p2437
+sg4
+S'A dynamic logic of action.'
+p2438
+sg6
+S'journals/jolli/Penther94'
+p2439
+sg8
+S'Brigitte Penther'
+p2440
+sa(dp2441
+g2
+S'CoRR'
+p2442
+sg4
+S'A Multipath TCP model for ns-3 simulator'
+p2443
+sg6
+S'journals/corr/abs-1112-1932'
+p2444
+sg8
+S'Denis Collange'
+p2445
+sa(dp2446
+g2
+S'J. Digit. Inf.'
+p2447
+sg4
+S'Open Hypermedia: Systems, Interoperability and Standards.'
+p2448
+sg6
+S'journals/jodi/Wiil97'
+p2449
+sg8
+S'Uffe Kock Wiil'
+p2450
+sa(dp2451
+g11
+S'ICASSP'
+p2452
+sg4
+S'STFT-based multi-channel acoustic interference suppressor.'
+p2453
+sg6
+S'conf/icassp/AvendanoG01'
+p2454
+sg8
+S'Guillermo Garcia'
+p2455
+sa(dp2456
+g11
+S'ICTAI'
+p2457
+sg4
+S'A Generic Architecture for Dynamic Outdoor Environment.'
+p2458
+sg6
+S'conf/ictai/AycardVBF11'
+p2459
+sg8
+S'Thierry Fraichard'
+p2460
+sa(dp2461
+g11
+S'ACII'
+p2462
+sg4
+S'Conversational Topics Handle Social Relationships.'
+p2463
+sg6
+S'conf/acii/Sansonnet13'
+p2464
+sg8
+S'Jean-Paul Sansonnet'
+p2465
+sa(dp2466
+g11
+S'VLDB'
+p2467
+sg4
+S'Distributed Privacy Preserving Information Sharing.'
+p2468
+sg6
+S'conf/vldb/ZhangZ05'
+p2469
+sg8
+S'Wei Zhao 0001'
+p2470
+sa(dp2471
+g2
+S'Advances in Engineering Software'
+p2472
+sg4
+S'Fast sort of floating-point data for data engineering.'
+p2473
+sg6
+S'journals/aes/KimYK11'
+p2474
+sg8
+S'Dongseung Kim'
+p2475
+sa(dp2476
+g11
+S'ICIRA (3)'
+p2477
+sg4
+S'An Adaptive Trajectory Prediction Method for Ping-Pong Robots.'
+p2478
+sg6
+S'conf/icira/ZhangXZC12'
+p2479
+sg8
+S'Jian Chu'
+p2480
+sa(dp2481
+g11
+S'VRCAI'
+p2482
+sg4
+S'Making an immersive projection environment with our living room.'
+p2483
+sg6
+S'conf/vrcai/HashimotoHSS09'
+p2484
+sg8
+S'Mie Sato'
+p2485
+sa(dp2486
+g2
+S'Computer Networks'
+p2487
+sg4
+S'A Practical Approach Towards Active Hyperlinked Documents.'
+p2488
+sg6
+S'journals/cn/KoppenN98'
+p2489
+sg8
+S'Gustaf Neumann'
+p2490
+sa(dp2491
+g2
+S'CoRR'
+p2492
+sg4
+S'LC Oscillator Driver for Safety Critical Applications'
+p2493
+sg6
+S'journals/corr/abs-0710-4831'
+p2494
+sg8
+S'Pavel Horsky'
+p2495
+sa(dp2496
+g2
+S'Systems and Computers in Japan'
+p2497
+sg4
+S'A group formation support system based on substitute goods in group buying.'
+p2498
+sg6
+S'journals/scjapan/MatsuoI04'
+p2499
+sg8
+S'Takayuki Ito'
+p2500
+sa(dp2501
+g11
+S'EMBC'
+p2502
+sg4
+S'Effect of environmental factors on level of trip disturbance: A simulation study.'
+p2503
+sg6
+S'conf/embc/LiuBH16'
+p2504
+sg8
+S'He Huang'
+p2505
+sa.
