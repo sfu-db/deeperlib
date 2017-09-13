@@ -2,6 +2,10 @@ from abc import ABCMeta, abstractmethod
 
 
 class SimpleApi:
+    """
+    An interface of many abstract methods. Users or developers could build their own subclasses of SimpleApi
+    to support specific api.
+    """
     __metaclass__ = ABCMeta
 
     def __init__(self):

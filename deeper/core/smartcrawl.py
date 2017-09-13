@@ -10,6 +10,25 @@ import utils
 
 
 def smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, api, sampledata, localdata, hiddendata):
+    """
+    Given a budget ofb queries, SMARTCRAWL first constructs a query pool based on the local database and then
+    iteratively issues b queries to the hidden database such that the union of the query results can cover
+    the maximum number of records in the local database. Finally, it performs entity resolution between the
+    local database and the crawled records.
+    ----**DeepER: Deep Entity Resolution**
+
+    :param top_k: top-k constraint of specific api
+    :param count: size of hidden database
+    :param pool_thre: threshold of queries' frequency
+    :param jaccard_thre: jaccard threshold
+    :param threads: numbers of queries issued at each iteration
+    :param budget: the budget of api call times
+    :param api: An implementation of simapi for specific api.
+    :param sampledata: SampleData object
+    :param localdata: LocalData object
+    :param hiddendata: HiddenData object
+    :return:
+    """
     time_s = timeit.default_timer()
     sample = sampledata.getSample()
     D1_ids, D1_query, D1_er = localdata.getlocalData()
@@ -86,15 +105,34 @@ def smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, api, samp
 
     api.getSession().close()
     hiddendata.setMatchPair(curmat)
-    deeper_figure(cov_deeper, threads)
+    hiddendata.saveMatchPair()
+    hiddendata.saveResult()
+
+    deeper_figure(cov_deeper, len(D1_ids), api, threads)
 
 
-def deeper_figure(cov_deeper, threads):
-    #####coverage figure#####
-    x_range = len(cov_deeper) * threads
-    x = range(1, x_range + 1, threads)
-    plt.plot(x, cov_deeper[:x_range], 'g', label='records num')
-    title = 'Coverage'
+def deeper_figure(cov_deeper, D1_size, api, threads):
+    """
+    Figure the trend of coverage rate
+
+    :param cov_deeper: a list of covered documents' size at each iteration
+    :param D1_size: size of local database
+    :param api: An implementation of simapi for specific api.
+    :param threads: numbers of queries issued at each iteration
+    """
+    kwargs = api.getKwargs()
+    if 'limit' in kwargs:
+        limit = kwargs['limit']
+        page = (api.getTopk() + limit - 1) / limit
+    else:
+        page = 1
+    cov_rate = []
+    for c in cov_deeper:
+        cov_rate.append(1.0 * c / D1_size)
+    x_range = len(cov_deeper) * threads * page
+    x = range(1, x_range + 1, threads * page)
+    plt.plot(x, cov_rate[:x_range], 'g', label='records num')
+    title = 'Coverage rate'
     plt.xlabel('times of api call')
     plt.title(title)
     plt.legend(loc='best')

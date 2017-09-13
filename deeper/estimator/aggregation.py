@@ -4,8 +4,18 @@ import random
 from deeper.data_processing import data_process
 
 
-# issue queries from pool to get aggregate estimator
 def sota_estimator(query_pool, api, match_term, uniqueid, query_num):
+    """
+    A method to estimate the aggregation of a search engine's corpus efficient
+    ------**Efficient search engine measurements**
+
+    :param query_pool: A dict contains the queries and their benefits. {set(['yong','jun']):5}
+    :param api: An implementation of simapi for specific api.
+    :param match_term: Some fields for matching queries and returned document.
+    :param uniqueid: The uniqueid of returned messages.
+    :param query_num: The number of queries you want to estimate
+    :return: count(*) of the search engine
+    """
     count = 0
     query_cost = 0
     params = api.getKwargs()
@@ -60,9 +70,12 @@ def sota_estimator(query_pool, api, match_term, uniqueid, query_num):
                 if len(mresult) == 0:
                     continue
                 for mrow in mresult:
-                    if r_id == eval('m' + uniqueid):
-                        count += 1.0 * t / len(match_query)
-                        break
+                    try:
+                        if r_id == eval('m' + uniqueid):
+                            count += 1.0 * t / len(match_query)
+                            break
+                    except KeyError:
+                        continue
                 else:
                     continue
                 break
@@ -71,6 +84,18 @@ def sota_estimator(query_pool, api, match_term, uniqueid, query_num):
 
 
 def stratified_estimator(query_pool, api, match_term, candidate_rate, query_num, layer=5):
+    """
+    A method to estimate the aggregation of a search engine's corpus efficient yet unbiased
+    ------**Mining a search engine's corpus: efficient yet unbiased sampling and aggregate estimation**
+
+    :param query_pool: A dict contains the queries and their benefits. {set(['yong','jun']):5}
+    :param api: An implementation of simapi for specific api.
+    :param match_term: Some fields for matching queries and returned document.
+    :param candidate_rate: A proportion of match query would be the candidate_rate..
+    :param query_num: The number of queries you want to estimate
+    :param layer: The number of queries you want to estimate
+    :return: count(*) of the search engine
+    """
     stratified_pool, pool_sample = __query_pool_Sample(query_pool, query_num, api, layer)
     print >> perr, 'sample generated successfully.'
     params = api.getKwargs()
@@ -81,6 +106,8 @@ def stratified_estimator(query_pool, api, match_term, candidate_rate, query_num,
         for query in pool_sample[i]:
             params[api.getSearchTerm()] = '+'.join(query)
             result = api.callAPI(params=params)
+            if len(result) == 0:
+                continue
             for row in result:
                 match_query, candidate_query = __candidate_construction(query, row, query_pool, match_term,
                                                                         candidate_rate)

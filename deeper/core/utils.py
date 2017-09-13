@@ -1,4 +1,5 @@
 import sys
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 from sys import stderr as perr
@@ -8,6 +9,13 @@ import fim
 
 
 def queryGene(D1, thre):
+    """
+    Use fpgrowth to generate a finite queries pool
+
+    :param D1: local database {'uniqueid':['database'. 'laboratory']}
+    :param thre: threshold of queries' frequency
+    :return: a closed frequency itemset of local database
+    """
     D1bags = []
     for k, v in D1.iteritems():
         D1bags.append(v)
@@ -20,6 +28,14 @@ def queryGene(D1, thre):
 
 
 def forwardIndex(D1index):
+    """
+     A forward index maps a local record to all the queries that the record satisfies. Such a list is
+     called a forward list. To build the index, we initialize a hash map F and let F(d)denote the
+     forward list for d.
+
+    :param D1index: inverted index of local database.
+    :return: a dict of forward index.
+    """
     findex = {}
     for q, v in D1index.iteritems():
         for d in v:
@@ -30,6 +46,17 @@ def forwardIndex(D1index):
 
 
 def invertedIndex(queries, data):
+    """
+     An inverted index maps each keyword to a list of local records that contain the keyword. Such a list
+     is called an inverted list. To build the index, we initialize a hash map I and let I(w) denote the
+     inverted list of key-word w. For each local record d belongs to D, we enumerate each keyword in
+     document(d) and add d into I(w). Given a query q, we generate q(D) by getting the intersection of
+     the inverted list of each keyword in the query.
+
+    :param queries: query pool which is a closed frequency itemset of local database
+    :param data: local database or sample database
+    :return: an inverted index {query: set(uniqueid)}
+    """
     sindex = {}
     for k, v in data.iteritems():
         for w in v:
@@ -50,6 +77,15 @@ def invertedIndex(queries, data):
 
 
 def add_naiveIndex(queries, data, index):
+    """
+    To improve the efficiency of building index, naive queries would be added to query pool and inverted
+    index after processing the queries whose frequency are larger than threshold.
+
+    :param queries: query pool without naive queries
+    :param data: local database
+    :param index: inverted index without naive queries
+    :return: query pool and inverted index with naive queries
+    """
     naiveQueries = {}
     naiveIndex = {}
     for q, v in data.iteritems():
@@ -66,6 +102,16 @@ def add_naiveIndex(queries, data, index):
 
 
 def initScore_biased(sampleindex, k, sr, Dratio, queries):
+    """
+    Biased benefit estimation.
+
+    :param sampleindex: inverted index of sample
+    :param k: top-k restriction
+    :param sr: sample rate
+    :param Dratio: local database rate
+    :param queries: query pool
+    :return: query pool with biased benefit
+    """
     query_pool = maxpq()
     for q, l1 in queries.iteritems():
         if len(sampleindex[q]) != 0:
@@ -85,6 +131,13 @@ def initScore_biased(sampleindex, k, sr, Dratio, queries):
 
 
 def updateList(D1index):
+    """
+    Update information stored into update list rather than update the priority of each query in-place in
+    the priority queue.
+
+    :param D1index: inverted index of local database.
+    :return: a dict of update information
+    """
     updatelist = {}
     for q in D1index:
         updatelist[q] = 0
@@ -92,6 +145,16 @@ def updateList(D1index):
 
 
 def initScore_unbiased(sampleindex, D1index, k, sr, queries):
+    """
+    Unbiased benefit estimation.
+
+    :param sampleindex: inverted index of sample
+    :param k: top-k restriction
+    :param sr: sample rate
+    :param Dratio: local database rate
+    :param queries: query pool
+    :return: query pool with biased benefit
+    """
     query_pool = maxpq()
     for q, l1 in queries.iteritems():
         if len(sampleindex[q]) != 0:
@@ -109,6 +172,14 @@ def initScore_unbiased(sampleindex, D1index, k, sr, queries):
 
 
 def results_simjoin(er_result, D1_ER, jaccard_thre):
+    """
+    An adapter for similarity join and smart crawl.
+
+    :param er_result: documents returned by api at each iteration
+    :param D1_ER: local database
+    :param jaccard_thre: jaccard threshold
+    :return: match index and pair at each iteration
+    """
     sj = simjoin.SimJoin(D1_ER)
     w_res = sj.join(er_result, jaccard_thre, True)
     match_ids = set()

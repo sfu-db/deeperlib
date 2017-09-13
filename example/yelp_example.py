@@ -22,9 +22,8 @@ yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=50, del
                  **parameters)
 sample_file = 'yelp_sample'
 localdata_file = 'yelp_3000'
-result_file = 'yelp_result'
-match_file = 'yelp_match'
+result_dir = 'yelp_result'
 sampledata = SampleData(sample_file, "row['id']", ["row['name']"])
 localdata = LocalData(localdata_file, "row['business_id']", ["row['name']"], ["row['name']", "row['full_address']"])
-hiddendata = HiddenData(result_file, match_file, "row['id']", ["row['name']", "' '.join(row['location']['display_address'])"])
+hiddendata = HiddenData(result_dir, "row['id']", ["row['name']", "' '.join(row['location']['display_address'])"])
 smartcrawl.smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, yelp, sampledata, localdata, hiddendata)

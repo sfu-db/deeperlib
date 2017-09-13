@@ -9,7 +9,22 @@ import deeper.api.simthread
 
 
 class SearchApi(deeper.api.simapi.SimpleApi):
+    """
+    A subclass implemented for yelp/business/search api----https://www.yelp.com/developers/documentation/v3/business_search
+    """
+
     def __init__(self, client_id, client_secret, top_k, delay, search_term, **kwargs):
+        """
+        Initialize the object. Set id and secret to obtain JWT Token. Create session with the token.
+        Set other parameters and top_k for future api call.
+
+        :param client_id: client_id
+        :param client_secret: client_secret
+        :param top_k: top-k constraint
+        :param delay: time interval between a failed api call and the next api call
+        :param search_term: the field for query string
+        :param kwargs: other parameters
+        """
         deeper.api.simapi.SimpleApi.__init__(self)
         self.setTopk(top_k)
         self.setDelay(delay)
@@ -27,6 +42,12 @@ class SearchApi(deeper.api.simapi.SimpleApi):
         return self.__topk
 
     def callAPI(self, params):
+        """
+        Call api until it returns messages successfully.
+
+        :param params: all the parameters needed by an api
+        :return: businesses in returned documents
+        """
         while True:
             try:
                 resp = self.__session.get(self.__searchURL, params=params)
@@ -46,8 +67,15 @@ class SearchApi(deeper.api.simapi.SimpleApi):
                 continue
 
     def callMulAPI(self, queries):
+        """
+        Call api with multiple threads. Therefore, we can issue several queries and get all of the top k
+        documents at the same time.
+
+        :param queries: queries list
+        :return: messages returned from api
+        """
         limit = self.__kwargs['limit']
-        page = (self.__topk + limit -1) / limit
+        page = (self.__topk + limit - 1) / limit
         threads = []
         for query in queries:
             for p in range(0, page):

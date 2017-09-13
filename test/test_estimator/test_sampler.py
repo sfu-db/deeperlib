@@ -1,4 +1,5 @@
 import unittest
+import os
 from deeper.api.yelp.searchapi import SearchApi
 from deeper.data_processing.local_data import LocalData
 from deeper.core import utils

@@ -2,22 +2,46 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 import pickle
+import os
 from data_process import wordset
 
 
 class HiddenData:
-    def __init__(self, resultpath, matchpath, uniqueid, matchlist):
-        self.setResultPath(resultpath)
-        self.setMatchPath(matchpath)
+    """
+    A HiddenData object would keep the data crawled from api in json format in a dict. It provides you
+    with some methods to manipulate the data, such as, defining your own way to pre-process the
+    raw_data, saving the data and matched pairs to files.
+    """
+
+    def __init__(self, result_dir, uniqueid, matchlist):
+        """
+        Initialize the object. The data structures of messages returned by various api are so different
+        that users or developers have to define the uniqueid and matchlist of the messages manually.
+
+        :param result_dir: the target directory for output files.
+        :param uniqueid: the uniqueid of returned messages.
+        :param matchlist: the fields of returned messages for similarity join.
+        """
+        self.setResultDir(result_dir)
         self.setUniqueId(uniqueid)
         self.setMatchList(matchlist)
         self.setMergeResult({})
 
     def proResult(self, result_raw):
+        """
+        Merge the raw data and keep them in a dict. Then, pre-process the raw data for similarity join.
+
+        :param result_raw: the raw result returned by api.
+        :return: a list for similarity join. [(['yong', 'jun', 'he', 'simon', 'fraser'],'uniqueid')]
+        :raises KeyError: some messages would miss some fields.
+        """
         result_merge = self.__mergeResult
         result_er = []
         for row in result_raw:
-            r_id = eval(self.__uniqueId)
+            try:
+                r_id = eval(self.__uniqueId)
+            except KeyError:
+                continue
             if r_id not in result_merge:
                 result_merge[r_id] = row
                 bag = []
@@ -31,30 +55,34 @@ class HiddenData:
         return result_er
 
     def saveResult(self):
+        """
+        Save the returned massages in the target directory.
+        """
         resultList = self.__mergeResult.values()
-        with open(self.__resultPath, 'wb') as f:
+        if not os.path.exists(self.__resultDir):
+            os.makedirs(self.__resultDir)
+        with open(self.__resultDir + '\\result_file', 'wb') as f:
             pickle.dump(resultList, f)
 
     def saveMatchPair(self):
+        """
+        Save the matched pairs judged by similarity join in the target directory.
+        """
         savePair = {}
         for m in self.__matchPair:
             savePair[m[0]] = []
         for m in self.__matchPair:
             savePair[m[0]].append(m[1])
-        with open(self.__matchPath, 'wb') as f:
+        if not os.path.exists(self.__resultDir):
+            os.makedirs(self.__resultDir)
+        with open(self.__resultDir + '\\match_file', 'wb') as f:
             pickle.dump(savePair, f)
 
-    def setResultPath(self, resultpath):
-        self.__resultPath = resultpath
+    def setResultDir(self, result_dir):
+        self.__resultDir = result_dir
 
-    def getResultPath(self):
-        return self.__resultPath
-
-    def setMatchPath(self, matchpath):
-        self.__matchPath = matchpath
-
-    def getMatchPath(self):
-        return self.__matchPath
+    def getResultDir(self):
+        return self.__resultDir
 
     def setUniqueId(self, uniqueid):
         self.__uniqueId = uniqueid

@@ -1,4 +1,5 @@
 import sys
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 import pickle
@@ -6,7 +7,21 @@ from data_process import wordset
 
 
 class LocalData:
+    """
+    A LocalData object would read the data from input file and then process the raw data. At last,
+    it would generate a set of uniqueid, .a list for similarity join and a dict for query pool generation.
+    """
+
     def __init__(self, localpath, uniqueid, querylist, matchlist):
+        """
+        Initialize the object. The data structures of messages input by users or developers are so different
+        that users or developers have to define the uniqueid, querylist and matchlist of the messages manually.
+
+        :param localpath: The path of input file.
+        :param uniqueid: The uniqueid of messages in the file.
+        :param querylist: The fields of messages for query pool generation..
+        :param matchlist: The fields of messages for similarity join.
+        """
         self.setLocalPath(localpath)
         self.setUniqueId(uniqueid)
         self.setQueryList(querylist)
@@ -14,26 +29,42 @@ class LocalData:
         self.loadLocalData()
 
     def loadLocalData(self):
+        """
+        Load local data and then generate three important data structures used for smart crawl.
+        **localdata_ids** Collect a set of uniqueid. ('uniqueid1', 'uniqueid2')
+
+        **localdata_query** Split the fields into a list of words defined by querylist of each message.
+        Filter out stop words and words whose length<3 from the list of words.
+        Then generate a dict for query pool generation. {'uniqueid':['database'. 'laboratory']}
+
+        **localdata_er** A list for similarity join. [(['yong', 'jun', 'he', 'simon', 'fraser'],'uniqueid')]
+        """
         with open(self.__localPath, 'rb') as f:
             data_raw = pickle.load(f)
         localdata_query = {}
         localdata_er = []
         localdata_ids = set()
-        common_words = ['and', 'for', 'the', 'with', 'about']
+        stop_words = ['and', 'for', 'the', 'with', 'about']
         for row in data_raw:
-            r_id = eval(self.__uniqueId)
+            try:
+                r_id = eval(self.__uniqueId)
+            except KeyError:
+                continue
             localdata_ids.add(r_id)
             tempbag = []
             for v in self.__queryList:
                 tempbag.extend(wordset(eval(v)))
             bag = []
             for word in tempbag:
-                if word not in common_words and len(word) >= 3:
+                if word not in stop_words and len(word) >= 3:
                     bag.append(word)
             localdata_query[r_id] = bag
             bag = []
             for v in self.__matchList:
-                bag.extend(wordset(eval(v)))
+                try:
+                    bag.extend(wordset(eval(v)))
+                except KeyError:
+                    continue
             localdata_er.append((bag, r_id))
         self.setlocalData(localdata_ids, localdata_query, localdata_er)
 

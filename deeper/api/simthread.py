@@ -1,7 +1,12 @@
 import threading
 
+
 class SimpleThread(threading.Thread):
-    def __init__(self,func,args,name=''):
+    """
+    A simple subclass of the Thread class. We can create new thread for customized function easily.
+    """
+
+    def __init__(self, func, args, name=''):
         threading.Thread.__init__(self)
         self.name = name
         self.func = func

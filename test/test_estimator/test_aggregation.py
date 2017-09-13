@@ -1,4 +1,5 @@
 import unittest
+import os
 from deeper.api.dblp.publapi import PublApi
 from deeper.data_processing.local_data import LocalData
 from deeper.core import utils

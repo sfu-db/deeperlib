@@ -8,7 +8,20 @@ import deeper.api.simthread
 
 
 class AdvancedPublApi(deeper.api.simapi.SimpleApi):
+    """
+    A subclass implemented for aminer/search/pub/advanced api----https://api.aminer.org/api/search/pub/advanced
+    """
+
     def __init__(self, top_k, delay, search_term, **kwargs):
+        """
+        Initialize the object. Set url and create session. Set other parameters and top_k for
+        future api call.
+
+        :param top_k: top-k constraint
+        :param delay: time interval between a failed api call and the next api call
+        :param search_term: the field for query string
+        :param kwargs: other parameters
+        """
         deeper.api.simapi.SimpleApi.__init__(self)
         self.setTopk(top_k)
         self.setDelay(delay)
@@ -24,6 +37,12 @@ class AdvancedPublApi(deeper.api.simapi.SimpleApi):
         return self.__topk
 
     def callAPI(self, params):
+        """
+        Call api until it returns messages successfully.
+
+        :param params: all the parameters needed by an api
+        :return: businesses in returned documents
+        """
         while True:
             try:
                 resp = self.__session.get(self.__searchURL, params=params)
@@ -43,6 +62,13 @@ class AdvancedPublApi(deeper.api.simapi.SimpleApi):
                 continue
 
     def callMulAPI(self, queries):
+        """
+        Call api with multiple threads. Therefore, we can issue several queries and get all of the top k
+        documents at the same time.
+
+        :param queries: queries list
+        :return: messages returned from api
+        """
         size = self.__kwargs['size']
         page = (self.__topk + size - 1) / size
         threads = []

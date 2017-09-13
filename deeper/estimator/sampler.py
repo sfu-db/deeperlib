@@ -6,6 +6,18 @@ from deeper.data_processing import data_process
 
 
 def sota_sampler(query_pool, api, match_term, top_k, adjustment=1, samplenum=500):
+    """
+    A method to crawl each document from a search engine's corpus in the same probability
+    ------**Random sampling from a search engine's index**
+
+    :param query_pool: A dict contains the queries and their benefits. {set(['yong','jun']):5}
+    :param api: An implementation of simapi for specific api.
+    :param match_term: Some fields for matching queries and returned document.
+    :param top_k: Only top_k documents would be returned by api.
+    :param adjustment: A paramters used to improve the probability of accepting a document
+    :param samplenum: The size of the sample
+    :return: A list of sample documents returned by api
+    """
     sample = []
     query_cost = 0
     params = api.getKwargs()
@@ -28,6 +40,7 @@ def sota_sampler(query_pool, api, match_term, top_k, adjustment=1, samplenum=500
                     try:
                         document += data_process.alphnum(eval(term).lower()) + ' '
                     except KeyError:
+                        print 'miss some attributes'
                         continue
                 # accept with prob of 1/freq
                 # else continue with prob(1 - q/k)

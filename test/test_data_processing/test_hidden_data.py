@@ -5,9 +5,8 @@ from deeper.data_processing.hidden_data import HiddenData
 
 class HiddendataTestCase(unittest.TestCase):
     def setUp(self):
-        match_file = os.path.abspath(os.path.dirname(__file__) + os.path.sep + "../../") + '/example/dblp_match'
-        result_file = os.path.abspath(os.path.dirname(__file__) + os.path.sep + "../../") + '/example/dblp_result'
-        self.hiddendata = HiddenData(result_file, match_file, "row['info']['key']", ["row['info']['title']"])
+        result_dir = os.path.abspath(os.path.dirname(__file__) + os.path.sep + "../../") + '/example/dblp_result'
+        self.hiddendata = HiddenData(result_dir, "row['info']['key']", ["row['info']['title']"])
 
     def tearDown(self):
         self.hiddendata = None

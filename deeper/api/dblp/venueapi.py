@@ -8,7 +8,18 @@ import deeper.api.simthread
 
 
 class VenueApi(deeper.api.simapi.SimpleApi):
+    """
+    A subclass implemented for dblp/search/venue api----http://dblp.org/search/venue/api
+    """
+
     def __init__(self, delay, search_term, **kwargs):
+        """
+        Initialize the object. Set url and create session. Set other parameters for future api call.
+
+        :param delay: time interval between a failed api call and the next api call
+        :param search_term: the field for query string
+        :param kwargs: other parameters
+        """
         deeper.api.simapi.SimpleApi.__init__(self)
         self.setDelay(delay)
         self.setSearchTerm(search_term)
@@ -17,6 +28,12 @@ class VenueApi(deeper.api.simapi.SimpleApi):
         self.setURL('http://dblp.org/search/venue/api')
 
     def callAPI(self, params):
+        """
+        Call api until it returns messages successfully.
+
+        :param params: all the parameters needed by an api
+        :return: businesses in returned documents
+        """
         while True:
             try:
                 resp = self.__session.get(self.__searchURL, params=params)
@@ -35,6 +52,13 @@ class VenueApi(deeper.api.simapi.SimpleApi):
                 continue
 
     def callMulAPI(self, queries):
+        """
+        Call api with multiple threads. Therefore, we can issue several queries and get all of the top k
+        documents at the same time.
+
+        :param queries: queries list
+        :return: messages returned from api
+        """
         threads = []
         for query in queries:
             params = self.getKwargs()

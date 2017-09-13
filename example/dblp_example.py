@@ -19,9 +19,8 @@ parameters = {'h': 800}
 dblp = PublApi(delay=5, search_term=search_term, **parameters)
 sample_file = 'dblp_sample'
 localdata_file = 'dblp_10000'
-result_file = 'dblp_result'
-match_file = 'dblp_match'
+result_dir = 'dblp_result'
 sampledata = SampleData(sample_file, "row['key']", ["row['title']"])
 localdata = LocalData(localdata_file, "row['key']", ["row['title']"], ["row['title']"])
-hiddendata = HiddenData(result_file, match_file, "row['info']['key']", ["row['info']['title']"])
+hiddendata = HiddenData(result_dir, "row['info']['key']", ["row['info']['title']"])
 smartcrawl.smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, dblp, sampledata, localdata, hiddendata)
