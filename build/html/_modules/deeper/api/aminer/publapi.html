@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>deeper.api.aminer.publapi &#8212; deeper 0.1a documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.1a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../../index.html">
+          Deeper</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../deeper.html">deeper package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modules.html">deeper</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"></ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <h1>Source code for deeper.api.aminer.publapi</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="k">import</span> <span class="n">stderr</span> <span class="k">as</span> <span class="n">perr</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">simplejson</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">sleep</span>
+<span class="kn">import</span> <span class="nn">deeper.api.simapi</span>
+<span class="kn">import</span> <span class="nn">deeper.api.simthread</span>
+
+
+<div class="viewcode-block" id="PublApi"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi">[docs]</a><span class="k">class</span> <span class="nc">PublApi</span><span class="p">(</span><span class="n">deeper</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">simapi</span><span class="o">.</span><span class="n">SimpleApi</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A subclass implemented for aminer/search/pub api----https://api.aminer.org/api/search/pub</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">top_k</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">search_term</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the object. Set url and create session. Set other parameters and top_k for</span>
+<span class="sd">        future api call.</span>
+
+<span class="sd">        :param top_k: top-k constraint</span>
+<span class="sd">        :param delay: time interval between a failed api call and the next api call</span>
+<span class="sd">        :param search_term: the field for query string</span>
+<span class="sd">        :param kwargs: other parameters</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">deeper</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">simapi</span><span class="o">.</span><span class="n">SimpleApi</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setTopk</span><span class="p">(</span><span class="n">top_k</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setDelay</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setSearchTerm</span><span class="p">(</span><span class="n">search_term</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setKwargs</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setURL</span><span class="p">(</span><span class="s2">&quot;https://api.aminer.org/api/search/pub&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setSession</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">session</span><span class="p">())</span>
+
+<div class="viewcode-block" id="PublApi.setTopk"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.setTopk">[docs]</a>    <span class="k">def</span> <span class="nf">setTopk</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">top_k</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__topk</span> <span class="o">=</span> <span class="n">top_k</span></div>
+
+<div class="viewcode-block" id="PublApi.getTopk"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.getTopk">[docs]</a>    <span class="k">def</span> <span class="nf">getTopk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__topk</span></div>
+
+<div class="viewcode-block" id="PublApi.callAPI"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.callAPI">[docs]</a>    <span class="k">def</span> <span class="nf">callAPI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Call api until it returns messages successfully.</span>
+
+<span class="sd">        :param params: all the parameters needed by an api</span>
+<span class="sd">        :return: businesses in returned documents</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__searchURL</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+                <span class="n">re</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+                <span class="k">if</span> <span class="s1">&#39;result&#39;</span> <span class="ow">in</span> <span class="n">re</span><span class="p">:</span>
+                    <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">]</span>
+                    <span class="k">return</span> <span class="n">result</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="p">[]</span>
+            <span class="k">except</span> <span class="n">simplejson</span><span class="o">.</span><span class="n">scanner</span><span class="o">.</span><span class="n">JSONDecodeError</span><span class="p">:</span>
+                <span class="nb">print</span> <span class="o">&gt;&gt;</span> <span class="n">perr</span><span class="p">,</span> <span class="s1">&#39;JSONDecodeError error!!!&#39;</span>
+                <span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__delay</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">ConnectionError</span><span class="p">:</span>
+                <span class="nb">print</span> <span class="o">&gt;&gt;</span> <span class="n">perr</span><span class="p">,</span> <span class="s1">&#39;ConnectionError error!!!&#39;</span>
+                <span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__delay</span><span class="p">)</span>
+                <span class="k">continue</span></div>
+
+<div class="viewcode-block" id="PublApi.callMulAPI"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.callMulAPI">[docs]</a>    <span class="k">def</span> <span class="nf">callMulAPI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queries</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Call api with multiple threads. Therefore, we can issue several queries and get all of the top k</span>
+<span class="sd">        documents at the same time.</span>
+
+<span class="sd">        :param queries: queries list</span>
+<span class="sd">        :return: messages returned from api</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__kwargs</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__topk</span> <span class="o">+</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">size</span>
+        <span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">query</span> <span class="ow">in</span> <span class="n">queries</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">page</span><span class="p">):</span>
+                <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getKwargs</span><span class="p">()</span>
+                <span class="n">params</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__searchTerm</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+                <span class="n">params</span><span class="p">[</span><span class="s1">&#39;offset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">size</span>
+                <span class="n">t</span> <span class="o">=</span> <span class="n">deeper</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">simthread</span><span class="o">.</span><span class="n">SimpleThread</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">callAPI</span><span class="p">,</span> <span class="p">(</span><span class="n">params</span><span class="p">,),</span> <span class="bp">self</span><span class="o">.</span><span class="n">callAPI</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+                <span class="n">threads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">:</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">:</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+        <span class="n">mresult</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">:</span>
+            <span class="n">mresult</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">getResult</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">mresult</span></div>
+
+<div class="viewcode-block" id="PublApi.setDelay"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.setDelay">[docs]</a>    <span class="k">def</span> <span class="nf">setDelay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__delay</span> <span class="o">=</span> <span class="n">delay</span></div>
+
+<div class="viewcode-block" id="PublApi.getDelay"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.getDelay">[docs]</a>    <span class="k">def</span> <span class="nf">getDelay</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__delay</span></div>
+
+<div class="viewcode-block" id="PublApi.setSearchTerm"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.setSearchTerm">[docs]</a>    <span class="k">def</span> <span class="nf">setSearchTerm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">search_term</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__searchTerm</span> <span class="o">=</span> <span class="n">search_term</span></div>
+
+<div class="viewcode-block" id="PublApi.getSearchTerm"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.getSearchTerm">[docs]</a>    <span class="k">def</span> <span class="nf">getSearchTerm</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__searchTerm</span></div>
+
+<div class="viewcode-block" id="PublApi.setKwargs"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.setKwargs">[docs]</a>    <span class="k">def</span> <span class="nf">setKwargs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__kwargs</span> <span class="o">=</span> <span class="n">kwargs</span></div>
+
+<div class="viewcode-block" id="PublApi.getKwargs"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.getKwargs">[docs]</a>    <span class="k">def</span> <span class="nf">getKwargs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PublApi.setURL"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.setURL">[docs]</a>    <span class="k">def</span> <span class="nf">setURL</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__searchURL</span> <span class="o">=</span> <span class="n">url</span></div>
+
+<div class="viewcode-block" id="PublApi.getURL"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.getURL">[docs]</a>    <span class="k">def</span> <span class="nf">getURL</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__searchURL</span></div>
+
+<div class="viewcode-block" id="PublApi.setID"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.setID">[docs]</a>    <span class="k">def</span> <span class="nf">setID</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PublApi.getID"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.getID">[docs]</a>    <span class="k">def</span> <span class="nf">getID</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PublApi.setToken"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.setToken">[docs]</a>    <span class="k">def</span> <span class="nf">setToken</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PublApi.getToken"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.getToken">[docs]</a>    <span class="k">def</span> <span class="nf">getToken</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="PublApi.setSession"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.setSession">[docs]</a>    <span class="k">def</span> <span class="nf">setSession</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36&quot;</span><span class="p">,</span>
+            <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s2">&quot;text / html, application / xhtml + xml, application / xml;q = 0.9, image / webp, image / apng, * / *;q = 0.8&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">session</span><span class="o">.</span><span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__session</span> <span class="o">=</span> <span class="n">session</span></div>
+
+<div class="viewcode-block" id="PublApi.getSession"><a class="viewcode-back" href="../../../../deeper.api.aminer.html#deeper.api.aminer.publapi.PublApi.getSession">[docs]</a>    <span class="k">def</span> <span class="nf">getSession</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__session</span></div></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, yongjun he.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

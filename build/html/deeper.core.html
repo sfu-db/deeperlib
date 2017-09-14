@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>deeper.core package &#8212; deeper 0.1a documentation</title>
+    
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="deeper.data_processing package" href="deeper.data_processing.html" />
+    <link rel="prev" title="deeper.api.yelp package" href="deeper.api.yelp.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Deeper</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="deeper.html">deeper package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">deeper</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">deeper.core package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-deeper.core.smartcrawl">deeper.core.smartcrawl module</a></li>
+<li><a class="reference internal" href="#module-deeper.core.utils">deeper.core.utils module</a></li>
+<li><a class="reference internal" href="#module-deeper.core">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="deeper.api.yelp.html" title="Previous Chapter: deeper.api.yelp package"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; deeper.api.ye...</span>
+    </a>
+  </li>
+  <li>
+    <a href="deeper.data_processing.html" title="Next Chapter: deeper.data_processing package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">deeper.data_p... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/deeper.core.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="deeper-core-package">
+<h1>deeper.core package<a class="headerlink" href="#deeper-core-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-deeper.core.smartcrawl">
+<span id="deeper-core-smartcrawl-module"></span><h2>deeper.core.smartcrawl module<a class="headerlink" href="#module-deeper.core.smartcrawl" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="deeper.core.smartcrawl.deeper_figure">
+<code class="descclassname">deeper.core.smartcrawl.</code><code class="descname">deeper_figure</code><span class="sig-paren">(</span><em>cov_deeper</em>, <em>D1_size</em>, <em>api</em>, <em>threads</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/core/smartcrawl.html#deeper_figure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.core.smartcrawl.deeper_figure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Figure the trend of coverage rate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cov_deeper</strong> &#8211; a list of covered documents&#8217; size at each iteration</li>
+<li><strong>D1_size</strong> &#8211; size of local database</li>
+<li><strong>api</strong> &#8211; An implementation of simapi for specific api.</li>
+<li><strong>threads</strong> &#8211; numbers of queries issued at each iteration</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="deeper.core.smartcrawl.smartCrawl">
+<code class="descclassname">deeper.core.smartcrawl.</code><code class="descname">smartCrawl</code><span class="sig-paren">(</span><em>top_k</em>, <em>count</em>, <em>pool_thre</em>, <em>jaccard_thre</em>, <em>threads</em>, <em>budget</em>, <em>api</em>, <em>sampledata</em>, <em>localdata</em>, <em>hiddendata</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/core/smartcrawl.html#smartCrawl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.core.smartcrawl.smartCrawl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a budget ofb queries, SMARTCRAWL first constructs a query pool based on the local database and then
+iteratively issues b queries to the hidden database such that the union of the query results can cover
+the maximum number of records in the local database. Finally, it performs entity resolution between the
+local database and the crawled records.
+&#8212;-<strong>DeepER: Deep Entity Resolution</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>top_k</strong> &#8211; top-k constraint of specific api</li>
+<li><strong>count</strong> &#8211; size of hidden database</li>
+<li><strong>pool_thre</strong> &#8211; threshold of queries&#8217; frequency</li>
+<li><strong>jaccard_thre</strong> &#8211; jaccard threshold</li>
+<li><strong>threads</strong> &#8211; numbers of queries issued at each iteration</li>
+<li><strong>budget</strong> &#8211; the budget of api call times</li>
+<li><strong>api</strong> &#8211; An implementation of simapi for specific api.</li>
+<li><strong>sampledata</strong> &#8211; SampleData object</li>
+<li><strong>localdata</strong> &#8211; LocalData object</li>
+<li><strong>hiddendata</strong> &#8211; HiddenData object</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-deeper.core.utils">
+<span id="deeper-core-utils-module"></span><h2>deeper.core.utils module<a class="headerlink" href="#module-deeper.core.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="deeper.core.utils.add_naiveIndex">
+<code class="descclassname">deeper.core.utils.</code><code class="descname">add_naiveIndex</code><span class="sig-paren">(</span><em>queries</em>, <em>data</em>, <em>index</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/core/utils.html#add_naiveIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.core.utils.add_naiveIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>To improve the efficiency of building index, naive queries would be added to query pool and inverted
+index after processing the queries whose frequency are larger than threshold.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>queries</strong> &#8211; query pool without naive queries</li>
+<li><strong>data</strong> &#8211; local database</li>
+<li><strong>index</strong> &#8211; inverted index without naive queries</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">query pool and inverted index with naive queries</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="deeper.core.utils.forwardIndex">
+<code class="descclassname">deeper.core.utils.</code><code class="descname">forwardIndex</code><span class="sig-paren">(</span><em>D1index</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/core/utils.html#forwardIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.core.utils.forwardIndex" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>A forward index maps a local record to all the queries that the record satisfies. Such a list is
+called a forward list. To build the index, we initialize a hash map F and let F(d)denote the
+forward list for d.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>D1index</strong> &#8211; inverted index of local database.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a dict of forward index.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="deeper.core.utils.initScore_biased">
+<code class="descclassname">deeper.core.utils.</code><code class="descname">initScore_biased</code><span class="sig-paren">(</span><em>sampleindex</em>, <em>k</em>, <em>sr</em>, <em>Dratio</em>, <em>queries</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/core/utils.html#initScore_biased"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.core.utils.initScore_biased" title="Permalink to this definition">¶</a></dt>
+<dd><p>Biased benefit estimation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sampleindex</strong> &#8211; inverted index of sample</li>
+<li><strong>k</strong> &#8211; top-k restriction</li>
+<li><strong>sr</strong> &#8211; sample rate</li>
+<li><strong>Dratio</strong> &#8211; local database rate</li>
+<li><strong>queries</strong> &#8211; query pool</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">query pool with biased benefit</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="deeper.core.utils.initScore_unbiased">
+<code class="descclassname">deeper.core.utils.</code><code class="descname">initScore_unbiased</code><span class="sig-paren">(</span><em>sampleindex</em>, <em>D1index</em>, <em>k</em>, <em>sr</em>, <em>queries</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/core/utils.html#initScore_unbiased"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.core.utils.initScore_unbiased" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unbiased benefit estimation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sampleindex</strong> &#8211; inverted index of sample</li>
+<li><strong>k</strong> &#8211; top-k restriction</li>
+<li><strong>sr</strong> &#8211; sample rate</li>
+<li><strong>Dratio</strong> &#8211; local database rate</li>
+<li><strong>queries</strong> &#8211; query pool</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">query pool with biased benefit</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="deeper.core.utils.invertedIndex">
+<code class="descclassname">deeper.core.utils.</code><code class="descname">invertedIndex</code><span class="sig-paren">(</span><em>queries</em>, <em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/core/utils.html#invertedIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.core.utils.invertedIndex" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>An inverted index maps each keyword to a list of local records that contain the keyword. Such a list
+is called an inverted list. To build the index, we initialize a hash map I and let I(w) denote the
+inverted list of key-word w. For each local record d belongs to D, we enumerate each keyword in
+document(d) and add d into I(w). Given a query q, we generate q(D) by getting the intersection of
+the inverted list of each keyword in the query.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>queries</strong> &#8211; query pool which is a closed frequency itemset of local database</li>
+<li><strong>data</strong> &#8211; local database or sample database</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">an inverted index {query: set(uniqueid)}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="deeper.core.utils.queryGene">
+<code class="descclassname">deeper.core.utils.</code><code class="descname">queryGene</code><span class="sig-paren">(</span><em>D1</em>, <em>thre</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/core/utils.html#queryGene"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.core.utils.queryGene" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use fpgrowth to generate a finite queries pool</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>D1</strong> &#8211; local database {&#8216;uniqueid&#8217;:[&#8216;database&#8217;. &#8216;laboratory&#8217;]}</li>
+<li><strong>thre</strong> &#8211; threshold of queries&#8217; frequency</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a closed frequency itemset of local database</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="deeper.core.utils.results_simjoin">
+<code class="descclassname">deeper.core.utils.</code><code class="descname">results_simjoin</code><span class="sig-paren">(</span><em>er_result</em>, <em>D1_ER</em>, <em>jaccard_thre</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/core/utils.html#results_simjoin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.core.utils.results_simjoin" title="Permalink to this definition">¶</a></dt>
+<dd><p>An adapter for similarity join and smart crawl.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>er_result</strong> &#8211; documents returned by api at each iteration</li>
+<li><strong>D1_ER</strong> &#8211; local database</li>
+<li><strong>jaccard_thre</strong> &#8211; jaccard threshold</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">match index and pair at each iteration</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="deeper.core.utils.updateList">
+<code class="descclassname">deeper.core.utils.</code><code class="descname">updateList</code><span class="sig-paren">(</span><em>D1index</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/core/utils.html#updateList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.core.utils.updateList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update information stored into update list rather than update the priority of each query in-place in
+the priority queue.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>D1index</strong> &#8211; inverted index of local database.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a dict of update information</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-deeper.core">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-deeper.core" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, yongjun he.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>deeper.estimator.sampler &#8212; deeper 0.1a documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html">
+          Deeper</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../deeper.html">deeper package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">deeper</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"></ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <h1>Source code for deeper.estimator.sampler</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="k">import</span> <span class="n">stderr</span> <span class="k">as</span> <span class="n">perr</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">from</span> <span class="nn">deeper.data_processing</span> <span class="k">import</span> <span class="n">data_process</span>
+
+
+<div class="viewcode-block" id="sota_sampler"><a class="viewcode-back" href="../../../deeper.estimator.html#deeper.estimator.sampler.sota_sampler">[docs]</a><span class="k">def</span> <span class="nf">sota_sampler</span><span class="p">(</span><span class="n">query_pool</span><span class="p">,</span> <span class="n">api</span><span class="p">,</span> <span class="n">match_term</span><span class="p">,</span> <span class="n">top_k</span><span class="p">,</span> <span class="n">adjustment</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">samplenum</span><span class="o">=</span><span class="mi">500</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A method to crawl each document from a search engine&#39;s corpus in the same probability</span>
+<span class="sd">    ------**Random sampling from a search engine&#39;s index**</span>
+
+<span class="sd">    :param query_pool: A dict contains the queries and their benefits. {set([&#39;yong&#39;,&#39;jun&#39;]):5}</span>
+<span class="sd">    :param api: An implementation of simapi for specific api.</span>
+<span class="sd">    :param match_term: Some fields for matching queries and returned document.</span>
+<span class="sd">    :param top_k: Only top_k documents would be returned by api.</span>
+<span class="sd">    :param adjustment: A paramters used to improve the probability of accepting a document</span>
+<span class="sd">    :param samplenum: The size of the sample</span>
+<span class="sd">    :return: A list of sample documents returned by api</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sample</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">query_cost</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">getKwargs</span><span class="p">()</span>
+    <span class="n">query_pool_copy</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">query_pool</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">samplenum</span><span class="p">:</span>
+        <span class="n">query_cost</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">curQuery</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">query_pool</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+        <span class="n">params</span><span class="p">[</span><span class="n">api</span><span class="o">.</span><span class="n">getSearchTerm</span><span class="p">()]</span> <span class="o">=</span> <span class="s1">&#39;+&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">curQuery</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">callAPI</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="c1"># choose one valid query</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">top_k</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># with prob of q/k</span>
+            <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">top_k</span> <span class="o">*</span> <span class="mf">1.0</span><span class="p">):</span>
+                <span class="c1"># choose one edge uniformly</span>
+                <span class="n">rint</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">row</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">rint</span><span class="p">]</span>
+                <span class="n">document</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+                <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">match_term</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">document</span> <span class="o">+=</span> <span class="n">data_process</span><span class="o">.</span><span class="n">alphnum</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="n">term</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span>
+                    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                        <span class="nb">print</span> <span class="s1">&#39;miss some attributes&#39;</span>
+                        <span class="k">continue</span>
+                <span class="c1"># accept with prob of 1/freq</span>
+                <span class="c1"># else continue with prob(1 - q/k)</span>
+                <span class="n">Mx</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">query_pool_copy</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                    <span class="n">Mx</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">for</span> <span class="n">subq</span> <span class="ow">in</span> <span class="n">q</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">subq</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">document</span><span class="p">:</span>
+                            <span class="n">Mx</span> <span class="o">-=</span> <span class="mi">1</span>
+                            <span class="k">break</span>
+
+                <span class="k">for</span> <span class="n">subq</span> <span class="ow">in</span> <span class="n">curQuery</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                    <span class="k">if</span> <span class="n">subq</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">document</span><span class="p">:</span>
+                        <span class="n">Mx</span> <span class="o">+=</span> <span class="mi">1</span>
+                        <span class="k">break</span>
+
+                <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">adjustment</span> <span class="o">/</span> <span class="n">Mx</span><span class="p">:</span>
+                    <span class="n">sample</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+                    <span class="nb">print</span> <span class="s1">&#39;sample num:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sample</span><span class="p">),</span> <span class="s1">&#39; query cost:&#39;</span><span class="p">,</span> <span class="n">query_cost</span>
+                    <span class="c1"># accept with prob of 1/M(X)</span>
+                    <span class="c1"># else continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">query_pool</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">curQuery</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="nb">print</span> <span class="o">&gt;&gt;</span> <span class="n">perr</span><span class="p">,</span> <span class="n">query_cost</span><span class="p">,</span> <span class="s1">&#39;used for sampling.&#39;</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">query_cost</span><span class="p">),</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sample</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, yongjun he.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

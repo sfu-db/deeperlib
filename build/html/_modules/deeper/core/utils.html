@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>deeper.core.utils &#8212; deeper 0.1a documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html">
+          Deeper</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../deeper.html">deeper package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">deeper</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"></ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <h1>Source code for deeper.core.utils</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="k">import</span> <span class="n">stderr</span> <span class="k">as</span> <span class="n">perr</span>
+<span class="kn">from</span> <span class="nn">pqdict</span> <span class="k">import</span> <span class="n">maxpq</span>
+<span class="kn">from</span> <span class="nn">deeper.entity_resolution</span> <span class="k">import</span> <span class="n">simjoin</span>
+<span class="kn">import</span> <span class="nn">fim</span>
+
+
+<div class="viewcode-block" id="queryGene"><a class="viewcode-back" href="../../../deeper.core.html#deeper.core.utils.queryGene">[docs]</a><span class="k">def</span> <span class="nf">queryGene</span><span class="p">(</span><span class="n">D1</span><span class="p">,</span> <span class="n">thre</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Use fpgrowth to generate a finite queries pool</span>
+
+<span class="sd">    :param D1: local database {&#39;uniqueid&#39;:[&#39;database&#39;. &#39;laboratory&#39;]}</span>
+<span class="sd">    :param thre: threshold of queries&#39; frequency</span>
+<span class="sd">    :return: a closed frequency itemset of local database</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">D1bags</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">D1</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+        <span class="n">D1bags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="n">queries_old</span> <span class="o">=</span> <span class="n">fim</span><span class="o">.</span><span class="n">fpgrowth</span><span class="p">(</span><span class="n">D1bags</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mf">100.0</span> <span class="o">*</span> <span class="n">thre</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">D1bags</span><span class="p">))</span>
+    <span class="n">queries</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">queries_old</span><span class="p">:</span>
+        <span class="n">queries</span><span class="p">[</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="nb">print</span> <span class="o">&gt;&gt;</span> <span class="n">perr</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">queries</span><span class="p">),</span> <span class="s1">&#39;queries generated in total.&#39;</span>
+    <span class="k">return</span> <span class="n">queries</span></div>
+
+
+<div class="viewcode-block" id="forwardIndex"><a class="viewcode-back" href="../../../deeper.core.html#deeper.core.utils.forwardIndex">[docs]</a><span class="k">def</span> <span class="nf">forwardIndex</span><span class="p">(</span><span class="n">D1index</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     A forward index maps a local record to all the queries that the record satisfies. Such a list is</span>
+<span class="sd">     called a forward list. To build the index, we initialize a hash map F and let F(d)denote the</span>
+<span class="sd">     forward list for d.</span>
+
+<span class="sd">    :param D1index: inverted index of local database.</span>
+<span class="sd">    :return: a dict of forward index.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">findex</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">D1index</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">d</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">findex</span><span class="p">:</span>
+                <span class="n">findex</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="n">findex</span><span class="p">[</span><span class="n">d</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">findex</span></div>
+
+
+<div class="viewcode-block" id="invertedIndex"><a class="viewcode-back" href="../../../deeper.core.html#deeper.core.utils.invertedIndex">[docs]</a><span class="k">def</span> <span class="nf">invertedIndex</span><span class="p">(</span><span class="n">queries</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     An inverted index maps each keyword to a list of local records that contain the keyword. Such a list</span>
+<span class="sd">     is called an inverted list. To build the index, we initialize a hash map I and let I(w) denote the</span>
+<span class="sd">     inverted list of key-word w. For each local record d belongs to D, we enumerate each keyword in</span>
+<span class="sd">     document(d) and add d into I(w). Given a query q, we generate q(D) by getting the intersection of</span>
+<span class="sd">     the inverted list of each keyword in the query.</span>
+
+<span class="sd">    :param queries: query pool which is a closed frequency itemset of local database</span>
+<span class="sd">    :param data: local database or sample database</span>
+<span class="sd">    :return: an inverted index {query: set(uniqueid)}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sindex</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sindex</span><span class="p">:</span>
+                <span class="n">sindex</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="n">sindex</span><span class="p">[</span><span class="n">w</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">queries</span><span class="p">:</span>
+        <span class="n">tempSet</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">q</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">sindex</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tempSet</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">tempSet</span> <span class="o">=</span> <span class="n">sindex</span><span class="p">[</span><span class="n">w</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">tempSet</span> <span class="o">=</span> <span class="n">tempSet</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">sindex</span><span class="p">[</span><span class="n">w</span><span class="p">])</span>
+        <span class="n">index</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="o">=</span> <span class="n">tempSet</span>
+    <span class="k">return</span> <span class="n">index</span></div>
+
+
+<div class="viewcode-block" id="add_naiveIndex"><a class="viewcode-back" href="../../../deeper.core.html#deeper.core.utils.add_naiveIndex">[docs]</a><span class="k">def</span> <span class="nf">add_naiveIndex</span><span class="p">(</span><span class="n">queries</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    To improve the efficiency of building index, naive queries would be added to query pool and inverted</span>
+<span class="sd">    index after processing the queries whose frequency are larger than threshold.</span>
+
+<span class="sd">    :param queries: query pool without naive queries</span>
+<span class="sd">    :param data: local database</span>
+<span class="sd">    :param index: inverted index without naive queries</span>
+<span class="sd">    :return: query pool and inverted index with naive queries</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">naiveQueries</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">naiveIndex</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+        <span class="n">naiveQueries</span><span class="p">[</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">v</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">naiveIndex</span><span class="p">[</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">v</span><span class="p">)]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+        <span class="n">naiveQueries</span><span class="p">[</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">v</span><span class="p">)]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">naiveIndex</span><span class="p">[</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">v</span><span class="p">)]</span> <span class="o">=</span> <span class="n">naiveIndex</span><span class="p">[</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">v</span><span class="p">)]</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">q</span><span class="p">]))</span>
+    <span class="n">naiveQueries</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">queries</span><span class="p">)</span>
+    <span class="n">queries</span> <span class="o">=</span> <span class="n">naiveQueries</span>
+    <span class="n">naiveIndex</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">naiveIndex</span>
+    <span class="k">return</span> <span class="n">queries</span><span class="p">,</span> <span class="n">index</span></div>
+
+
+<div class="viewcode-block" id="initScore_biased"><a class="viewcode-back" href="../../../deeper.core.html#deeper.core.utils.initScore_biased">[docs]</a><span class="k">def</span> <span class="nf">initScore_biased</span><span class="p">(</span><span class="n">sampleindex</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">sr</span><span class="p">,</span> <span class="n">Dratio</span><span class="p">,</span> <span class="n">queries</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Biased benefit estimation.</span>
+
+<span class="sd">    :param sampleindex: inverted index of sample</span>
+<span class="sd">    :param k: top-k restriction</span>
+<span class="sd">    :param sr: sample rate</span>
+<span class="sd">    :param Dratio: local database rate</span>
+<span class="sd">    :param queries: query pool</span>
+<span class="sd">    :return: query pool with biased benefit</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">query_pool</span> <span class="o">=</span> <span class="n">maxpq</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">l1</span> <span class="ow">in</span> <span class="n">queries</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sampleindex</span><span class="p">[</span><span class="n">q</span><span class="p">])</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">ls</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sampleindex</span><span class="p">[</span><span class="n">q</span><span class="p">])</span>
+            <span class="n">est_score</span> <span class="o">=</span> <span class="n">ls</span> <span class="o">/</span> <span class="n">sr</span>
+            <span class="k">if</span> <span class="n">est_score</span> <span class="o">&gt;</span> <span class="n">k</span><span class="p">:</span>
+                <span class="n">score</span> <span class="o">=</span> <span class="n">k</span> <span class="o">*</span> <span class="n">l1</span> <span class="o">/</span> <span class="p">(</span><span class="n">est_score</span> <span class="o">*</span> <span class="mf">1.0</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">score</span> <span class="o">=</span> <span class="n">l1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">l1</span> <span class="o">&gt;</span> <span class="n">k</span> <span class="o">*</span> <span class="n">Dratio</span><span class="p">:</span>
+                <span class="n">score</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">k</span> <span class="o">*</span> <span class="n">Dratio</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">score</span> <span class="o">=</span> <span class="n">l1</span>
+        <span class="n">query_pool</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="o">=</span> <span class="n">score</span>
+    <span class="k">return</span> <span class="n">query_pool</span></div>
+
+
+<div class="viewcode-block" id="updateList"><a class="viewcode-back" href="../../../deeper.core.html#deeper.core.utils.updateList">[docs]</a><span class="k">def</span> <span class="nf">updateList</span><span class="p">(</span><span class="n">D1index</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Update information stored into update list rather than update the priority of each query in-place in</span>
+<span class="sd">    the priority queue.</span>
+
+<span class="sd">    :param D1index: inverted index of local database.</span>
+<span class="sd">    :return: a dict of update information</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">updatelist</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">D1index</span><span class="p">:</span>
+        <span class="n">updatelist</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">updatelist</span></div>
+
+
+<div class="viewcode-block" id="initScore_unbiased"><a class="viewcode-back" href="../../../deeper.core.html#deeper.core.utils.initScore_unbiased">[docs]</a><span class="k">def</span> <span class="nf">initScore_unbiased</span><span class="p">(</span><span class="n">sampleindex</span><span class="p">,</span> <span class="n">D1index</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">sr</span><span class="p">,</span> <span class="n">queries</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Unbiased benefit estimation.</span>
+
+<span class="sd">    :param sampleindex: inverted index of sample</span>
+<span class="sd">    :param k: top-k restriction</span>
+<span class="sd">    :param sr: sample rate</span>
+<span class="sd">    :param Dratio: local database rate</span>
+<span class="sd">    :param queries: query pool</span>
+<span class="sd">    :return: query pool with biased benefit</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">query_pool</span> <span class="o">=</span> <span class="n">maxpq</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">l1</span> <span class="ow">in</span> <span class="n">queries</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sampleindex</span><span class="p">[</span><span class="n">q</span><span class="p">])</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">ls</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sampleindex</span><span class="p">[</span><span class="n">q</span><span class="p">])</span>
+            <span class="n">lcap</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sampleindex</span><span class="p">[</span><span class="n">q</span><span class="p">]</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">D1index</span><span class="p">[</span><span class="n">q</span><span class="p">]))</span>
+            <span class="n">est_score</span> <span class="o">=</span> <span class="n">lcap</span> <span class="o">/</span> <span class="n">sr</span>
+            <span class="k">if</span> <span class="n">est_score</span> <span class="o">&gt;</span> <span class="n">k</span><span class="p">:</span>
+                <span class="n">score</span> <span class="o">=</span> <span class="n">lcap</span> <span class="o">*</span> <span class="n">k</span> <span class="o">/</span> <span class="p">(</span><span class="n">ls</span> <span class="o">*</span> <span class="mf">1.0</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">score</span> <span class="o">=</span> <span class="n">est_score</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">query_pool</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="o">=</span> <span class="n">score</span>
+    <span class="k">return</span> <span class="n">query_pool</span></div>
+
+
+<div class="viewcode-block" id="results_simjoin"><a class="viewcode-back" href="../../../deeper.core.html#deeper.core.utils.results_simjoin">[docs]</a><span class="k">def</span> <span class="nf">results_simjoin</span><span class="p">(</span><span class="n">er_result</span><span class="p">,</span> <span class="n">D1_ER</span><span class="p">,</span> <span class="n">jaccard_thre</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An adapter for similarity join and smart crawl.</span>
+
+<span class="sd">    :param er_result: documents returned by api at each iteration</span>
+<span class="sd">    :param D1_ER: local database</span>
+<span class="sd">    :param jaccard_thre: jaccard threshold</span>
+<span class="sd">    :return: match index and pair at each iteration</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sj</span> <span class="o">=</span> <span class="n">simjoin</span><span class="o">.</span><span class="n">SimJoin</span><span class="p">(</span><span class="n">D1_ER</span><span class="p">)</span>
+    <span class="n">w_res</span> <span class="o">=</span> <span class="n">sj</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">er_result</span><span class="p">,</span> <span class="n">jaccard_thre</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">match_ids</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="n">match_pair</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">w_res</span><span class="p">:</span>
+        <span class="n">match_ids</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">match_pair</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">match_ids</span><span class="p">,</span> <span class="n">match_pair</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, yongjun he.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

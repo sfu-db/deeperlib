@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>deeper.api.yelp package &#8212; deeper 0.1a documentation</title>
+    
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="deeper.core package" href="deeper.core.html" />
+    <link rel="prev" title="deeper.api.dblp package" href="deeper.api.dblp.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Deeper</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="deeper.html">deeper package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">deeper</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">deeper.api.yelp package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-deeper.api.yelp.searchapi">deeper.api.yelp.searchapi module</a></li>
+<li><a class="reference internal" href="#module-deeper.api.yelp">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="deeper.api.dblp.html" title="Previous Chapter: deeper.api.dblp package"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; deeper.api.db...</span>
+    </a>
+  </li>
+  <li>
+    <a href="deeper.core.html" title="Next Chapter: deeper.core package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">deeper.core package &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/deeper.api.yelp.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="deeper-api-yelp-package">
+<h1>deeper.api.yelp package<a class="headerlink" href="#deeper-api-yelp-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-deeper.api.yelp.searchapi">
+<span id="deeper-api-yelp-searchapi-module"></span><h2>deeper.api.yelp.searchapi module<a class="headerlink" href="#module-deeper.api.yelp.searchapi" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="deeper.api.yelp.searchapi.SearchApi">
+<em class="property">class </em><code class="descclassname">deeper.api.yelp.searchapi.</code><code class="descname">SearchApi</code><span class="sig-paren">(</span><em>client_id</em>, <em>client_secret</em>, <em>top_k</em>, <em>delay</em>, <em>search_term</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="deeper.api.html#deeper.api.simapi.SimpleApi" title="deeper.api.simapi.SimpleApi"><code class="xref py py-class docutils literal"><span class="pre">deeper.api.simapi.SimpleApi</span></code></a></p>
+<p>A subclass implemented for yelp/business/search api&#8212;-https://www.yelp.com/developers/documentation/v3/business_search</p>
+<p>Initialize the object. Set id and secret to obtain JWT Token. Create session with the token.
+Set other parameters and top_k for future api call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>client_id</strong> &#8211; client_id</li>
+<li><strong>client_secret</strong> &#8211; client_secret</li>
+<li><strong>top_k</strong> &#8211; top-k constraint</li>
+<li><strong>delay</strong> &#8211; time interval between a failed api call and the next api call</li>
+<li><strong>search_term</strong> &#8211; the field for query string</li>
+<li><strong>kwargs</strong> &#8211; other parameters</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.callAPI">
+<code class="descname">callAPI</code><span class="sig-paren">(</span><em>params</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.callAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.callAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call api until it returns messages successfully.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>params</strong> &#8211; all the parameters needed by an api</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">businesses in returned documents</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.callMulAPI">
+<code class="descname">callMulAPI</code><span class="sig-paren">(</span><em>queries</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.callMulAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.callMulAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call api with multiple threads. Therefore, we can issue several queries and get all of the top k
+documents at the same time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>queries</strong> &#8211; queries list</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">messages returned from api</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.getDelay">
+<code class="descname">getDelay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.getDelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.getDelay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.getID">
+<code class="descname">getID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.getID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.getID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.getKwargs">
+<code class="descname">getKwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.getKwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.getKwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.getSearchTerm">
+<code class="descname">getSearchTerm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.getSearchTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.getSearchTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.getSession">
+<code class="descname">getSession</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.getSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.getSession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.getToken">
+<code class="descname">getToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.getToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.getToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.getTopk">
+<code class="descname">getTopk</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.getTopk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.getTopk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.getURL">
+<code class="descname">getURL</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.getURL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.getURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.setDelay">
+<code class="descname">setDelay</code><span class="sig-paren">(</span><em>delay</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.setDelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.setDelay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.setID">
+<code class="descname">setID</code><span class="sig-paren">(</span><em>client_id</em>, <em>client_secret</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.setID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.setID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.setKwargs">
+<code class="descname">setKwargs</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.setKwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.setKwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.setSearchTerm">
+<code class="descname">setSearchTerm</code><span class="sig-paren">(</span><em>search_term</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.setSearchTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.setSearchTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.setSession">
+<code class="descname">setSession</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.setSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.setSession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.setToken">
+<code class="descname">setToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.setToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.setToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.setTopk">
+<code class="descname">setTopk</code><span class="sig-paren">(</span><em>top_k</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.setTopk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.setTopk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.yelp.searchapi.SearchApi.setURL">
+<code class="descname">setURL</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/yelp/searchapi.html#SearchApi.setURL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.yelp.searchapi.SearchApi.setURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-deeper.api.yelp">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-deeper.api.yelp" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, yongjun he.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

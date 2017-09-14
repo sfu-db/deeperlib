@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>deeper.api.aminer package &#8212; deeper 0.1a documentation</title>
+    
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="deeper.api.dblp package" href="deeper.api.dblp.html" />
+    <link rel="prev" title="deeper.api package" href="deeper.api.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Deeper</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="deeper.html">deeper package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">deeper</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">deeper.api.aminer package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-deeper.api.aminer.advanced_personapi">deeper.api.aminer.advanced_personapi module</a></li>
+<li><a class="reference internal" href="#module-deeper.api.aminer.advanced_publapi">deeper.api.aminer.advanced_publapi module</a></li>
+<li><a class="reference internal" href="#module-deeper.api.aminer.personapi">deeper.api.aminer.personapi module</a></li>
+<li><a class="reference internal" href="#module-deeper.api.aminer.publapi">deeper.api.aminer.publapi module</a></li>
+<li><a class="reference internal" href="#module-deeper.api.aminer">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="deeper.api.html" title="Previous Chapter: deeper.api package"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; deeper.api package</span>
+    </a>
+  </li>
+  <li>
+    <a href="deeper.api.dblp.html" title="Next Chapter: deeper.api.dblp package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">deeper.api.db... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/deeper.api.aminer.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="deeper-api-aminer-package">
+<h1>deeper.api.aminer package<a class="headerlink" href="#deeper-api-aminer-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-deeper.api.aminer.advanced_personapi">
+<span id="deeper-api-aminer-advanced-personapi-module"></span><h2>deeper.api.aminer.advanced_personapi module<a class="headerlink" href="#module-deeper.api.aminer.advanced_personapi" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi">
+<em class="property">class </em><code class="descclassname">deeper.api.aminer.advanced_personapi.</code><code class="descname">AdvancedPersonApi</code><span class="sig-paren">(</span><em>top_k</em>, <em>delay</em>, <em>search_term</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="deeper.api.html#deeper.api.simapi.SimpleApi" title="deeper.api.simapi.SimpleApi"><code class="xref py py-class docutils literal"><span class="pre">deeper.api.simapi.SimpleApi</span></code></a></p>
+<p>A subclass implemented for aminer/search/pub/advanced api&#8212;-https://api.aminer.org/api/search/pub/advanced</p>
+<p>Initialize the object. Set url and create session. Set other parameters and top_k for
+future api call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>top_k</strong> &#8211; top-k constraint</li>
+<li><strong>delay</strong> &#8211; time interval between a failed api call and the next api call</li>
+<li><strong>search_term</strong> &#8211; the field for query string</li>
+<li><strong>kwargs</strong> &#8211; other parameters</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.callAPI">
+<code class="descname">callAPI</code><span class="sig-paren">(</span><em>params</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.callAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.callAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call api until it returns messages successfully.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>params</strong> &#8211; all the parameters needed by an api</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">businesses in returned documents</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.callMulAPI">
+<code class="descname">callMulAPI</code><span class="sig-paren">(</span><em>queries</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.callMulAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.callMulAPI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getDelay">
+<code class="descname">getDelay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.getDelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getDelay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getID">
+<code class="descname">getID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.getID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getKwargs">
+<code class="descname">getKwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.getKwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getKwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getSearchTerm">
+<code class="descname">getSearchTerm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.getSearchTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getSearchTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getSession">
+<code class="descname">getSession</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.getSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getSession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getToken">
+<code class="descname">getToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.getToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getTopk">
+<code class="descname">getTopk</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.getTopk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getTopk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getURL">
+<code class="descname">getURL</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.getURL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.getURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setDelay">
+<code class="descname">setDelay</code><span class="sig-paren">(</span><em>delay</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.setDelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setDelay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setID">
+<code class="descname">setID</code><span class="sig-paren">(</span><em>client_id</em>, <em>client_secret</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.setID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setKwargs">
+<code class="descname">setKwargs</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.setKwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setKwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setSearchTerm">
+<code class="descname">setSearchTerm</code><span class="sig-paren">(</span><em>search_term</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.setSearchTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setSearchTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setSession">
+<code class="descname">setSession</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.setSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setSession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setToken">
+<code class="descname">setToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.setToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setTopk">
+<code class="descname">setTopk</code><span class="sig-paren">(</span><em>top_k</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.setTopk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setTopk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setURL">
+<code class="descname">setURL</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_personapi.html#AdvancedPersonApi.setURL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_personapi.AdvancedPersonApi.setURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-deeper.api.aminer.advanced_publapi">
+<span id="deeper-api-aminer-advanced-publapi-module"></span><h2>deeper.api.aminer.advanced_publapi module<a class="headerlink" href="#module-deeper.api.aminer.advanced_publapi" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi">
+<em class="property">class </em><code class="descclassname">deeper.api.aminer.advanced_publapi.</code><code class="descname">AdvancedPublApi</code><span class="sig-paren">(</span><em>top_k</em>, <em>delay</em>, <em>search_term</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="deeper.api.html#deeper.api.simapi.SimpleApi" title="deeper.api.simapi.SimpleApi"><code class="xref py py-class docutils literal"><span class="pre">deeper.api.simapi.SimpleApi</span></code></a></p>
+<p>A subclass implemented for aminer/search/pub/advanced api&#8212;-https://api.aminer.org/api/search/pub/advanced</p>
+<p>Initialize the object. Set url and create session. Set other parameters and top_k for
+future api call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>top_k</strong> &#8211; top-k constraint</li>
+<li><strong>delay</strong> &#8211; time interval between a failed api call and the next api call</li>
+<li><strong>search_term</strong> &#8211; the field for query string</li>
+<li><strong>kwargs</strong> &#8211; other parameters</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.callAPI">
+<code class="descname">callAPI</code><span class="sig-paren">(</span><em>params</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.callAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.callAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call api until it returns messages successfully.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>params</strong> &#8211; all the parameters needed by an api</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">businesses in returned documents</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.callMulAPI">
+<code class="descname">callMulAPI</code><span class="sig-paren">(</span><em>queries</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.callMulAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.callMulAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call api with multiple threads. Therefore, we can issue several queries and get all of the top k
+documents at the same time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>queries</strong> &#8211; queries list</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">messages returned from api</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.getDelay">
+<code class="descname">getDelay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.getDelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.getDelay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.getID">
+<code class="descname">getID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.getID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.getID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.getKwargs">
+<code class="descname">getKwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.getKwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.getKwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.getSearchTerm">
+<code class="descname">getSearchTerm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.getSearchTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.getSearchTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.getSession">
+<code class="descname">getSession</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.getSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.getSession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.getToken">
+<code class="descname">getToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.getToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.getToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.getTopk">
+<code class="descname">getTopk</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.getTopk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.getTopk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.getURL">
+<code class="descname">getURL</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.getURL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.getURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.setDelay">
+<code class="descname">setDelay</code><span class="sig-paren">(</span><em>delay</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.setDelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.setDelay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.setID">
+<code class="descname">setID</code><span class="sig-paren">(</span><em>client_id</em>, <em>client_secret</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.setID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.setID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.setKwargs">
+<code class="descname">setKwargs</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.setKwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.setKwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.setSearchTerm">
+<code class="descname">setSearchTerm</code><span class="sig-paren">(</span><em>search_term</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.setSearchTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.setSearchTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.setSession">
+<code class="descname">setSession</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.setSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.setSession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.setToken">
+<code class="descname">setToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.setToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.setToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.setTopk">
+<code class="descname">setTopk</code><span class="sig-paren">(</span><em>top_k</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.setTopk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.setTopk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.advanced_publapi.AdvancedPublApi.setURL">
+<code class="descname">setURL</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/advanced_publapi.html#AdvancedPublApi.setURL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.advanced_publapi.AdvancedPublApi.setURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-deeper.api.aminer.personapi">
+<span id="deeper-api-aminer-personapi-module"></span><h2>deeper.api.aminer.personapi module<a class="headerlink" href="#module-deeper.api.aminer.personapi" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="deeper.api.aminer.personapi.PersonApi">
+<em class="property">class </em><code class="descclassname">deeper.api.aminer.personapi.</code><code class="descname">PersonApi</code><span class="sig-paren">(</span><em>top_k</em>, <em>delay</em>, <em>search_term</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="deeper.api.html#deeper.api.simapi.SimpleApi" title="deeper.api.simapi.SimpleApi"><code class="xref py py-class docutils literal"><span class="pre">deeper.api.simapi.SimpleApi</span></code></a></p>
+<p>A subclass implemented for aminer/search/person api&#8212;-https://api.aminer.org/api/search/person</p>
+<p>Initialize the object. Set url and create session. Set other parameters and top_k for
+future api call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>top_k</strong> &#8211; top-k constraint</li>
+<li><strong>delay</strong> &#8211; time interval between a failed api call and the next api call</li>
+<li><strong>search_term</strong> &#8211; the field for query string</li>
+<li><strong>kwargs</strong> &#8211; other parameters</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.callAPI">
+<code class="descname">callAPI</code><span class="sig-paren">(</span><em>params</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.callAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.callAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call api until it returns messages successfully.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>params</strong> &#8211; all the parameters needed by an api</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">businesses in returned documents</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.callMulAPI">
+<code class="descname">callMulAPI</code><span class="sig-paren">(</span><em>queries</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.callMulAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.callMulAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call api with multiple threads. Therefore, we can issue several queries and get all of the top k
+documents at the same time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>queries</strong> &#8211; queries list</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">messages returned from api</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.getDelay">
+<code class="descname">getDelay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.getDelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.getDelay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.getID">
+<code class="descname">getID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.getID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.getID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.getKwargs">
+<code class="descname">getKwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.getKwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.getKwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.getSearchTerm">
+<code class="descname">getSearchTerm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.getSearchTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.getSearchTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.getSession">
+<code class="descname">getSession</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.getSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.getSession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.getToken">
+<code class="descname">getToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.getToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.getToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.getTopk">
+<code class="descname">getTopk</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.getTopk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.getTopk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.getURL">
+<code class="descname">getURL</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.getURL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.getURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.setDelay">
+<code class="descname">setDelay</code><span class="sig-paren">(</span><em>delay</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.setDelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.setDelay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.setID">
+<code class="descname">setID</code><span class="sig-paren">(</span><em>client_id</em>, <em>client_secret</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.setID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.setID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.setKwargs">
+<code class="descname">setKwargs</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.setKwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.setKwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.setSearchTerm">
+<code class="descname">setSearchTerm</code><span class="sig-paren">(</span><em>search_term</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.setSearchTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.setSearchTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.setSession">
+<code class="descname">setSession</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.setSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.setSession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.setToken">
+<code class="descname">setToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.setToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.setToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.setTopk">
+<code class="descname">setTopk</code><span class="sig-paren">(</span><em>top_k</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.setTopk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.setTopk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.personapi.PersonApi.setURL">
+<code class="descname">setURL</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/personapi.html#PersonApi.setURL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.personapi.PersonApi.setURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-deeper.api.aminer.publapi">
+<span id="deeper-api-aminer-publapi-module"></span><h2>deeper.api.aminer.publapi module<a class="headerlink" href="#module-deeper.api.aminer.publapi" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="deeper.api.aminer.publapi.PublApi">
+<em class="property">class </em><code class="descclassname">deeper.api.aminer.publapi.</code><code class="descname">PublApi</code><span class="sig-paren">(</span><em>top_k</em>, <em>delay</em>, <em>search_term</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="deeper.api.html#deeper.api.simapi.SimpleApi" title="deeper.api.simapi.SimpleApi"><code class="xref py py-class docutils literal"><span class="pre">deeper.api.simapi.SimpleApi</span></code></a></p>
+<p>A subclass implemented for aminer/search/pub api&#8212;-https://api.aminer.org/api/search/pub</p>
+<p>Initialize the object. Set url and create session. Set other parameters and top_k for
+future api call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>top_k</strong> &#8211; top-k constraint</li>
+<li><strong>delay</strong> &#8211; time interval between a failed api call and the next api call</li>
+<li><strong>search_term</strong> &#8211; the field for query string</li>
+<li><strong>kwargs</strong> &#8211; other parameters</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.callAPI">
+<code class="descname">callAPI</code><span class="sig-paren">(</span><em>params</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.callAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.callAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call api until it returns messages successfully.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>params</strong> &#8211; all the parameters needed by an api</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">businesses in returned documents</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.callMulAPI">
+<code class="descname">callMulAPI</code><span class="sig-paren">(</span><em>queries</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.callMulAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.callMulAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call api with multiple threads. Therefore, we can issue several queries and get all of the top k
+documents at the same time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>queries</strong> &#8211; queries list</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">messages returned from api</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.getDelay">
+<code class="descname">getDelay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.getDelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.getDelay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.getID">
+<code class="descname">getID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.getID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.getID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.getKwargs">
+<code class="descname">getKwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.getKwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.getKwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.getSearchTerm">
+<code class="descname">getSearchTerm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.getSearchTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.getSearchTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.getSession">
+<code class="descname">getSession</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.getSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.getSession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.getToken">
+<code class="descname">getToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.getToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.getToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.getTopk">
+<code class="descname">getTopk</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.getTopk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.getTopk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.getURL">
+<code class="descname">getURL</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.getURL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.getURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.setDelay">
+<code class="descname">setDelay</code><span class="sig-paren">(</span><em>delay</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.setDelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.setDelay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.setID">
+<code class="descname">setID</code><span class="sig-paren">(</span><em>client_id</em>, <em>client_secret</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.setID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.setID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.setKwargs">
+<code class="descname">setKwargs</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.setKwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.setKwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.setSearchTerm">
+<code class="descname">setSearchTerm</code><span class="sig-paren">(</span><em>search_term</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.setSearchTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.setSearchTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.setSession">
+<code class="descname">setSession</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.setSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.setSession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.setToken">
+<code class="descname">setToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.setToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.setToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.setTopk">
+<code class="descname">setTopk</code><span class="sig-paren">(</span><em>top_k</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.setTopk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.setTopk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeper.api.aminer.publapi.PublApi.setURL">
+<code class="descname">setURL</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeper/api/aminer/publapi.html#PublApi.setURL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeper.api.aminer.publapi.PublApi.setURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-deeper.api.aminer">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-deeper.api.aminer" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, yongjun he.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
