@@ -14,7 +14,7 @@ DeepER is ready for the following API:
 * [YELP](https://www.yelp.com/developers/documentation/v3/business_search)（Yelp Search API）
 * [AMiner](http://doc.aminer.org/en/latest/s/index.html)（arnetminer）
 
-###Custom
+### Custom
 
 implement a subclass of deeper.api.simapi and pass it to deeper.core.smartcrawl 
 and you would integrate a new api to collect more data.
@@ -35,12 +35,14 @@ Requirements
 * numpy==1.13.1
 * rauth==0.7.3
 
-Requests officially supports Python 2.7.13, and runs great on PyPy.
+Requests officially supports Python 2.7.13(64-bit), and runs great on PyPy.
 
 
 Installation and Update
 -----------------------
+pip install -r requirements.txt
 
+easy_install deeper-0.1-py2.7.egg
 
 Changelog
 ----------
