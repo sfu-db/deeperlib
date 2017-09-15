@@ -73,7 +73,7 @@ Discussing
 		<th>email</th>
 	</tr> 
 	<tr> 
-		<th>yongjun he</th> 
+		<th>Yongjun He</th> 
 		<th>141250047@smail.nju.edu.cn</th> 
 	</tr>  
 </table>
