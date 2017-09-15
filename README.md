@@ -62,7 +62,7 @@ Team
 * Jiannan Wang, Assistant Professor at Simon Fraser University
 * Eugene Wu, Assistant Professor at Columbia University
 * Ryan Shea, Research Associate at Simon Fraser University
-* Penny Wang, Ph.D. Student at Simon Fraser University
+* Pei Wang, Ph.D. Student at Simon Fraser University
 * Yongjun He, Undergraduate Student at Nanjing University
 
 Discussing
