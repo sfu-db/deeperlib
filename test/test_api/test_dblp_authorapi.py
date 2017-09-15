@@ -1,6 +1,6 @@
 import unittest
 
-from deeper.api.dblp.authorapi import AuthorApi
+from deeperlib.api.dblp.authorapi import AuthorApi
 
 
 class DblpAuthorapiTestCase(unittest.TestCase):

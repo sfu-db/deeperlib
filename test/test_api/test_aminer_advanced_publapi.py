@@ -1,6 +1,6 @@
 import unittest
 
-from deeper.api.aminer.advanced_publapi import AdvancedPublApi
+from deeperlib.api.aminer.advanced_publapi import AdvancedPublApi
 
 
 class AminerAdvancedPublapiTestCase(unittest.TestCase):

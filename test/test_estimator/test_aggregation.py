@@ -1,9 +1,9 @@
 import unittest
 import os
-from deeper.api.dblp.publapi import PublApi
-from deeper.data_processing.local_data import LocalData
-from deeper.core import utils
-from deeper.estimator import aggregation
+from deeperlib.api.dblp.publapi import PublApi
+from deeperlib.data_processing.local_data import LocalData
+from deeperlib.core import utils
+from deeperlib.estimator import aggregation
 
 
 class AggregationTestCase(unittest.TestCase):

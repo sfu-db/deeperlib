@@ -1,6 +1,6 @@
 import unittest
 
-from deeper.api.dblp.venueapi import VenueApi
+from deeperlib.api.dblp.venueapi import VenueApi
 
 
 class DblpVenueapiTestCase(unittest.TestCase):

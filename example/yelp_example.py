@@ -1,11 +1,11 @@
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
-from deeper.core import smartcrawl
-from deeper.api.yelp.searchapi import SearchApi
-from deeper.data_processing.sample_data import SampleData
-from deeper.data_processing.local_data import LocalData
-from deeper.data_processing.hidden_data import HiddenData
+from deeperlib.core import smartcrawl
+from deeperlib.api.yelp.searchapi import SearchApi
+from deeperlib.data_processing.sample_data import SampleData
+from deeperlib.data_processing.local_data import LocalData
+from deeperlib.data_processing.hidden_data import HiddenData
 
 top_k = 50
 count = 1000000
@@ -14,6 +14,24 @@ jaccard_thre = 0.9
 threads = 1
 budget = 10
 
+"""
+full description provided in the links of readme 
+Name        Type    Description
+term        string  Optional. Search term (e.g. "food", "restaurants"). If term isn't included we search everything. 
+                    The term keyword also accepts business names such as "Starbucks".
+location    string  Required if either latitude or longitude is not provided. Specifies the combination of "address, 
+                    neighborhood, city, state or zip, optional country" to be used when searching for businesses.
+categories  string  Optional. Categories to filter the search results with. See the list of supported categories. 
+                    The category filter can be a list of comma delimited categories. For example, "bars,french" 
+                    will filter by Bars and French. The category identifier should be used (for example "discgolf", 
+                    not "Disc Golf").
+limit       int     Optional. Number of business results to return. By default, it will return 20. Maximum is 50.
+offset      int     Optional. Offset the list of returned business results by this amount.
+sort_by     string  Optional. Sort the results by one of the these modes: best_match, rating, review_count or distance. 
+                    By default it's best_match. The rating sort is not strictly sorted by the rating value, but by an 
+                    adjusted rating value that takes into account the number of ratings, similar to a bayesian average. 
+                    This is so a business with 1 rating of 5 stars doesn't immediately jump to the top. 
+"""
 client_id = "kCe2YbZePXsPnC204ZrXoQ"
 client_secret = "s9KnvEEQW7jaA2wlrBi4X2fnDQ0F7asdklXVvJUidWp8i50ov24E8EjkHX2AUhoL"
 search_term = 'term'

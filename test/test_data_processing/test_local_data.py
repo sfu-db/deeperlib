@@ -1,6 +1,6 @@
 import unittest
 import os
-from deeper.data_processing.local_data import LocalData
+from deeperlib.data_processing.local_data import LocalData
 
 
 class LocaldataTestCase(unittest.TestCase):

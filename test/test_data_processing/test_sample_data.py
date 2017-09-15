@@ -1,6 +1,6 @@
 import unittest
 import os
-from deeper.data_processing.sample_data import SampleData
+from deeperlib.data_processing.sample_data import SampleData
 
 
 class SampledataTestCase(unittest.TestCase):

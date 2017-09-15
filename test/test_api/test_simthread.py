@@ -1,5 +1,5 @@
 import unittest
-from deeper.api.simthread import SimpleThread
+from deeperlib.api.simthread import SimpleThread
 
 
 def sayhello():

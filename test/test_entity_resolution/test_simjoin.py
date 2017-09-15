@@ -1,4 +1,4 @@
-from deeper.entity_resolution import simjoin
+from deeperlib.entity_resolution import simjoin
 import unittest
 
 

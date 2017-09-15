@@ -1,6 +1,6 @@
 import unittest
 
-from deeper.api.yelp.searchapi import SearchApi
+from deeperlib.api.yelp.searchapi import SearchApi
 
 
 class YelpSearchapiTestCase(unittest.TestCase):

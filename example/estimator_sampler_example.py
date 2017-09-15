@@ -1,7 +1,7 @@
-from deeper.api.yelp.searchapi import SearchApi
-from deeper.core import utils
-from deeper.data_processing.local_data import LocalData
-from deeper.estimator import sampler
+from deeperlib.api.yelp.searchapi import SearchApi
+from deeperlib.core import utils
+from deeperlib.data_processing.local_data import LocalData
+from deeperlib.estimator import sampler
 
 # ==== Sota-Sampler Yelp ====
 client_id = "kCe2YbZePXsPnC204ZrXoQ"

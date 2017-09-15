@@ -1,6 +1,6 @@
 import unittest
 
-from deeper.api.aminer.personapi import PersonApi
+from deeperlib.api.aminer.personapi import PersonApi
 
 
 class AminerPersonTestCase(unittest.TestCase):

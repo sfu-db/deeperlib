@@ -1,6 +1,6 @@
 import unittest
 
-from deeper.api.dblp.publapi import PublApi
+from deeperlib.api.dblp.publapi import PublApi
 
 
 class DblpPublapiTestCase(unittest.TestCase):

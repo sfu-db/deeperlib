@@ -1,11 +1,11 @@
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
-from deeper.core import smartcrawl
-from deeper.api.dblp.publapi import PublApi
-from deeper.data_processing.sample_data import SampleData
-from deeper.data_processing.local_data import LocalData
-from deeper.data_processing.hidden_data import HiddenData
+from deeperlib.core import smartcrawl
+from deeperlib.api.dblp.publapi import PublApi
+from deeperlib.data_processing.sample_data import SampleData
+from deeperlib.data_processing.local_data import LocalData
+from deeperlib.data_processing.hidden_data import HiddenData
 
 top_k = 800
 count = 3000000
@@ -14,9 +14,24 @@ jaccard_thre = 0.9
 threads = 5
 budget = 50
 
+"""
+full description provided in the links of readme  
+Parameter  Description                                                       Default  Example
+q          The query string to search for, as described on a separate page.           ...?q=test+search
+format     The result format of the search. Recognized values are "xml",     xml      ...?q=test&format=json
+           "json", and "jsonp".
+h          Maximum number of search results (hits) to return. For bandwidth  30       ...?q=test&h=100
+           reasons, this number is capped at 1000.
+f          The first hit in the numbered sequence of search results 
+           (starting with 0) to return. In combination with the h parameter, 0        ...?q=test&h=100&f=300  
+           this parameter can be used for pagination of search results.
+c          Maximum number of completion terms (see below) to return. For     10       ...?q=test&c=0
+           bandwidth reasons, this number is capped at 1000.
+"""
 search_term = 'q'
 parameters = {'h': 800}
 dblp = PublApi(delay=5, search_term=search_term, **parameters)
+
 sample_file = 'dblp_sample'
 localdata_file = 'dblp_10000'
 result_dir = 'dblp_result'

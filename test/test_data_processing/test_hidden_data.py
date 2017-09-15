@@ -1,6 +1,6 @@
 import unittest
 import os
-from deeper.data_processing.hidden_data import HiddenData
+from deeperlib.data_processing.hidden_data import HiddenData
 
 
 class HiddendataTestCase(unittest.TestCase):

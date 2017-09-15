@@ -1,9 +1,9 @@
 import unittest
 import os
-from deeper.api.yelp.searchapi import SearchApi
-from deeper.data_processing.local_data import LocalData
-from deeper.core import utils
-from deeper.estimator import sampler
+from deeperlib.api.yelp.searchapi import SearchApi
+from deeperlib.data_processing.local_data import LocalData
+from deeperlib.core import utils
+from deeperlib.estimator import sampler
 
 
 class SamplerTestCase(unittest.TestCase):

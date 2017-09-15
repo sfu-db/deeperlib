@@ -1,5 +1,5 @@
 import unittest
-from deeper.data_processing import data_process
+from deeperlib.data_processing import data_process
 
 
 class DataprocessTestCase(unittest.TestCase):

@@ -1,5 +1,4 @@
 pqdict==1.0.0
-sphinx_bootstrap_theme==0.6.0
 requests==2.18.4
 simplejson==3.11.1
 matplotlib==2.0.2

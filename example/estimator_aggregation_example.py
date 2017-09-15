@@ -1,7 +1,7 @@
-from deeper.api.dblp.publapi import PublApi
-from deeper.core import utils
-from deeper.data_processing.local_data import LocalData
-from deeper.estimator import aggregation
+from deeperlib.api.dblp.publapi import PublApi
+from deeperlib.core import utils
+from deeperlib.data_processing.local_data import LocalData
+from deeperlib.estimator import aggregation
 
 # ==== Sota-Estimator Dblp ====
 search_term = 'q'
