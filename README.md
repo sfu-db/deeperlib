@@ -13,7 +13,7 @@ API Support
 DeepER is ready for the following API:
 
 * [DBLP](http://dblp.uni-trier.de/faq/How+to+use+the+dblp+search+API.html)（DataBase systems and Logic Programming）
-* [YELP](https://www.yelp.com/developers/documentation/v3/business_search)（Yelp Search API）
+* [YELP](https://www.yelp.com/developers/documentation/v3/business_search)（Yelp Fusion API）
 * [AMiner](http://doc.aminer.org/en/latest/s/index.html)（arnetminer）
 
 ### Custom
