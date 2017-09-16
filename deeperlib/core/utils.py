@@ -1,7 +1,3 @@
-import sys
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
 from sys import stderr as perr
 from pqdict import maxpq
 from deeperlib.entity_resolution import simjoin

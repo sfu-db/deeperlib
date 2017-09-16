@@ -1,7 +1,3 @@
-import sys
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
 import pickle
 import os
 from data_process import wordset
@@ -58,24 +54,24 @@ class HiddenData:
     def saveResult(self):
         """
         Save the returned massages in the target directory.
-        result_dir\result_file
+        result_dir\result_file.pkl
                    result_file.csv
-                   match_file
+                   match_file.pkl
                    match_file.csv
         """
         resultList = self.__mergeResult.values()
         if not os.path.exists(self.__resultDir):
             os.makedirs(self.__resultDir)
-        with open(self.__resultDir + '\\result_file', 'wb') as f:
+        with open(self.__resultDir + '\\result_fil.pkl', 'wb') as f:
             pickle.dump(resultList, f)
         print self.__resultDir + '\\result_file saved successfully'
 
     def saveMatchPair(self):
         """
         Save the matched pairs judged by similarity join in the target directory.
-        result_dir\result_file
+        result_dir\result_file.pkl
                    result_file.csv
-                   match_file
+                   match_file.pkl
                    match_file.csv
         """
         savePair = {}
@@ -85,7 +81,7 @@ class HiddenData:
             savePair[m[0]].append(m[1])
         if not os.path.exists(self.__resultDir):
             os.makedirs(self.__resultDir)
-        with open(self.__resultDir + '\\match_file', 'wb') as f:
+        with open(self.__resultDir + '\\match_file.pkl', 'wb') as f:
             pickle.dump(savePair, f)
         print self.__resultDir + '\\match_file saved successfully'
 

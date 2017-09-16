@@ -61,6 +61,7 @@ def sota_estimator(query_pool, api, match_term, uniqueid, query_num):
                 query = random.choice(match_query)
                 if query == curQuery[0]:
                     count += 1.0 * t / len(match_query)
+                    print 'count: ', count, ' query cost: ', query_cost
                     break
 
                 params[api.getSearchTerm()] = '+'.join(query)
@@ -73,6 +74,7 @@ def sota_estimator(query_pool, api, match_term, uniqueid, query_num):
                     try:
                         if r_id == eval('m' + uniqueid):
                             count += 1.0 * t / len(match_query)
+                            print 'count: ', count, ' query cost: ', query_cost
                             break
                     except KeyError:
                         continue

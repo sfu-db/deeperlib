@@ -1,8 +1,5 @@
-import sys
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
 from sys import stderr as perr
+import sys
 import timeit
 import copy
 import utils
@@ -98,8 +95,10 @@ def smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, api, samp
         D1_ids_deeper.difference_update(matched_ids)
         curcov = curcov.union(matched_ids)
         curmat.extend(matched_pair)
-        print len(cur_raw_result), ' results returned, ', len(matched_ids), ' local records covered at this iteration. ', \
-                len(hiddendata.getMergeResult()), ' results returned, ', len(curmat), ' local records covered totally.'
+        print len(cur_raw_result), ' results returned, ', len(
+            matched_ids), ' local records covered at this iteration. ', \
+            len(hiddendata.getMergeResult()), 'different results returned, ', len(
+            curcov), ' local records covered totally.'
 
     api.getSession().close()
     hiddendata.setMatchPair(curmat)

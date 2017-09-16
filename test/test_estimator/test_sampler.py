@@ -17,8 +17,8 @@ class SamplerTestCase(unittest.TestCase):
                               **parameters)
 
     def test_sota_sampler(self):
-        local_file = os.path.abspath(os.path.dirname(__file__) + os.path.sep + "../../") + '/example/yelp_3000'
-        localdata = LocalData(local_file, "row['business_id']", ["row['name']"], ["row['name']", "row['full_address']"])
+        local_file = os.path.abspath(os.path.dirname(__file__) + os.path.sep + "../../") + '/example/yelp_3000.pkl'
+        localdata = LocalData(local_file, 'pkl', "row['business_id']", ["row['name']"], ["row['name']", "row['full_address']"])
         localdata_ids, localdata_query, localdata_er = localdata.getlocalData()
         initQueries = utils.queryGene(localdata_query, 2)
         sampler.sota_sampler(query_pool=initQueries, api=self.yelp, match_term=localdata.getQueryList(), top_k=300,

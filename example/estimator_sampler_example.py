@@ -10,8 +10,8 @@ search_term = 'term'
 parameters = {'limit': 50, 'location': 'AZ'}
 yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=300, delay=5, search_term=search_term,
                  **parameters)
-local_file = 'yelp_3000'
-localdata = LocalData(local_file, "row['business_id']", ["row['name']"], ["row['name']", "row['full_address']"])
+local_file = 'yelp_3000.pkl'
+localdata = LocalData(local_file, 'pkl', "row['business_id']", ["row['name']"], ["row['name']", "row['full_address']"])
 localdata_ids, localdata_query, localdata_er = localdata.getlocalData()
 initQueries = utils.queryGene(localdata_query, 2)
 sampler.sota_sampler(query_pool=initQueries, api=yelp, match_term=localdata.getQueryList(), top_k=300, adjustment=1)

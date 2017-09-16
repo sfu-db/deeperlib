@@ -1,4 +1,5 @@
 from deeperlib.entity_resolution.simjoin import SimJoin, wordset
+
 if __name__ == "__main__":
     # Example for join
 

@@ -1,4 +1,5 @@
 import sys
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 from deeperlib.core import smartcrawl
@@ -30,21 +31,22 @@ c          Maximum number of completion terms (see below) to return. For     10 
            bandwidth reasons, this number is capped at 1000.
 """
 search_term = 'q'
-parameters = {'h': 800}
+parameters = {'h': 1000}
 dblp = PublApi(delay=5, search_term=search_term, **parameters)
 
 """
-\dblp_sample
- dblp_10000
- dblp_result\\result_file
+\dblp_sample.pkl
+ dblp_10000.pkl
+ dblp_result\\result_file.pkl
               result_file.csv
-              match_file
+              match_file.pkl
               match_file.csv
 """
-sample_file = 'dblp_sample'
-localdata_file = 'dblp_10000'
+sample_file = 'dblp_sample.pkl'
+localdata_file = 'dblp_10000.pkl'
 result_dir = 'dblp_result'
-sampledata = SampleData(sample_file, "row['key']", ["row['title']"])
-localdata = LocalData(localdata_file, "row['key']", ["row['title']"], ["row['title']"])
-hiddendata = HiddenData(result_dir, "row['info']['key']", ["row['info']['title']"])
+sampledata = SampleData(samplepath=sample_file, filetype='pkl', uniqueid="row['key']", querylist=["row['title']"])
+localdata = LocalData(localpath=localdata_file, filetype='pkl', uniqueid="row['key']", querylist=["row['title']"],
+                      matchlist=["row['title']"])
+hiddendata = HiddenData(result_dir=result_dir, uniqueid="row['info']['key']", matchlist=["row['info']['title']"])
 smartcrawl.smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, dblp, sampledata, localdata, hiddendata)
