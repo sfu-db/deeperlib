@@ -7,15 +7,16 @@ from deeperlib.data_processing.sample_data import SampleData
 from deeperlib.data_processing.local_data import LocalData
 from deeperlib.data_processing.hidden_data import HiddenData
 
-top_k = 800
+top_k = 1000
 count = 3000000
-pool_thre = 4
-jaccard_thre = 0.9
-threads = 5
-budget = 50
+pool_thre = 2
+jaccard_thre = 0.85
+threads = 4
+budget = 100
 
 """
-full description provided in the links of readme  
+full description provided in http://dblp.uni-trier.de/faq/How+to+use+the+dblp+search+API.html
+
 Parameter  Description                                                       Default  Example
 q          The query string to search for, as described on a separate page.           ...?q=test+search
 format     The result format of the search. Recognized values are "xml",     xml      ...?q=test&format=json
@@ -32,6 +33,14 @@ search_term = 'q'
 parameters = {'h': 800}
 dblp = PublApi(delay=5, search_term=search_term, **parameters)
 
+"""
+\dblp_sample
+ dblp_10000
+ dblp_result\\result_file
+              result_file.csv
+              match_file
+              match_file.csv
+"""
 sample_file = 'dblp_sample'
 localdata_file = 'dblp_10000'
 result_dir = 'dblp_result'

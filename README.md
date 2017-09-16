@@ -33,8 +33,6 @@ Requirements
 * pqdict==1.0.0
 * requests==2.18.4
 * simplejson==3.11.1
-* matplotlib==2.0.2
-* numpy==1.13.1
 * rauth==0.7.3
 
 Requests officially supports Python 2.7.13(windows 64-bit), and runs great on PyPy.
@@ -48,7 +46,7 @@ pip install deeperlib
 ```
 
 ```
-pip install upgrade deeperlib
+pip install --upgrade deeperlib
 ```
 
 Changelog

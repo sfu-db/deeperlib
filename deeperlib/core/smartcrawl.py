@@ -3,7 +3,6 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 from sys import stderr as perr
-from matplotlib import pyplot as plt
 import timeit
 import copy
 import utils
@@ -62,7 +61,6 @@ def smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, api, samp
     query_pool = utils.initScore_biased(sampleindex, top_k, sample_rate, Dratio, initQueries)
     flagNum = len(initQueries) - budget
 
-    cov_deeper = []
     curcov = set()
     curmat = []
     updateList = utils.updateList(D1index)
@@ -100,40 +98,10 @@ def smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, api, samp
         D1_ids_deeper.difference_update(matched_ids)
         curcov = curcov.union(matched_ids)
         curmat.extend(matched_pair)
-        cov_deeper.append(len(curcov))
-        print len(curcov)
+        print len(cur_raw_result), ' results returned, ', len(matched_ids), ' local records covered at this iteration. ', \
+                len(hiddendata.getMergeResult()), ' results returned, ', len(curmat), ' local records covered totally.'
 
     api.getSession().close()
     hiddendata.setMatchPair(curmat)
     hiddendata.saveMatchPair()
     hiddendata.saveResult()
-
-    deeper_figure(cov_deeper, len(D1_ids), api, threads)
-
-
-def deeper_figure(cov_deeper, D1_size, api, threads):
-    """
-    Figure the trend of coverage rate
-
-    :param cov_deeper: a list of covered documents' size at each iteration
-    :param D1_size: size of local database
-    :param api: An implementation of simapi for specific api.
-    :param threads: numbers of queries issued at each iteration
-    """
-    kwargs = api.getKwargs()
-    if 'limit' in kwargs:
-        limit = kwargs['limit']
-        page = (api.getTopk() + limit - 1) / limit
-    else:
-        page = 1
-    cov_rate = []
-    for c in cov_deeper:
-        cov_rate.append(1.0 * c / D1_size)
-    x_range = len(cov_deeper) * threads * page
-    x = range(1, x_range + 1, threads * page)
-    plt.plot(x, cov_rate[:x_range], 'g', label='records num')
-    title = 'Coverage rate'
-    plt.xlabel('times of api call')
-    plt.title(title)
-    plt.legend(loc='best')
-    plt.show()

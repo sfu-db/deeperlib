@@ -7,15 +7,16 @@ from deeperlib.data_processing.sample_data import SampleData
 from deeperlib.data_processing.local_data import LocalData
 from deeperlib.data_processing.hidden_data import HiddenData
 
-top_k = 50
+top_k = 250
 count = 1000000
 pool_thre = 2
-jaccard_thre = 0.9
-threads = 1
-budget = 10
+jaccard_thre = 0.85
+threads = 4
+budget = 100
 
 """
-full description provided in the links of readme 
+full description provided in https://www.yelp.com/developers/documentation/v3/business_search
+
 Name        Type    Description
 term        string  Optional. Search term (e.g. "food", "restaurants"). If term isn't included we search everything. 
                     The term keyword also accepts business names such as "Starbucks".
@@ -38,6 +39,15 @@ search_term = 'term'
 parameters = {'limit':50, 'location': 'AZ'}
 yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=50, delay=5, search_term=search_term,
                  **parameters)
+
+"""
+\yelp_sample
+ yelp_10000
+ yelp_result\\result_file
+              result_file.csv
+              match_file
+              match_file.csv
+"""
 sample_file = 'yelp_sample'
 localdata_file = 'yelp_3000'
 result_dir = 'yelp_result'

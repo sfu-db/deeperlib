@@ -1,5 +1,5 @@
 from sys import stderr as perr
-import numpy
+import math
 import random
 from deeperlib.data_processing import data_process
 
@@ -147,7 +147,7 @@ def __query_pool_Sample(query_pool, query_num, api, layer):
     n_std = []
     for p in pilot_result:
         if len(p) != 0:
-            n_std.append(len(p) * numpy.std(p))
+            n_std.append(len(p) * __std(p))
         else:
             n_std.append(0)
 
@@ -209,3 +209,19 @@ def __topl_queryTesting(query, row, match_query, candidate_query, api):
                     return 1
                 else:
                     return 0
+
+
+def __std(iterable):
+    """
+    Calculate standard deviation for sample
+
+    :param iterable: sample iterable
+    :return: standard deviation
+    """
+    avg = math.fsum(iterable=iterable) / len(iterable)
+    var = 0
+    for i in iterable:
+        var += math.pow((i - avg), 2)
+    var = var / (len(iterable) - 1)
+    std = math.sqrt(var)
+    return std
