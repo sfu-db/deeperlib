@@ -52,16 +52,10 @@ yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=50, del
 sample_file = 'yelp_sample.pkl'
 localdata_file = 'yelp_3000.pkl'
 result_dir = 'yelp_result'
-sampledata = SampleData(samplepath=sample_file, filetype='pkl', uniqueid="row['id']", querylist=["row['name']"])
-"""
-localdata = LocalData(localpath=localdata_file, filetype='pkl', uniqueid="row['business_id']",
-                      querylist=["row['name']"],
-                      matchlist=["row['name']", "row['full_address']"])
-hiddendata = HiddenData(result_dir=result_dir, uniqueid="row['id']",
-                        matchlist=["row['name']", "' '.join(row['location']['display_address'])"])
-"""
-localdata = LocalData(localpath='yelp_5882.csv', filetype='csv', uniqueid='ID', querylist=['NAME'],
-                      matchlist=['NAME','ADDRESS'])
-hiddendata = HiddenData(result_dir=result_dir, uniqueid="row['id']",
-                        matchlist=["row['name']", "' '.join(row['location']['display_address'])"])
+sampledata = SampleData(samplepath=sample_file, filetype='pkl', uniqueid="id", querylist=["name"])
+localdata = LocalData(localpath=localdata_file, filetype='pkl', uniqueid="business_id",
+                      querylist=["name"],
+                      matchlist=["name", "full_address"])
+hiddendata = HiddenData(result_dir=result_dir, uniqueid="id",
+                        matchlist=["name", "location.display_address.*"])
 smartcrawl.smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, yelp, sampledata, localdata, hiddendata)

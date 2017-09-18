@@ -1,3 +1,5 @@
+from sys import stderr as perr
+import copy
 import re
 
 
@@ -27,3 +29,33 @@ def wordset(s, lower_case=True, alphanum_only=True):
     if alphanum_only:
         s = alphnum(s)
     return s.split()
+
+
+def getElement(node_list, data):
+    """
+    Get the specified element according to the node path provided by users.
+
+    :param node_list: node path
+    :param data: data in dictionary
+    :return: specified element
+    """
+    temp = copy.deepcopy(data)
+    result = ''
+    try:
+        for i, node in enumerate(node_list):
+            if node.isdigit():
+                temp = temp[int(node)]
+            elif node == '*':
+                if i == len(node_list) - 1:
+                    for ele in temp:
+                        result += str(ele) + ' '
+                else:
+                    for ele in temp:
+                        result += str(getElement(node_list[i + 1:], ele)) + ' '
+                return result.lstrip()
+            else:
+                temp = temp[node]
+        result = temp
+    except (KeyError, TypeError, IndexError):
+        print >> perr, "Can't find the nodes."
+    return result

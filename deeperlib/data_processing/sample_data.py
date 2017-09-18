@@ -1,7 +1,7 @@
 from sys import stderr as perr
 import pickle
 import csv
-from data_process import wordset
+from data_process import wordset, getElement
 
 
 class SampleData:
@@ -42,18 +42,17 @@ class SampleData:
         with open(self.__samplePath, 'rb') as f:
             sample_raw = pickle.load(f)
 
+        uniqueid = self.__uniqueId.split('.')
+        querylist = []
+        for q in self.__queryList:
+            querylist.append(q.split('.'))
+
         sample = {}
         for row in sample_raw:
-            try:
-                r_id = eval(self.__uniqueId)
-            except KeyError:
-                continue
+            r_id = getElement(uniqueid, row)
             bag = []
-            for v in self.__queryList:
-                try:
-                    bag.extend(wordset(eval(v)))
-                except KeyError:
-                    continue
+            for q in querylist:
+                bag.extend(wordset(getElement(q, row)))
             sample[r_id] = bag
         self.setSample(sample)
 

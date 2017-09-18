@@ -1,7 +1,6 @@
-from sys import stderr as perr
 import math
 import random
-from deeperlib.data_processing import data_process
+from deeperlib.data_processing.data_process import alphnum, getElement
 
 
 def sota_estimator(query_pool, api, match_term, uniqueid, query_num):
@@ -20,6 +19,11 @@ def sota_estimator(query_pool, api, match_term, uniqueid, query_num):
     query_cost = 0
     params = api.getKwargs()
 
+    uniqueId = uniqueid.split('.')
+    matchlist = []
+    for m in match_term:
+        matchlist.append(m.split('.'))
+
     for i in range(query_num):
         # choose one query
         curQuery = random.choice(query_pool.items())
@@ -31,16 +35,10 @@ def sota_estimator(query_pool, api, match_term, uniqueid, query_num):
 
         # estimate weight for each query
         for row in result:
-            try:
-                r_id = eval(uniqueid)
-            except KeyError:
-                continue
+            r_id = getElement(uniqueId, row)
             document = ''
-            for term in match_term:
-                try:
-                    document += data_process.alphnum(eval(term).lower()) + ' '
-                except KeyError:
-                    continue
+            for term in matchlist:
+                document += alphnum(getElement(term, row).lower()) + ' '
 
             # get a set of queries match document
             match_query = []
@@ -72,7 +70,7 @@ def sota_estimator(query_pool, api, match_term, uniqueid, query_num):
                     continue
                 for mrow in mresult:
                     try:
-                        if r_id == eval('m' + uniqueid):
+                        if r_id == getElement(uniqueId, mrow):
                             count += 1.0 * t / len(match_query)
                             print 'count: ', count, ' query cost: ', query_cost
                             break
@@ -99,8 +97,13 @@ def stratified_estimator(query_pool, api, match_term, candidate_rate, query_num,
     :return: count(*) of the search engine
     """
     stratified_pool, pool_sample = __query_pool_Sample(query_pool, query_num, api, layer)
-    print >> perr, 'sample generated successfully.'
+    print 'sample generated successfully.'
+
     params = api.getKwargs()
+    matchlist = []
+    for m in match_term:
+        matchlist.append(m.split('.'))
+
     total_weight = []
     for i in range(layer):
         total_weight.append(0)
@@ -111,10 +114,10 @@ def stratified_estimator(query_pool, api, match_term, candidate_rate, query_num,
             if len(result) == 0:
                 continue
             for row in result:
-                match_query, candidate_query = __candidate_construction(query, row, query_pool, match_term,
+                match_query, candidate_query = __candidate_construction(query, row, query_pool, matchlist,
                                                                         candidate_rate)
                 total_weight[i] += __topl_queryTesting(query, row, match_query, candidate_query, api)
-                print >> perr, total_weight
+                print total_weight
     count = 0
     for i in range(layer):
         count += 1.0 * len(stratified_pool[i]) * total_weight[i] / len(pool_sample[i])
@@ -170,15 +173,12 @@ def __query_pool_Sample(query_pool, query_num, api, layer):
     return stratified_pool, pool_sample
 
 
-def __candidate_construction(query, row, query_pool, match_term, candidate_rate):
+def __candidate_construction(query, row, query_pool, match_list, candidate_rate):
     # select set of queries matching X
     match_query = {}
     document = ''
-    for term in match_term:
-        try:
-            document += data_process.alphnum(eval(term).lower()) + ' '
-        except KeyError:
-            continue
+    for term in match_list:
+        document += alphnum(getElement(term, row).lower()) + ' '
     for q, v in query_pool.iteritems():
         match_query[q] = v
         for subq in q:
@@ -220,7 +220,7 @@ def __std(iterable):
     :param iterable: sample iterable
     :return: standard deviation
     """
-    avg = math.fsum(iterable=iterable) / len(iterable)
+    avg = math.fsum(iterable) / len(iterable)
     var = 0
     for i in iterable:
         var += math.pow((i - avg), 2)

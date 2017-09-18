@@ -5,9 +5,9 @@ from deeperlib.data_processing.local_data import LocalData
 
 class LocaldataTestCase(unittest.TestCase):
     def setUp(self):
-        data_file = os.path.abspath(os.path.dirname(__file__) + os.path.sep + "../../") + '/example/yelp_3000.pkl'
-        self.localdata = LocalData(data_file, 'pkl', "row['business_id']", ["row['name']"],
-                                   ["row['name']", "row['full_address']"])
+        data_file = os.path.abspath(os.path.dirname(__file__) + os.path.sep + "../../") + '/pkl_example/yelp_3000.pkl'
+        self.localdata = LocalData(data_file, 'pkl', "business_id", ["name"],
+                                   ["name", "full_address"])
 
     def tearDown(self):
         self.localdata = None

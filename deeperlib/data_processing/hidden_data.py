@@ -1,6 +1,6 @@
 import pickle
 import os
-from data_process import wordset
+from data_process import wordset, getElement
 
 
 class HiddenData:
@@ -32,21 +32,20 @@ class HiddenData:
         :return: a list for similarity join. [(['yong', 'jun', 'he', 'simon', 'fraser'],'uniqueid')]
         :raises KeyError: some messages would miss some fields.
         """
+        uniqueid = self.__uniqueId.split('.')
+        matchlist = []
+        for m in self.__matchList:
+            matchlist.append(m.split('.'))
+
         result_merge = self.__mergeResult
         result_er = []
         for row in result_raw:
-            try:
-                r_id = eval(self.__uniqueId)
-            except KeyError:
-                continue
+            r_id = getElement(uniqueid, row)
             if r_id not in result_merge:
                 result_merge[r_id] = row
                 bag = []
-                for v in self.__matchList:
-                    try:
-                        bag.extend(wordset(eval(v)))
-                    except KeyError:
-                        continue
+                for m in matchlist:
+                    bag.extend(wordset(getElement(m, row)))
                 result_er.append((bag, r_id))
         self.setMergeResult(result_merge)
         return result_er

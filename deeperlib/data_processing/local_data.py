@@ -1,7 +1,7 @@
 from sys import stderr as perr
 import pickle
 import csv
-from data_process import wordset
+from data_process import wordset, getElement
 
 
 class LocalData:
@@ -48,23 +48,26 @@ class LocalData:
         with open(self.__localPath, 'rb') as f:
             data_raw = pickle.load(f)
 
+        uniqueid = self.__uniqueId.split('.')
+        querylist = []
+        for q in self.__queryList:
+            querylist.append(q.split('.'))
+        matchlist = []
+        for m in self.__matchList:
+            matchlist.append(m.split('.'))
+
         localdata_query = {}
         localdata_er = []
         localdata_ids = set()
         stop_words = ['and', 'for', 'the', 'with', 'about']
         for row in data_raw:
-            try:
-                r_id = eval(self.__uniqueId)
-            except KeyError:
-                continue
+            r_id = getElement(uniqueid, row)
             localdata_ids.add(r_id)
 
             tempbag = []
-            for q in self.__queryList:
-                try:
-                    tempbag.extend(wordset(eval(q)))
-                except KeyError:
-                    continue
+            for q in querylist:
+                tempbag.extend(wordset(getElement(q, row)))
+
             bag = []
             for word in tempbag:
                 if word not in stop_words and len(word) >= 3:
@@ -72,11 +75,8 @@ class LocalData:
             localdata_query[r_id] = bag
 
             bag = []
-            for m in self.__matchList:
-                try:
-                    bag.extend(wordset(eval(m)))
-                except KeyError:
-                    continue
+            for m in matchlist:
+                bag.extend(wordset(getElement(m, row)))
             localdata_er.append((bag, r_id))
         self.setlocalData(localdata_ids, localdata_query, localdata_er)
 

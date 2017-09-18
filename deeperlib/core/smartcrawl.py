@@ -1,5 +1,4 @@
 from sys import stderr as perr
-import sys
 import timeit
 import copy
 import utils
@@ -85,7 +84,6 @@ def smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, api, samp
 
         cur_raw_result = api.callMulAPI(queries)
         cur_er_result = hiddendata.proResult(cur_raw_result)
-
         matched_ids, matched_pair = utils.results_simjoin(cur_er_result, D1_er, jaccard_thre)
         removed_ids = D1_ids_deeper.intersection(matched_ids)
         for d in removed_ids:

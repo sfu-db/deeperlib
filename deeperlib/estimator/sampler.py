@@ -2,7 +2,7 @@ from sys import stderr as perr
 import random
 import copy
 import pickle
-from deeperlib.data_processing import data_process
+from deeperlib.data_processing.data_process import alphnum, getElement
 
 
 def sota_sampler(query_pool, api, match_term, top_k, adjustment=1, samplenum=500):
@@ -22,6 +22,9 @@ def sota_sampler(query_pool, api, match_term, top_k, adjustment=1, samplenum=500
     query_cost = 0
     params = api.getKwargs()
     query_pool_copy = copy.deepcopy(query_pool)
+    matchlist = []
+    for m in match_term:
+        matchlist.append(m.split('.'))
 
     while len(sample) < samplenum:
         query_cost += 1
@@ -36,12 +39,8 @@ def sota_sampler(query_pool, api, match_term, top_k, adjustment=1, samplenum=500
                 rint = random.randint(0, len(result) - 1)
                 row = result[rint]
                 document = ''
-                for term in match_term:
-                    try:
-                        document += data_process.alphnum(eval(term).lower()) + ' '
-                    except KeyError:
-                        print 'miss some attributes'
-                        continue
+                for term in matchlist:
+                    document += alphnum(getElement(term, row).lower()) + ' '
                 # accept with prob of 1/freq
                 # else continue with prob(1 - q/k)
                 Mx = 0

@@ -7,18 +7,17 @@ from deeperlib.estimator import aggregation
 search_term = 'q'
 parameters = {'h': 1000}
 dblp = PublApi(delay=5, search_term=search_term, **parameters)
-localdata_file = 'dblp_10000'
-localdata = LocalData(localdata_file, 'pkl', "row['key']", ["row['title']"], ["row['title']"])
+localdata_file = 'dblp_10000.pkl'
+localdata = LocalData(localdata_file, 'pkl', "key", ["title"], ["title"])
 localdata_ids, localdata_query, localdata_er = localdata.getlocalData()
 initQueries = utils.queryGene(localdata_query, 2)
-aggregation.sota_estimator(query_pool=initQueries, api=dblp, match_term=["row['info']['title']"],
-                           uniqueid="row['info']['key']",
+aggregation.sota_estimator(query_pool=initQueries, api=dblp, match_term=["info.title"],
+                           uniqueid="info.key",
                            query_num=1)
 
 # ==== Stratified-Estimator Dblp ====
-dblp = PublApi(delay=5, search_term=search_term, **parameters)
 aggregation.stratified_estimator(query_pool=initQueries, api=dblp,
-                                 match_term=["row['info']['title']"],
+                                 match_term=["info.title"],
                                  candidate_rate=0.2,
                                  query_num=100)
 dblp.getSession().close()

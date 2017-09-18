@@ -35,18 +35,18 @@ parameters = {'h': 1000}
 dblp = PublApi(delay=5, search_term=search_term, **parameters)
 
 """
-\dblp_sample.pkl
- dblp_10000.pkl
+\dblp_sample.csv
+ dblp_3881.csv
  dblp_result\\result_file.pkl
               result_file.csv
               match_file.pkl
               match_file.csv
 """
-sample_file = 'dblp_sample.pkl'
-localdata_file = 'dblp_10000.pkl'
+sample_file = 'dblp_sample.csv'
+localdata_file = 'dblp_3881.csv'
 result_dir = 'dblp_result'
-sampledata = SampleData(samplepath=sample_file, filetype='pkl', uniqueid="row['key']", querylist=["row['title']"])
-localdata = LocalData(localpath=localdata_file, filetype='pkl', uniqueid="row['key']", querylist=["row['title']"],
-                      matchlist=["row['title']"])
-hiddendata = HiddenData(result_dir=result_dir, uniqueid="row['info']['key']", matchlist=["row['info']['title']"])
+sampledata = SampleData(samplepath=sample_file, filetype='pkl', uniqueid="key", querylist=["title"])
+localdata = LocalData(localpath=localdata_file, filetype='csv', uniqueid="ID", querylist=['title'],
+                      matchlist=['title'])
+hiddendata = HiddenData(result_dir=result_dir, uniqueid="info.key", matchlist=["info.title"])
 smartcrawl.smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, dblp, sampledata, localdata, hiddendata)
