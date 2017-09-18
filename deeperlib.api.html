@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>deeperlib.api package &#8212; deeperlib 0.1a documentation</title>
+    
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="deeperlib.api.aminer package" href="deeperlib.api.aminer.html" />
+    <link rel="prev" title="deeperlib package" href="deeperlib.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          DeeperLib</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="deeperlib.html">deeperlib package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">deeperlib</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">deeperlib.api package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-deeperlib.api.simapi">deeperlib.api.simapi module</a></li>
+<li><a class="reference internal" href="#module-deeperlib.api.simthread">deeperlib.api.simthread module</a></li>
+<li><a class="reference internal" href="#module-deeperlib.api">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="deeperlib.html" title="Previous Chapter: deeperlib package"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; deeperlib package</span>
+    </a>
+  </li>
+  <li>
+    <a href="deeperlib.api.aminer.html" title="Next Chapter: deeperlib.api.aminer package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">deeperlib.api... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/deeperlib.api.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="deeperlib-api-package">
+<h1>deeperlib.api package<a class="headerlink" href="#deeperlib-api-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="deeperlib.api.aminer.html">deeperlib.api.aminer package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.aminer.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.aminer.html#module-deeperlib.api.aminer.advanced_personapi">deeperlib.api.aminer.advanced_personapi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.aminer.html#module-deeperlib.api.aminer.advanced_publapi">deeperlib.api.aminer.advanced_publapi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.aminer.html#module-deeperlib.api.aminer.personapi">deeperlib.api.aminer.personapi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.aminer.html#module-deeperlib.api.aminer.publapi">deeperlib.api.aminer.publapi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.aminer.html#module-deeperlib.api.aminer">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deeperlib.api.dblp.html">deeperlib.api.dblp package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.dblp.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.dblp.html#module-deeperlib.api.dblp.authorapi">deeperlib.api.dblp.authorapi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.dblp.html#module-deeperlib.api.dblp.publapi">deeperlib.api.dblp.publapi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.dblp.html#module-deeperlib.api.dblp.venueapi">deeperlib.api.dblp.venueapi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.dblp.html#module-deeperlib.api.dblp">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deeperlib.api.yelp.html">deeperlib.api.yelp package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.yelp.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.yelp.html#module-deeperlib.api.yelp.searchapi">deeperlib.api.yelp.searchapi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeperlib.api.yelp.html#module-deeperlib.api.yelp">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-deeperlib.api.simapi">
+<span id="deeperlib-api-simapi-module"></span><h2>deeperlib.api.simapi module<a class="headerlink" href="#module-deeperlib.api.simapi" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="deeperlib.api.simapi.SimpleApi">
+<em class="property">class </em><code class="descclassname">deeperlib.api.simapi.</code><code class="descname">SimpleApi</code><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>An interface of many abstract methods. Users or developers could build their own subclasses of SimpleApi
+to support specific api.</p>
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.callAPI">
+<code class="descname">callAPI</code><span class="sig-paren">(</span><em>params</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.callAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.callAPI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.callMulAPI">
+<code class="descname">callMulAPI</code><span class="sig-paren">(</span><em>queries</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.callMulAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.callMulAPI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.getDelay">
+<code class="descname">getDelay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.getDelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.getDelay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.getID">
+<code class="descname">getID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.getID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.getID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.getKwargs">
+<code class="descname">getKwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.getKwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.getKwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.getSearchTerm">
+<code class="descname">getSearchTerm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.getSearchTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.getSearchTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.getSession">
+<code class="descname">getSession</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.getSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.getSession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.getToken">
+<code class="descname">getToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.getToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.getToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.getURL">
+<code class="descname">getURL</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.getURL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.getURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.setDelay">
+<code class="descname">setDelay</code><span class="sig-paren">(</span><em>delay</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.setDelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.setDelay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.setID">
+<code class="descname">setID</code><span class="sig-paren">(</span><em>client_id</em>, <em>client_secret</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.setID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.setID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.setKwargs">
+<code class="descname">setKwargs</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.setKwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.setKwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.setSearchTerm">
+<code class="descname">setSearchTerm</code><span class="sig-paren">(</span><em>search_term</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.setSearchTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.setSearchTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.setSession">
+<code class="descname">setSession</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.setSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.setSession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.setToken">
+<code class="descname">setToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.setToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.setToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simapi.SimpleApi.setURL">
+<code class="descname">setURL</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simapi.html#SimpleApi.setURL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simapi.SimpleApi.setURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-deeperlib.api.simthread">
+<span id="deeperlib-api-simthread-module"></span><h2>deeperlib.api.simthread module<a class="headerlink" href="#module-deeperlib.api.simthread" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="deeperlib.api.simthread.SimpleThread">
+<em class="property">class </em><code class="descclassname">deeperlib.api.simthread.</code><code class="descname">SimpleThread</code><span class="sig-paren">(</span><em>func</em>, <em>args</em>, <em>name=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simthread.html#SimpleThread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simthread.SimpleThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/threading.html#threading.Thread" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></a></p>
+<p>A simple subclass of the Thread class. We can create new thread for customized function easily.</p>
+<dl class="method">
+<dt id="deeperlib.api.simthread.SimpleThread.getResult">
+<code class="descname">getResult</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simthread.html#SimpleThread.getResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simthread.SimpleThread.getResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="deeperlib.api.simthread.SimpleThread.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deeperlib/api/simthread.html#SimpleThread.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#deeperlib.api.simthread.SimpleThread.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-deeperlib.api">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-deeperlib.api" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, yongjun he.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

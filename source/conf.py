@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# deeper documentation build configuration file, created by
+# deeperlib documentation build configuration file, created by
 # sphinx-quickstart on Mon Sep 11 00:48:16 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -18,7 +18,7 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('C:\PycharmProjects\NewDeepER\deeper'))
+sys.path.insert(0, os.path.abspath('C:\PycharmProjects\NewDeepER\deeperlib'))
 sys.path.append(os.path.abspath('../..'))
 sys.path.append(os.path.abspath('..'))
 
@@ -52,7 +52,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'deeper'
+project = u'deeperlib'
 copyright = u'2017, yongjun he'
 author = u'yongjun he'
 
@@ -93,7 +93,7 @@ import sphinx_bootstrap_theme
 html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 html_theme_options = {
-	'navbar_title': "Deeper",
+	'navbar_title': "DeeperLib",
 	'bootswatch_theme': "united",
 	'bootstrap_version': "3",
 }
@@ -114,7 +114,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'deeperdoc'
+htmlhelp_basename = 'deeperlibdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -141,7 +141,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'deeper.tex', u'deeper Documentation',
+    (master_doc, 'deeperlib.tex', u'deeperlib Documentation',
      u'yongjun he', 'manual'),
 ]
 
@@ -151,7 +151,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'deeper', u'deeper Documentation',
+    (master_doc, 'deeperlib', u'deeperlib Documentation',
      [author], 1)
 ]
 
@@ -162,8 +162,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'deeper', u'deeper Documentation',
-     author, 'deeper', 'One line description of project.',
+    (master_doc, 'deeperlib', u'deeperlib Documentation',
+     author, 'deeperlib', 'One line description of project.',
      'Miscellaneous'),
 ]
 

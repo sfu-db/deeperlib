@@ -1,7 +1,7 @@
-deeper
-======
+deeperlib
+=========
 
 .. toctree::
    :maxdepth: 4
 
-   deeper
+   deeperlib
