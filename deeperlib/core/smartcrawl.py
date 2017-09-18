@@ -99,6 +99,6 @@ def smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, api, samp
             curcov), ' local records covered totally.'
 
     api.getSession().close()
+    hiddendata.saveResult()
     hiddendata.setMatchPair(curmat)
     hiddendata.saveMatchPair()
-    hiddendata.saveResult()

@@ -45,7 +45,7 @@ dblp = PublApi(delay=5, search_term=search_term, **parameters)
 sample_file = 'dblp_sample.csv'
 localdata_file = 'dblp_3881.csv'
 result_dir = 'dblp_result'
-sampledata = SampleData(samplepath=sample_file, filetype='pkl', uniqueid="key", querylist=["title"])
+sampledata = SampleData(samplepath=sample_file, filetype='csv', uniqueid="key", querylist=["title"])
 localdata = LocalData(localpath=localdata_file, filetype='csv', uniqueid="ID", querylist=['title'],
                       matchlist=['title'])
 hiddendata = HiddenData(result_dir=result_dir, uniqueid="info.key", matchlist=["info.title"])

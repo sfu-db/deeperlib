@@ -1,4 +1,3 @@
-from sys import stderr as perr
 import copy
 import re
 
@@ -57,5 +56,5 @@ def getElement(node_list, data):
                 temp = temp[node]
         result = temp
     except (KeyError, TypeError, IndexError):
-        print >> perr, "Can't find the nodes."
+        pass
     return result

@@ -1,6 +1,7 @@
 import pickle
 import os
 from data_process import wordset, getElement
+from json2csv import Json2csv
 
 
 class HiddenData:
@@ -61,9 +62,12 @@ class HiddenData:
         resultList = self.__mergeResult.values()
         if not os.path.exists(self.__resultDir):
             os.makedirs(self.__resultDir)
-        with open(self.__resultDir + '\\result_fil.pkl', 'wb') as f:
+        with open(self.__resultDir + '/result_file.pkl', 'wb') as f:
             pickle.dump(resultList, f)
-        print self.__resultDir + '\\result_file saved successfully'
+        print self.__resultDir + '/result_file.pkl saved successfully'
+
+        Json2csv(resultList, self.__resultDir + '/result_file.csv')
+        print self.__resultDir + '/result_file.csv saved successfully'
 
     def saveMatchPair(self):
         """
@@ -78,11 +82,19 @@ class HiddenData:
             savePair[m[0]] = []
         for m in self.__matchPair:
             savePair[m[0]].append(m[1])
+
+        saveList = []
+        for q, v in savePair.iteritems():
+            saveList.append({'local_id': q, 'remote_id': v})
+
         if not os.path.exists(self.__resultDir):
             os.makedirs(self.__resultDir)
-        with open(self.__resultDir + '\\match_file.pkl', 'wb') as f:
-            pickle.dump(savePair, f)
-        print self.__resultDir + '\\match_file saved successfully'
+        with open(self.__resultDir + '/match_file.pkl', 'wb') as f:
+            pickle.dump(saveList, f)
+        print self.__resultDir + '/match_file saved successfully'
+
+        Json2csv(saveList, self.__resultDir + '/match_file.csv')
+        print self.__resultDir + '/match_file.csv saved successfully'
 
     def setResultDir(self, result_dir):
         self.__resultDir = result_dir
