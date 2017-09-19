@@ -6,7 +6,7 @@ from deeperlib.estimator import aggregation
 # ==== Sota-Estimator Dblp ====
 search_term = 'q'
 parameters = {'h': 1000}
-dblp = PublApi(delay=5, search_term=search_term, **parameters)
+dblp = PublApi(top_k=1000, delay=5, search_term=search_term, **parameters)
 localdata_file = 'dblp_sample.csv'
 localdata = LocalData(localdata_file, 'csv', "key", ["title"], ["title"])
 localdata_ids, localdata_query, localdata_er = localdata.getlocalData()

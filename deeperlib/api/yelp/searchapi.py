@@ -35,12 +35,6 @@ class SearchApi(deeperlib.api.simapi.SimpleApi):
         self.setToken()
         self.setSession(session=rauth.OAuth2Session(access_token=self.__token["access_token"]))
 
-    def setTopk(self, top_k):
-        self.__topk = top_k
-
-    def getTopk(self):
-        return self.__topk
-
     def callAPI(self, params):
         """
         Call api until it returns messages successfully.
@@ -92,6 +86,12 @@ class SearchApi(deeperlib.api.simapi.SimpleApi):
         for t in threads:
             mresult.extend(t.getResult())
         return mresult
+
+    def setTopk(self, top_k):
+        self.__topk = top_k
+
+    def getTopk(self):
+        return self.__topk
 
     def setDelay(self, delay):
         self.__delay = delay

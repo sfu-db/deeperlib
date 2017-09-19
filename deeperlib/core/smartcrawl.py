@@ -4,7 +4,7 @@ import copy
 import utils
 
 
-def smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, api, sampledata, localdata, hiddendata):
+def smartCrawl(budget, api, sampledata, localdata, hiddendata, pool_thre=2, jaccard_thre=0.85, threads=4):
     """
     Given a budget ofb queries, SMARTCRAWL first constructs a query pool based on the local database and then
     iteratively issues b queries to the hidden database such that the union of the query results can cover
@@ -12,24 +12,23 @@ def smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, api, samp
     local database and the crawled records.
     ----**DeepER: Deep Entity Resolution**
 
-    :param top_k: top-k constraint of specific api
-    :param count: size of hidden database
-    :param pool_thre: threshold of queries' frequency
-    :param jaccard_thre: jaccard threshold
-    :param threads: numbers of queries issued at each iteration
     :param budget: the budget of api call times
     :param api: An implementation of simapi for specific api.
     :param sampledata: SampleData object
     :param localdata: LocalData object
     :param hiddendata: HiddenData object
+    :param pool_thre: threshold of queries' frequency
+    :param jaccard_thre: jaccard threshold
+    :param threads: numbers of queries issued at each iteration
     :return:
     """
     time_s = timeit.default_timer()
     sample = sampledata.getSample()
     D1_ids, D1_query, D1_er = localdata.getlocalData()
 
-    sample_rate = 1.0 * len(sample) / count
-    Dratio = 1.0 * len(D1_ids) / count
+    top_k = api.getTopk()
+    sample_rate = sampledata.getRatio() / 100.0
+    Dratio = 1.0 * len(D1_ids) * sample_rate / len(sample)
 
     time_e = timeit.default_timer()
     print >> perr, time_e - time_s, 'data loaded.'
@@ -93,10 +92,11 @@ def smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, api, samp
         D1_ids_deeper.difference_update(matched_ids)
         curcov = curcov.union(matched_ids)
         curmat.extend(matched_pair)
-        print len(cur_raw_result), ' results returned, ', len(
-            matched_ids), ' local records covered at this iteration. ', \
-            len(hiddendata.getMergeResult()), 'different results returned, ', len(
-            curcov), ' local records covered totally.'
+        print 'budget:', 100.0 * (len(query_pool) - flagNum) / budget, '%, coverage ratio:', \
+            100.0 * len(curcov) / len(D1_ids), '%, ', len(cur_raw_result), 'results returned, ', \
+            len(matched_ids), 'local records covered at this iteration. ', \
+            len(hiddendata.getMergeResult()), 'different results returned, ', len(curcov), \
+            'local records covered totally.'
 
     api.getSession().close()
     hiddendata.saveResult()

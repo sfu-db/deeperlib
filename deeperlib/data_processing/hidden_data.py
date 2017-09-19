@@ -31,7 +31,6 @@ class HiddenData:
 
         :param result_raw: the raw result returned by api.
         :return: a list for similarity join. [(['yong', 'jun', 'he', 'simon', 'fraser'],'uniqueid')]
-        :raises KeyError: some messages would miss some fields.
         """
         uniqueid = self.__uniqueId.split('.')
         matchlist = []
@@ -54,10 +53,13 @@ class HiddenData:
     def saveResult(self):
         """
         Save the returned massages in the target directory.
-        result_dir\result_file.pkl
-                   result_file.csv
-                   match_file.pkl
-                   match_file.csv
+        result_dir\\result_file.pkl
+
+                    result_file.csv
+
+                    match_file.pkl
+
+                    match_file.csv
         """
         resultList = self.__mergeResult.values()
         if not os.path.exists(self.__resultDir):
@@ -71,11 +73,14 @@ class HiddenData:
 
     def saveMatchPair(self):
         """
-        Save the matched pairs judged by similarity join in the target directory.
-        result_dir\result_file.pkl
-                   result_file.csv
-                   match_file.pkl
-                   match_file.csv
+        Save the returned massages in the target directory.
+        result_dir\\result_file.pkl
+
+                    result_file.csv
+
+                    match_file.pkl
+
+                    match_file.csv
         """
         savePair = {}
         for m in self.__matchPair:

@@ -10,16 +10,18 @@ class SampleData:
     it would generate a dict for query pool generation.
     """
 
-    def __init__(self, samplepath, filetype, uniqueid, querylist):
+    def __init__(self, sample_ratio, samplepath, filetype, uniqueid, querylist):
         """
         Initialize the object. The data structures of messages input by users or developers are so different
         that users or developers have to define the uniqueid and querylist of the messages manually.
 
+        :param sample_ratio: the ratio of sample.
         :param samplepath: the path of input file.
         :param filetype: file type
         :param uniqueid: the uniqueid of messages in the file.
-        :param querylist: the fields of messages for query pool generation..
+        :param querylist: the fields of messages for query pool generation.
         """
+        self.setRatio(sample_ratio)
         self.setSamplePath(samplepath)
         self.setFileType(filetype)
         self.setUniqueId(uniqueid)
@@ -122,3 +124,9 @@ class SampleData:
 
     def getSample(self):
         return self.__sample
+
+    def setRatio(self, sample_ratio):
+        self.__sampleRatio = sample_ratio
+
+    def getRatio(self):
+        return self.__sampleRatio

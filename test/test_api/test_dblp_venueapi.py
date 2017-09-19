@@ -7,7 +7,7 @@ class DblpVenueapiTestCase(unittest.TestCase):
     def setUp(self):
         search_term = 'q'
         parameters = {'h': 1000}
-        self.dblp = VenueApi(delay=5, search_term=search_term, **parameters)
+        self.dblp = VenueApi(top_k=1000, delay=5, search_term=search_term, **parameters)
 
     def tearDown(self):
         self.dblp = None

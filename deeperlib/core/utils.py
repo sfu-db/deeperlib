@@ -1,7 +1,7 @@
 from sys import stderr as perr
 from pqdict import maxpq
 from deeperlib.entity_resolution import simjoin
-import fim
+import platform
 
 
 def queryGene(D1, thre):
@@ -12,6 +12,32 @@ def queryGene(D1, thre):
     :param thre: threshold of queries' frequency
     :return: a closed frequency itemset of local database
     """
+    system = platform.system()
+    architecture = platform.architecture()[0]
+    if architecture == "64bit":
+        if system == "Linux":
+            from deeperlib.extensions.Linux_64 import fim
+        elif system == "Windows":
+            from deeperlib.extensions.Windows_64 import fim
+        elif system == "Darwin":
+            from deeperlib.extensions.Darwin_64 import fim
+        else:
+            print "Your operating system is not supported now. " \
+                  "Please refer to for https://github.com/sfu-db/deeper" \
+                  "maintainer's information."
+            exit(0)
+    elif architecture == "32bit":
+        if system == "Linux":
+            from deeperlib.extensions.Linux_32 import fim
+        elif system == "Windows":
+            from deeperlib.extensions.Windows_64 import fim
+        else:
+            print "Your operating system is not supported now. " \
+                  "Please refer to https://github.com/sfu-db/deeper " \
+                  "for maintainer's information."
+            exit(0)
+    print >> perr, system, architecture
+
     D1bags = []
     for k, v in D1.iteritems():
         D1bags.append(v)

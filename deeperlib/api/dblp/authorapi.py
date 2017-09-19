@@ -12,15 +12,17 @@ class AuthorApi(deeperlib.api.simapi.SimpleApi):
     A subclass implemented for dblp/search/author api----http://dblp.org/search/author/api
     """
 
-    def __init__(self, delay, search_term, **kwargs):
+    def __init__(self, top_k, delay, search_term, **kwargs):
         """
         Initialize the object. Set url and create session. Set other parameters for future api call.
 
+        :param top_k: top-k constraint
         :param delay: time interval between a failed api call and the next api call
         :param search_term: the field for query string
         :param kwargs: other parameters
         """
         deeperlib.api.simapi.SimpleApi.__init__(self)
+        self.setTopk(top_k)
         self.setDelay(delay)
         self.setSearchTerm(search_term)
         self.setKwargs(kwargs)
@@ -73,6 +75,12 @@ class AuthorApi(deeperlib.api.simapi.SimpleApi):
         for t in threads:
             mresult.extend(t.getResult())
         return mresult
+
+    def setTopk(self, top_k):
+        self.__topk = top_k
+
+    def getTopk(self):
+        return self.__topk
 
     def setDelay(self, delay):
         self.__delay = delay

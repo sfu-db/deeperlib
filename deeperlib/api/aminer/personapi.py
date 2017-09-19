@@ -30,12 +30,6 @@ class PersonApi(deeperlib.api.simapi.SimpleApi):
         self.setURL("https://api.aminer.org/api/search/person")
         self.setSession(requests.session())
 
-    def setTopk(self, top_k):
-        self.__topk = top_k
-
-    def getTopk(self):
-        return self.__topk
-
     def callAPI(self, params):
         """
         Call api until it returns messages successfully.
@@ -87,6 +81,12 @@ class PersonApi(deeperlib.api.simapi.SimpleApi):
         for t in threads:
             mresult.extend(t.getResult())
         return mresult
+
+    def setTopk(self, top_k):
+        self.__topk = top_k
+
+    def getTopk(self):
+        return self.__topk
 
     def setDelay(self, delay):
         self.__delay = delay

@@ -9,7 +9,7 @@ class YelpSearchapiTestCase(unittest.TestCase):
         client_secret = "s9KnvEEQW7jaA2wlrBi4X2fnDQ0F7asdklXVvJUidWp8i50ov24E8EjkHX2AUhoL"
         search_term = 'term'
         parameters = {'limit': 50, 'location': 'AZ'}
-        self.yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=1000, delay=5,
+        self.yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=300, delay=5,
                               search_term=search_term,
                               **parameters)
 

@@ -20,6 +20,14 @@ class SimpleApi:
         return
 
     @abstractmethod
+    def setTopk(self, top_k):
+        return
+
+    @abstractmethod
+    def getTopk(self):
+        return
+
+    @abstractmethod
     def setDelay(self, delay):
         return
 

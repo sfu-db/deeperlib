@@ -8,13 +8,6 @@ from deeperlib.data_processing.sample_data import SampleData
 from deeperlib.data_processing.local_data import LocalData
 from deeperlib.data_processing.hidden_data import HiddenData
 
-top_k = 1000
-count = 3000000
-pool_thre = 2
-jaccard_thre = 0.85
-threads = 4
-budget = 100
-
 """
 full description provided in http://dblp.uni-trier.de/faq/How+to+use+the+dblp+search+API.html
 
@@ -32,7 +25,7 @@ c          Maximum number of completion terms (see below) to return. For     10 
 """
 search_term = 'q'
 parameters = {'h': 1000}
-dblp = PublApi(delay=5, search_term=search_term, **parameters)
+dblp = PublApi(top_k=1000, delay=5, search_term=search_term, **parameters)
 
 """
 \dblp_sample.csv
@@ -45,8 +38,15 @@ dblp = PublApi(delay=5, search_term=search_term, **parameters)
 sample_file = 'dblp_sample.csv'
 localdata_file = 'dblp_3881.csv'
 result_dir = 'dblp_result'
-sampledata = SampleData(samplepath=sample_file, filetype='csv', uniqueid="key", querylist=["title"])
+sampledata = SampleData(sample_ratio=0.5, samplepath=sample_file, filetype='csv', uniqueid="key", querylist=["title"])
 localdata = LocalData(localpath=localdata_file, filetype='csv', uniqueid="ID", querylist=['title'],
                       matchlist=['title'])
 hiddendata = HiddenData(result_dir=result_dir, uniqueid="info.key", matchlist=["info.title"])
-smartcrawl.smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, dblp, sampledata, localdata, hiddendata)
+budget = 100
+smartcrawl.smartCrawl(budget, dblp, sampledata, localdata, hiddendata)
+"""
+pool_thre = 2
+jaccard_thre = 0.85
+threads = 4
+smartcrawl.smartCrawl(budget, dblp, sampledata, localdata, hiddendata, pool_thre, jaccard_thre, threads)
+"""

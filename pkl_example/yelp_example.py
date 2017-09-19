@@ -8,13 +8,6 @@ from deeperlib.data_processing.sample_data import SampleData
 from deeperlib.data_processing.local_data import LocalData
 from deeperlib.data_processing.hidden_data import HiddenData
 
-top_k = 250
-count = 1000000
-pool_thre = 2
-jaccard_thre = 0.85
-threads = 4
-budget = 100
-
 """
 full description provided in https://www.yelp.com/developers/documentation/v3/business_search
 
@@ -38,7 +31,7 @@ client_id = "kCe2YbZePXsPnC204ZrXoQ"
 client_secret = "s9KnvEEQW7jaA2wlrBi4X2fnDQ0F7asdklXVvJUidWp8i50ov24E8EjkHX2AUhoL"
 search_term = 'term'
 parameters = {'limit': 50, 'location': 'AZ'}
-yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=50, delay=5, search_term=search_term,
+yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=300, delay=5, search_term=search_term,
                  **parameters)
 
 """
@@ -52,10 +45,17 @@ yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=50, del
 sample_file = 'yelp_sample.pkl'
 localdata_file = 'yelp_3000.pkl'
 result_dir = 'yelp_result'
-sampledata = SampleData(samplepath=sample_file, filetype='pkl', uniqueid="id", querylist=["name"])
+sampledata = SampleData(sample_ratio=0.5, samplepath=sample_file, filetype='pkl', uniqueid="id", querylist=["name"])
 localdata = LocalData(localpath=localdata_file, filetype='pkl', uniqueid="business_id",
                       querylist=["name"],
                       matchlist=["name", "full_address"])
 hiddendata = HiddenData(result_dir=result_dir, uniqueid="id",
                         matchlist=["name", "location.display_address.*"])
-smartcrawl.smartCrawl(top_k, count, pool_thre, jaccard_thre, threads, budget, yelp, sampledata, localdata, hiddendata)
+budget = 100
+smartcrawl.smartCrawl(budget, yelp, sampledata, localdata, hiddendata)
+"""
+pool_thre = 2
+jaccard_thre = 0.85
+threads = 4
+smartcrawl.smartCrawl(budget, yelp, sampledata, localdata, hiddendata, pool_thre, jaccard_thre, threads)
+"""
