@@ -33,10 +33,8 @@ def smartCrawl(budget, api, sampledata, localdata, hiddendata, pool_thre=2, jacc
     time_e = timeit.default_timer()
     print >> perr, time_e - time_s, 'data loaded.'
 
-    time_s = timeit.default_timer()
+    #####query pool #####
     initQueries = utils.queryGene(D1_query, pool_thre)
-    time_e = timeit.default_timer()
-    print >> perr, time_e - time_s, 'query pool finished.'
 
     #####inverted index #####
     time_s = timeit.default_timer()
@@ -44,12 +42,10 @@ def smartCrawl(budget, api, sampledata, localdata, hiddendata, pool_thre=2, jacc
     initQueries, D1index = utils.add_naiveIndex(initQueries, D1_query, D1index)
     sampleindex = utils.invertedIndex(initQueries, sample)
     time_e = timeit.default_timer()
-    print >> perr, time_e - time_s, 'index building finished.'
+    print >> perr, time_e - time_s, 'inverted index generated.'
+
     #####forward index #####
-    time_s = timeit.default_timer()
     findex = utils.forwardIndex(D1index)
-    time_e = timeit.default_timer()
-    print >> perr, time_e - time_s, 'forward index'
 
     ##### biased #####
     D1_ids_deeper = copy.deepcopy(D1_ids)

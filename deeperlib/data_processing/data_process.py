@@ -1,3 +1,5 @@
+from sys import stderr as perr
+import timeit
 import copy
 import re
 
@@ -58,3 +60,15 @@ def getElement(node_list, data):
     except (KeyError, TypeError, IndexError):
         pass
     return result
+
+
+def timelogger(sysout=''):
+    def logger(func):
+        def wrapper(*args, **kwargs):
+            time_s = timeit.default_timer()
+            ret = func(*args, **kwargs)
+            time_e = timeit.default_timer()
+            print >> perr, time_e - time_s, sysout
+            return ret
+        return wrapper
+    return logger

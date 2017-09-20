@@ -1,9 +1,11 @@
 from sys import stderr as perr
 from pqdict import maxpq
 from deeperlib.entity_resolution import simjoin
+from deeperlib.data_processing.data_process import timelogger
 import platform
 
 
+@timelogger('query pool generated.')
 def queryGene(D1, thre):
     """
     Use fpgrowth to generate a finite queries pool
@@ -49,6 +51,7 @@ def queryGene(D1, thre):
     return queries
 
 
+@timelogger('forward index generated')
 def forwardIndex(D1index):
     """
      A forward index maps a local record to all the queries that the record satisfies. Such a list is
@@ -123,6 +126,7 @@ def add_naiveIndex(queries, data, index):
     return queries, index
 
 
+@timelogger('biased benefits generated.')
 def initScore_biased(sampleindex, k, sr, Dratio, queries):
     """
     Biased benefit estimation.
@@ -166,6 +170,7 @@ def updateList(D1index):
     return updatelist
 
 
+@timelogger('unbiased benefits generated.')
 def initScore_unbiased(sampleindex, D1index, k, sr, queries):
     """
     Unbiased benefit estimation.
