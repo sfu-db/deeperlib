@@ -1,6 +1,6 @@
 DeepER - Deep Entity Resolution
 =========================
-[![TeamCity (simple build status)](https://img.shields.io/badge/pypi-0.1.a-orange.svg?style=plastic)](https://pypi.python.org/pypi/deeperlib/0.1a0)
+[![Travis](https://img.shields.io/badge/pypi-0.2-orange.svg?style=plastic)](https://pypi.python.org/pypi/deeperlib)
 [![David](https://img.shields.io/badge/python-2.7-blue.svg?style=plastic)](https://www.python.org/)
 	
 A web data integration tool, A novel framework to overcome limitations, Easy for  configuration, Fully functional, Smooth interface.
@@ -35,7 +35,7 @@ Requirements
 * simplejson==3.11.1
 * rauth==0.7.3
 
-Requests officially supports Python 2.7.13(windows 64-bit), and runs great on PyPy.
+Requests officially supports Python 2.7.13, and runs great on PyPy.
 
 
 Installation and Update
@@ -51,6 +51,10 @@ pip install --upgrade deeperlib
 
 Changelog
 ----------
+v0.2a
+
+* 2017/09/19 support Windows-32bit/64bit, Linux-32bit/64bit, MacOs-64bit, csv and pickle input
+
 v0.1a
 
 * 2017/09/14 deeper's birthday
