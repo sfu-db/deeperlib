@@ -11,6 +11,7 @@ Subpackages
     deeperlib.data_processing
     deeperlib.entity_resolution
     deeperlib.estimator
+    deeperlib.extensions
 
 Module contents
 ---------------
