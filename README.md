@@ -24,16 +24,16 @@ and you would integrate a new api to collect more data.
 
 Documentation
 ------------
-Fantastic documentation is available at [https://sfu-db.github.io/deeper/](https://sfu-db.github.io/deeper/) 
+Fantastic documentation is available at [https://sfu-db.github.io/deeper/](https://sfu-db.github.io/deeperlib/) 
 
 
 Requirements
 ------------
 
-* pqdict==1.0.0
-* requests==2.18.4
-* simplejson==3.11.1
-* rauth==0.7.3
+* pqdict>=1.0.0
+* requests>=2.18.4
+* simplejson>=3.11.1
+* rauth>=0.7.3
 
 Requests officially supports Python 2.7.13, and runs great on PyPy.
 
