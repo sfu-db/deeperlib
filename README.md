@@ -24,7 +24,7 @@ and you would integrate a new api to collect more data.
 
 Documentation
 ------------
-Fantastic documentation is available at [https://sfu-db.github.io/deeper/](https://sfu-db.github.io/deeperlib/) 
+Fantastic documentation is available at [https://sfu-db.github.io/deeperlib/](https://sfu-db.github.io/deeperlib/) 
 
 
 Requirements
