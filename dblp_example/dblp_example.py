@@ -42,7 +42,7 @@ sampledata = SampleData(sample_ratio=0.5, samplepath=sample_file, filetype='csv'
 localdata = LocalData(localpath=localdata_file, filetype='csv', uniqueid="ID", querylist=['title'],
                       matchlist=['title'])
 hiddendata = HiddenData(result_dir=result_dir, uniqueid="info.key", matchlist=["info.title"])
-budget = 100
+budget = 20
 smartcrawl.smartCrawl(budget, dblp, sampledata, localdata, hiddendata)
 """
 pool_thre = 2

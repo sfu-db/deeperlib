@@ -96,7 +96,7 @@ class HiddenData:
             os.makedirs(self.__resultDir)
         with open(self.__resultDir + '/match_file.pkl', 'wb') as f:
             pickle.dump(saveList, f)
-        print self.__resultDir + '/match_file saved successfully'
+        print self.__resultDir + '/match_file.pkl saved successfully'
 
         Json2csv(saveList, self.__resultDir + '/match_file.csv')
         print self.__resultDir + '/match_file.csv saved successfully'

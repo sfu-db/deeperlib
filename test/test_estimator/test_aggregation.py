@@ -11,7 +11,7 @@ class AggregationTestCase(unittest.TestCase):
         search_term = 'q'
         parameters = {'h': 1000}
         self.dblp = PublApi(top_k=1000, delay=5, search_term=search_term, **parameters)
-        localdata_file = os.path.abspath(os.path.dirname(__file__) + os.path.sep + "../../") + '/csv_example/dblp_sample.csv'
+        localdata_file = os.path.abspath(os.path.dirname(__file__) + os.path.sep + "../../") + '/dblp_example/dblp_sample.csv'
         localdata = LocalData(localdata_file, 'csv', "key", ["title"], ["title"])
         localdata_ids, localdata_query, localdata_er = localdata.getlocalData()
         initQueries = utils.queryGene(localdata_query, 2)

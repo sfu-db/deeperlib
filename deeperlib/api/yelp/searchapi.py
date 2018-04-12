@@ -1,6 +1,5 @@
 from sys import stderr as perr
 import requests
-import rauth
 import copy
 import simplejson
 from time import sleep
@@ -32,8 +31,7 @@ class SearchApi(deeperlib.api.simapi.SimpleApi):
         self.setKwargs(kwargs)
         self.setURL('https://api.yelp.com/v3/businesses/search')
         self.setID(client_id, client_secret)
-        self.setToken()
-        self.setSession(session=rauth.OAuth2Session(access_token=self.__token["access_token"]))
+        self.setSession(requests.session())
 
     def callAPI(self, params):
         """
@@ -118,20 +116,22 @@ class SearchApi(deeperlib.api.simapi.SimpleApi):
         return self.__searchURL
 
     def setID(self, client_id, client_secret):
-        self.__apiID = {"grant_type": "client_credentials"}
-        self.__apiID['client_id'] = client_id
-        self.__apiID['client_secret'] = client_secret
+        self.__apiID = {'client_id': client_id, 'client_secret': client_secret}
 
     def getID(self):
         return self.__apiID
 
     def setToken(self):
-        self.__token = requests.post("https://api.yelp.com/oauth2/token", self.__apiID).json()
+        return
 
     def getToken(self):
-        return self.__token
+        return
 
     def setSession(self, session):
+        headers = {
+            'Authorization': 'Bearer ' + self.__apiID['client_secret']
+        }
+        session.headers = headers
         self.__session = session
 
     def getSession(self):

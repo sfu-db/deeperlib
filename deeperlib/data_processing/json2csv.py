@@ -14,22 +14,23 @@ class Json2csv:
     """
 
     def __init__(self, jsondata, csv_path):
-        self.__header = []
-        self.__jsondata = jsondata
-        self.__getHeader(jsondata[random.randint(0, len(jsondata) - 1)])
+        if len(jsondata) > 0:
+            self.__header = []
+            self.__jsondata = jsondata
+            self.__getHeader(jsondata[random.randint(0, len(jsondata) - 1)])
 
-        with open(csv_path, "wb") as csvfile:
-            csvfile = file(csv_path, 'wb')
-            csvfile.write(codecs.BOM_UTF8)
-            writer = csv.writer(csvfile)
-            # write header
-            writer.writerow(self.__header)
-            # write row
-            for row in self.__jsondata:
-                temprow = []
-                for h in self.__header:
-                    temprow.append(self.__getElement(h.split('.'), row))
-                writer.writerow(temprow)
+            with open(csv_path, "wb") as csvfile:
+                csvfile = file(csv_path, 'wb')
+                csvfile.write(codecs.BOM_UTF8)
+                writer = csv.writer(csvfile)
+                # write header
+                writer.writerow(self.__header)
+                # write row
+                for row in self.__jsondata:
+                    temprow = []
+                    for h in self.__header:
+                        temprow.append(self.__getElement(h.split('.'), row))
+                    writer.writerow(temprow)
 
     def __getHeader(self, row, parentNode=''):
         """

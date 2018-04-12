@@ -5,8 +5,8 @@ from deeperlib.api.yelp.searchapi import SearchApi
 
 class YelpSearchapiTestCase(unittest.TestCase):
     def setUp(self):
-        client_id = "kCe2YbZePXsPnC204ZrXoQ"
-        client_secret = "s9KnvEEQW7jaA2wlrBi4X2fnDQ0F7asdklXVvJUidWp8i50ov24E8EjkHX2AUhoL"
+        client_id = "QhqrWe9agsd0Ad6Gs0qgMQ"
+        client_secret = "6WQWRMV8edOhaThyWgm96wAJkIzJ1pHOhm5N0AD20edrnzv0lwi3wfgZAFp0IqQ6WIc-pZki83kjpViwptlcsiV0-Ij3HI6AJxhOTE4jsjNOoZOHZI3823twg8yZWXYx"
         search_term = 'term'
         parameters = {'limit': 50, 'location': 'AZ'}
         self.yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=300, delay=5,
@@ -22,23 +22,24 @@ class YelpSearchapiTestCase(unittest.TestCase):
         params[self.yelp.getSearchTerm()] = '+'.join(query)
         params['offset'] = 0
         results = self.yelp.callAPI(params)
+        print(len(results))
         assert len(results) >= 20
 
     def test_callMulApi_term(self):
         queries = [['tai'], ['restaurant']]
         results = self.yelp.callMulAPI(queries)
-        assert len(results) >= 1000
+        assert len(results) >= 200
 
     def test_callMulApi_categories(self):
         self.yelp.setSearchTerm('categories')
         categories = [['bars'], ['french']]
         results = self.yelp.callMulAPI(categories)
-        print len(results)
-        assert len(results) >= 700
+        assert len(results) >= 200
 
     def test_callMulApi_sort(self):
         self.yelp.setSearchTerm('sort_by')
         sort_by = [['rating'], ['best_match']]
         results = self.yelp.callMulAPI(sort_by)
         self.yelp.getSession().close()
-        assert len(results) >= 1000
+        print(len(results))
+        assert len(results) >= 200

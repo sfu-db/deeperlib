@@ -73,6 +73,7 @@ class SampleData:
         querylist_index = []
         try:
             header = sample_raw.pop(0)
+            header[0] = header[0].replace(b'\xef\xbb\xbf', '')
             uniqueid_index = header.index(self.__uniqueId)
             for q in self.__queryList:
                 querylist_index.append(header.index(q))

@@ -27,8 +27,8 @@ sort_by     string  Optional. Sort the results by one of the these modes: best_m
                     adjusted rating value that takes into account the number of ratings, similar to a bayesian average. 
                     This is so a business with 1 rating of 5 stars doesn't immediately jump to the top. 
 """
-client_id = "kCe2YbZePXsPnC204ZrXoQ"
-client_secret = "s9KnvEEQW7jaA2wlrBi4X2fnDQ0F7asdklXVvJUidWp8i50ov24E8EjkHX2AUhoL"
+client_id = "QhqrWe9agsd0Ad6Gs0qgMQ"
+client_secret = "6WQWRMV8edOhaThyWgm96wAJkIzJ1pHOhm5N0AD20edrnzv0lwi3wfgZAFp0IqQ6WIc-pZki83kjpViwptlcsiV0-Ij3HI6AJxhOTE4jsjNOoZOHZI3823twg8yZWXYx"
 search_term = 'term'
 parameters = {'limit': 50, 'location': 'AZ'}
 yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=300, delay=5, search_term=search_term,
@@ -42,16 +42,16 @@ yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=300, de
               match_file.pkl
               match_file.csv
 """
-sample_file = 'yelp_sample.pkl'
-localdata_file = 'yelp_3000.pkl'
+sample_file = 'yelp_sample_AZ.pkl'
+localdata_file = 'yelp_3000_AZ.csv'
 result_dir = 'yelp_result'
-sampledata = SampleData(sample_ratio=0.5, samplepath=sample_file, filetype='pkl', uniqueid="id", querylist=["name"])
-localdata = LocalData(localpath=localdata_file, filetype='pkl', uniqueid="business_id",
+sampledata = SampleData(sample_ratio=0.5, samplepath=sample_file, filetype='pkl', uniqueid="business_id", querylist=["name"])
+localdata = LocalData(localpath=localdata_file, filetype='csv', uniqueid="business_id",
                       querylist=["name"],
                       matchlist=["name", "full_address"])
 hiddendata = HiddenData(result_dir=result_dir, uniqueid="id",
                         matchlist=["name", "location.display_address.*"])
-budget = 100
+budget = 20
 smartcrawl.smartCrawl(budget, yelp, sampledata, localdata, hiddendata)
 """
 pool_thre = 2
