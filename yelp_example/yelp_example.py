@@ -35,8 +35,8 @@ yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=300, de
                  **parameters)
 
 """
-\yelp_sample.pkl
- yelp_10000.pkl
+\yelp_sample_AZ.pkl
+ yelp_3000_AZ.csv
  yelp_result\\result_file.pkl
               result_file.csv
               match_file.pkl
