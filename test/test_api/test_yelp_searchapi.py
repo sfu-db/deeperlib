@@ -22,7 +22,6 @@ class YelpSearchapiTestCase(unittest.TestCase):
         params[self.yelp.getSearchTerm()] = '+'.join(query)
         params['offset'] = 0
         results = self.yelp.callAPI(params)
-        print(len(results))
         assert len(results) >= 20
 
     def test_callMulApi_term(self):
@@ -41,5 +40,4 @@ class YelpSearchapiTestCase(unittest.TestCase):
         sort_by = [['rating'], ['best_match']]
         results = self.yelp.callMulAPI(sort_by)
         self.yelp.getSession().close()
-        print(len(results))
         assert len(results) >= 200

@@ -11,6 +11,20 @@ from deeperlib.data_processing.hidden_data import HiddenData
 """
 full description provided in https://developers.google.cn/places/web-service/search
                              https://developers.google.com/places/web-service/details
+                             
+A Text Search request is an HTTP URL of the following form:
+https://maps.googleapis.com/maps/api/place/textsearch/output?parameters
+where output may be either of the following values:
+    * json (recommended) indicates output in JavaScript Object Notation (JSON)
+    * xml indicates output as XML
+Required parameters
+    * query - The text string on which to search, for example: "restaurant" or "123 Main Street". 
+      The Google Places service will return candidate matches based on this string and order the results 
+      based on their perceived relevance. This parameter becomes optional if the type parameter is also 
+      used in the search request.
+    * key - Your application's API key. This key identifies your application for purposes of quota management 
+      and so that places added from your application are made immediately available to your app. See Get a key 
+      for Google Places API Web Service to see how to create an API Project and obtain your key.
 """
 search_term = 'query'
 parameters = {'key': 'AIzaSyDhBJSPqHfcEkPGQGbH7l3eWyF_PhF10iw'}
