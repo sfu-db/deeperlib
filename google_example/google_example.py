@@ -37,6 +37,8 @@ google = TextSearchApi(location='in+Toronto', top_k=60, delay=5, search_term=sea
               result_file.csv
               match_file.pkl
               match_file.csv
+              enriched_file.pkl
+              enriched_file.csv
 """
 sample_file = 'yelp_sample_Toronto.pkl'
 localdata_file = 'yelp_3000_Toronto.csv'

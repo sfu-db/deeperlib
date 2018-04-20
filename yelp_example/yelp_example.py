@@ -41,6 +41,8 @@ yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=300, de
               result_file.csv
               match_file.pkl
               match_file.csv
+              enriched_file.pkl
+              enriched_file.csv
 """
 sample_file = 'yelp_sample_AZ.pkl'
 localdata_file = 'yelp_3000_AZ.csv'

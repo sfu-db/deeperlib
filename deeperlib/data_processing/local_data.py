@@ -56,6 +56,7 @@ class LocalData:
         for m in self.__matchList:
             matchlist.append(m.split('.'))
 
+        localdata_record = {}
         localdata_query = {}
         localdata_er = []
         localdata_ids = set()
@@ -63,11 +64,11 @@ class LocalData:
         for row in data_raw:
             r_id = getElement(uniqueid, row)
             localdata_ids.add(r_id)
+            localdata_record[r_id] = row
 
             tempbag = []
             for q in querylist:
                 tempbag.extend(wordset(getElement(q, row)))
-
             bag = []
             for word in tempbag:
                 if word not in stop_words and len(word) >= 3:
@@ -78,7 +79,7 @@ class LocalData:
             for m in matchlist:
                 bag.extend(wordset(getElement(m, row)))
             localdata_er.append((bag, r_id))
-        self.setlocalData(localdata_ids, localdata_query, localdata_er)
+        self.setlocalData(localdata_ids, localdata_query, localdata_er, localdata_record)
 
     def read_csv(self):
         """
@@ -95,12 +96,14 @@ class LocalData:
             reader = csv.reader(csvfile)
             data_raw = [row for row in reader]
 
+        localdata_record = {}
         uniqueid_index = 0
         querylist_index = []
         matchlist_index = []
         try:
             header = data_raw.pop(0)
             header[0] = header[0].replace(b'\xef\xbb\xbf', '')
+            localdata_record['header'] = header
             uniqueid_index = header.index(self.__uniqueId)
             for q in self.__queryList:
                 querylist_index.append(header.index(q))
@@ -120,6 +123,7 @@ class LocalData:
             except IndexError:
                 continue
             localdata_ids.add(r_id)
+            localdata_record[r_id] = row
 
             tempbag = []
             for q in querylist_index:
@@ -140,7 +144,7 @@ class LocalData:
                 except IndexError:
                     continue
             localdata_er.append((bag, r_id))
-        self.setlocalData(localdata_ids, localdata_query, localdata_er)
+        self.setlocalData(localdata_ids, localdata_query, localdata_er, localdata_record)
 
     def setLocalPath(self, localpath):
         self.__localPath = localpath
@@ -172,10 +176,11 @@ class LocalData:
     def getMatchList(self):
         return self.__matchList
 
-    def setlocalData(self, localdata_ids, localdata_query, localdata_er):
+    def setlocalData(self, localdata_ids, localdata_query, localdata_er, localdata_record):
         self.__localdataIds = localdata_ids
         self.__localdataQuery = localdata_query
         self.__localdataEr = localdata_er
+        self.__localdataRecord = localdata_record
 
     def getlocalData(self):
-        return self.__localdataIds, self.__localdataQuery, self.__localdataEr
+        return self.__localdataIds, self.__localdataQuery, self.__localdataEr, self.__localdataRecord

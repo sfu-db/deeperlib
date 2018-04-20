@@ -24,7 +24,7 @@ def smartCrawl(budget, api, sampledata, localdata, hiddendata, pool_thre=2, jacc
     """
     time_s = timeit.default_timer()
     sample = sampledata.getSample()
-    D1_ids, D1_query, D1_er = localdata.getlocalData()
+    D1_ids, D1_query, D1_er = localdata.getlocalData()[:-1]
 
     top_k = api.getTopk()
     sample_rate = sampledata.getRatio() / 100.0
@@ -95,6 +95,7 @@ def smartCrawl(budget, api, sampledata, localdata, hiddendata, pool_thre=2, jacc
             'local records covered totally.'
 
     api.getSession().close()
-    hiddendata.saveResult()
     hiddendata.setMatchPair(curmat)
     hiddendata.saveMatchPair()
+    hiddendata.saveResult()
+    hiddendata.saveEnrichedResult(localdata)

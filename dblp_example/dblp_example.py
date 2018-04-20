@@ -34,6 +34,8 @@ dblp = PublApi(top_k=1000, delay=5, search_term=search_term, **parameters)
               result_file.csv
               match_file.pkl
               match_file.csv
+              enriched_file.pkl
+              enriched_file.csv
 """
 sample_file = 'dblp_sample.csv'
 localdata_file = 'dblp_3881.csv'

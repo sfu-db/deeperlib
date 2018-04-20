@@ -1,6 +1,6 @@
 import pickle
 import os
-from data_process import wordset, getElement
+from data_process import alphnum, wordset, getElement
 from json2csv import Json2csv
 
 
@@ -100,6 +100,35 @@ class HiddenData:
 
         Json2csv(saveList, self.__resultDir + '/match_file.csv')
         print self.__resultDir + '/match_file.csv saved successfully'
+
+    def saveEnrichedResult(self, localdata):
+        resultList = []
+        localDict = localdata.getlocalData()[3]
+        remoteDict = self.__mergeResult
+
+        local_header = localDict.pop('header')
+        for i in range(len(local_header)):
+            local_header[i] = alphnum(local_header[i])
+
+        if localdata.getFileType() == 'pkl':
+            for m in self.__matchPair:
+                tempRecord = {'local': localDict[m[0]], 'remote': remoteDict[m[1]]}
+                resultList.append(tempRecord)
+        elif localdata.getFileType() == 'csv':
+            for m in self.__matchPair:
+                tempRecord = {'local': {}, 'remote': remoteDict[m[1]]}
+                for i in range(len(local_header)):
+                    tempRecord['local'][local_header[i]] = localDict[m[0]][i]
+                resultList.append(tempRecord)
+
+        if not os.path.exists(self.__resultDir):
+            os.makedirs(self.__resultDir)
+        with open(self.__resultDir + '/enriched_file.pkl', 'wb') as f:
+            pickle.dump(resultList, f)
+        print self.__resultDir + '/enriched_file.pkl saved successfully'
+
+        Json2csv(resultList, self.__resultDir + '/enriched_file.csv')
+        print self.__resultDir + '/enriched_file.csv saved successfully'
 
     def setResultDir(self, result_dir):
         self.__resultDir = result_dir
