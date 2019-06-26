@@ -1,16 +1,14 @@
-DeepER - Deep Entity Resolution
+Deeper, a data enrichment system through progressive deep deb crawling.
 =========================
 [![Travis](https://img.shields.io/badge/pypi-0.2-orange.svg?style=plastic)](https://pypi.python.org/pypi/deeperlib)
 [![David](https://img.shields.io/badge/python-2.7-blue.svg?style=plastic)](https://www.python.org/)
 	
-A web data integration tool, A novel framework to overcome limitations, Easy for  configuration, Fully functional, Smooth interface.
-
-which aims to find pairs of records that describe the same entity between a local database and a hidden database and has many applications in data enrichment and data cleaning. 
+Deeper is a system for data enrichment with web data. Given a local data table, it is able to efficiently find the matching records in a deep website through keyword search interface API, so that the returned data can be used to enrich the local data.
 
 
-API Support
+APIs Supportted
 ------------
-DeepER is ready for the following API:
+The current version implemented API for the following websites as examples:
 
 * [DBLP](http://dblp.uni-trier.de/faq/How+to+use+the+dblp+search+API.html)（DataBase systems and Logic Programming）
 * [YELP](https://www.yelp.com/developers/documentation/v3/business_search)（Yelp Fusion API）
@@ -18,8 +16,7 @@ DeepER is ready for the following API:
 
 ### Custom
 
-implement a subclass of deeper.api.simapi and pass it to deeper.core.smartcrawl 
-and you would integrate a new api to collect more data.
+You can also implement other APIs based on your needs by implementing a subclass of deeper.api.simapi and pass it to deeper.core.smartcrawl.
 
 
 Documentation
@@ -48,3 +45,8 @@ pip install deeperlib
 ```
 pip install --upgrade deeperlib
 ```
+
+Publication
+-----------
+[1]. P. Wang et al. Progressive Deep Web Crawling Through Keyword Queries For Data Enrichment. SIGMOD 2019.
+[2]. P. Wang et al. Deeper: A Data Enrichment System Powered by Deep Web. SIGMOD 2018 (demo).
