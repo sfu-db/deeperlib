@@ -48,5 +48,5 @@ pip install --upgrade deeperlib
 
 Publication
 -----------
-[1]. P. Wang et al. Progressive Deep Web Crawling Through Keyword Queries For Data Enrichment. SIGMOD 2019.
+[1]. P. Wang et al. Progressive Deep Web Crawling Through Keyword Queries For Data Enrichment. SIGMOD 2019.  
 [2]. P. Wang et al. Deeper: A Data Enrichment System Powered by Deep Web. SIGMOD 2018 (demo).
