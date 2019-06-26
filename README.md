@@ -48,13 +48,3 @@ pip install deeperlib
 ```
 pip install --upgrade deeperlib
 ```
-
-Changelog
-----------
-v0.2a
-
-* 2017/09/19 support Windows-32bit/64bit, Linux-32bit/64bit, MacOs-64bit, csv and pickle input
-
-v0.1a
-
-* 2017/09/14 initial version
