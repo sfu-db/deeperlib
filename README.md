@@ -57,25 +57,4 @@ v0.2a
 
 v0.1a
 
-* 2017/09/14 deeper's birthday
-
-Team
-----------
-* Jiannan Wang, Assistant Professor at Simon Fraser University
-* Eugene Wu, Assistant Professor at Columbia University
-* Ryan Shea, Research Associate at Simon Fraser University
-* Pei Wang, Ph.D. Student at Simon Fraser University
-* Yongjun He, Undergraduate Student at Nanjing University
-
-Discussing
-----------
-<table> 
-	<tr> 
-		<th>Maintainer</th> 
-		<th>email</th>
-	</tr> 
-	<tr> 
-		<th>Yongjun He</th> 
-		<th>141250047@smail.nju.edu.cn</th> 
-	</tr>  
-</table>
+* 2017/09/14 initial version
