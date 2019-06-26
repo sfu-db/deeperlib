@@ -4,7 +4,7 @@ Deeper, a data enrichment system through progressive deep deb crawling.
 [![David](https://img.shields.io/badge/python-2.7-blue.svg?style=plastic)](https://www.python.org/)
 	
 Deeperlib is a library for data enrichment with web data. Given a local data table, it is able to efficiently find the matching records in a deep website through keyword search interface API, so that the returned data can be used to enrich the local data.
-You can also try the online version at [deeper](deeper.sfucloud.ca).
+You can also try the online version at [deeper](http://deeper.sfucloud.ca).
 
 
 APIs Supportted
