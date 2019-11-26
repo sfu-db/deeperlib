@@ -27,8 +27,8 @@ sort_by     string  Optional. Sort the results by one of the these modes: best_m
                     adjusted rating value that takes into account the number of ratings, similar to a bayesian average. 
                     This is so a business with 1 rating of 5 stars doesn't immediately jump to the top. 
 """
-client_id = "QhqrWe9agsd0Ad6Gs0qgMQ"
-client_secret = "6WQWRMV8edOhaThyWgm96wAJkIzJ1pHOhm5N0AD20edrnzv0lwi3wfgZAFp0IqQ6WIc-pZki83kjpViwptlcsiV0-Ij3HI6AJxhOTE4jsjNOoZOHZI3823twg8yZWXYx"
+client_id = 
+client_secret = 
 search_term = 'term'
 parameters = {'limit': 50, 'location': 'AZ'}
 yelp = SearchApi(client_id=client_id, client_secret=client_secret, top_k=300, delay=5, search_term=search_term,
