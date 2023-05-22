@@ -1,4 +1,4 @@
 pqdict==1.0.0
-requests==2.20.0
+requests==2.31.0
 simplejson==3.11.1
 rauth==0.7.3
